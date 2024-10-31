@@ -16,7 +16,7 @@ class ForgotPasswordViewController: UIViewController {
      hideNavigationBackButtton()
         username.setPlaceholderText(Constants.username, .white)
         username.setIcon(UIImage(named: Constants.usernameIcon) ?? UIImage())
-     
+     hideKeyboardWhenTappedAround()
     }
     
 

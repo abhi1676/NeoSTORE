@@ -19,6 +19,7 @@
 		186292142CD251550052DF4A /* UiViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186292132CD251550052DF4A /* UiViewControllerExtension.swift */; };
 		186292162CD26AC70052DF4A /* TextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186292152CD26AC70052DF4A /* TextFieldType.swift */; };
 		1879181B2CCFC28C00AADCC2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879181A2CCFC28C00AADCC2 /* RegisterViewController.swift */; };
+		18A3E4B52CD36E7200FA7CC2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A3E4B42CD36E7200FA7CC2 /* APIManager.swift */; };
 		18AABFA12CCF63CC00E35122 /* Gotham-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18AABFA02CCF63CC00E35122 /* Gotham-Medium.otf */; };
 		18AABFA32CCF63D200E35122 /* Gotham-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18AABFA22CCF63D200E35122 /* Gotham-Book.otf */; };
 		18AABFA52CCF63DD00E35122 /* Gotham-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18AABFA42CCF63DD00E35122 /* Gotham-Bold.otf */; };
@@ -46,6 +47,7 @@
 		186292132CD251550052DF4A /* UiViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiViewControllerExtension.swift; sourceTree = "<group>"; };
 		186292152CD26AC70052DF4A /* TextFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldType.swift; sourceTree = "<group>"; };
 		1879181A2CCFC28C00AADCC2 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		18A3E4B42CD36E7200FA7CC2 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		18AABFA02CCF63CC00E35122 /* Gotham-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gotham-Medium.otf"; path = "../../../../Downloads/Gotham-Medium.otf"; sourceTree = "<group>"; };
 		18AABFA22CCF63D200E35122 /* Gotham-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gotham-Book.otf"; path = "../../../../Downloads/Gotham-Book.otf"; sourceTree = "<group>"; };
 		18AABFA42CCF63DD00E35122 /* Gotham-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gotham-Bold.otf"; path = "../../../../Downloads/Gotham-Bold.otf"; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 			children = (
 				18F568262CCFA16500B3EE8D /* Navigation.swift */,
 				186292152CD26AC70052DF4A /* TextFieldType.swift */,
+				18A3E4B42CD36E7200FA7CC2 /* APIManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				186292162CD26AC70052DF4A /* TextFieldType.swift in Sources */,
 				18F568272CCFA16500B3EE8D /* Navigation.swift in Sources */,
 				186292102CD20D2F0052DF4A /* RegisterViewModel.swift in Sources */,
+				18A3E4B52CD36E7200FA7CC2 /* APIManager.swift in Sources */,
 				1862920E2CD206100052DF4A /* StringExtension.swift in Sources */,
 				1818D5E42CCB7C59006FDFE1 /* SceneDelegate.swift in Sources */,
 				1862920C2CD0DA8D0052DF4A /* UILabelExtension.swift in Sources */,

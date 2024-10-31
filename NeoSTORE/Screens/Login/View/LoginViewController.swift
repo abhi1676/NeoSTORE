@@ -24,7 +24,7 @@ class LoginViewController: UIViewController{
         setUpUI()
         passwordTextField.delegate = self
         userNameTextField.delegate = self
-        
+        hideKeyboardWhenTappedAround()
     }
     
   

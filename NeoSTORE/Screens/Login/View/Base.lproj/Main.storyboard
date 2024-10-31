@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PMG-Gx-z0j">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gotham-Bold.otf">
+            <string>Gotham-Bold</string>
+        </array>
+        <array key="Gotham-Medium.otf">
+            <string>Gotham-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="NeoSTORE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NeoSTORE" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYA-a0-9mJ">
+                                <rect key="frame" x="60" y="255" width="275" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="ovU-oU-VoA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="45"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="shadowColor" systemColor="tertiarySystemBackgroundColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KHf-Te-Rvt" customClass="CustomTextField" customModule="NeoSTORE" customModuleProvider="target">
+                                <rect key="frame" x="34" y="350" width="325" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="jWa-9f-YtE"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zqV-mB-36g" customClass="CustomTextField" customModule="NeoSTORE" customModuleProvider="target">
+                                <rect key="frame" x="34" y="410" width="325" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ZQV-C6-PgO"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVP-hR-8A1">
+                                <rect key="frame" x="34" y="484" width="325" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Gea-E0-LCl"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="LOGIN">
+                                    <fontDescription key="titleFontDescription" name="Gotham-Medium" family="Gotham" pointSize="26"/>
+                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X49-lT-ElA">
+                                <rect key="frame" x="334" y="748.33333333333337" width="46" height="46"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="ntB-x4-i6N"/>
+                                    <constraint firstAttribute="height" constant="46" id="o6x-94-m02"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addAccountTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cM4-t7-qWg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DONT HAVE AN ACCOUNT?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpQ-IO-XJt">
+                                <rect key="frame" x="34" y="760.66666666666663" width="300" height="21.333333333333371"/>
+                                <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="kQ5-di-3wC">
+                                <rect key="frame" x="80" y="556" width="233" height="35"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Forgot Password?">
+                                    <fontDescription key="titleFontDescription" name="Gotham-Medium" family="Gotham" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="forgotPassWordTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AV2-ju-kHl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KHf-Te-Rvt" secondAttribute="trailing" constant="34" id="1vL-UX-vuc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jpQ-IO-XJt" secondAttribute="bottom" constant="35.999999999999886" id="6Jr-JV-8vk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kQ5-di-3wC" secondAttribute="trailing" constant="80" id="AbZ-SA-auW"/>
+                            <constraint firstItem="XYA-a0-9mJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="DXd-dR-da7"/>
+                            <constraint firstItem="zqV-mB-36g" firstAttribute="top" secondItem="KHf-Te-Rvt" secondAttribute="bottom" constant="20" id="Dxp-Mk-pG4"/>
+                            <constraint firstItem="XYA-a0-9mJ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="FYX-V7-KOk"/>
+                            <constraint firstItem="KHf-Te-Rvt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="FYn-th-dBS"/>
+                            <constraint firstItem="KHf-Te-Rvt" firstAttribute="top" secondItem="XYA-a0-9mJ" secondAttribute="bottom" constant="50" id="GSb-ZQ-Rud"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zqV-mB-36g" secondAttribute="trailing" constant="34" id="V5f-Bj-Uz6"/>
+                            <constraint firstItem="uVP-hR-8A1" firstAttribute="top" secondItem="zqV-mB-36g" secondAttribute="bottom" constant="34" id="a9j-gT-PFO"/>
+                            <constraint firstItem="zqV-mB-36g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="d4Z-iy-CMG"/>
+                            <constraint firstItem="jpQ-IO-XJt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="34" id="hlG-6F-5sv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uVP-hR-8A1" secondAttribute="trailing" constant="34" id="jSS-kw-YPi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="X49-lT-ElA" secondAttribute="bottom" constant="23.666666666666629" id="l5a-9G-aQC"/>
+                            <constraint firstItem="XYA-a0-9mJ" firstAttribute="topMargin" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="160" id="otw-fa-qD2"/>
+                            <constraint firstItem="uVP-hR-8A1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="s81-Yb-FIp"/>
+                            <constraint firstItem="kQ5-di-3wC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="tFh-hY-9dI"/>
+                            <constraint firstItem="X49-lT-ElA" firstAttribute="leading" secondItem="jpQ-IO-XJt" secondAttribute="trailing" id="tNz-dy-PKW"/>
+                            <constraint firstItem="X49-lT-ElA" firstAttribute="centerY" secondItem="jpQ-IO-XJt" secondAttribute="centerY" id="tfx-Cp-rH5"/>
+                            <constraint firstItem="kQ5-di-3wC" firstAttribute="top" secondItem="uVP-hR-8A1" secondAttribute="bottom" constant="22" id="vBi-oM-rNA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X49-lT-ElA" secondAttribute="trailing" constant="13" id="y0i-CN-uvc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="m6J-uM-MAj"/>
+                    <connections>
+                        <outlet property="addAccountButton" destination="X49-lT-ElA" id="OaU-CN-Lvf"/>
+                        <outlet property="passwordTextField" destination="zqV-mB-36g" id="tkV-Zc-OoR"/>
+                        <outlet property="userNameTextField" destination="KHf-Te-Rvt" id="fzx-4E-Wbc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="941" y="-2"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9H2-KB-B3b">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PMG-Gx-z0j" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cej-kf-1nx">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1fM-84-5zg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rjd-bK-1cZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="81.679389312977094" y="-2.1126760563380285"/>
+        </scene>
+        <!--Register-->
+        <scene sceneID="5ty-aJ-GAx">
+            <objects>
+                <viewController storyboardIdentifier="RegisterViewController" id="SR1-k3-4MS" customClass="RegisterViewController" customModule="NeoSTORE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZYW-NM-1kX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2iQ-D7-lSe">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aT5-mQ-jWi">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="700"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NeoSTORE" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uz6-Gx-SbB">
+                                                <rect key="frame" x="71.666666666666686" y="30" width="250" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="3cD-z9-ZJQ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="45"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="shadowColor" systemColor="tertiarySystemBackgroundColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="RBz-30-HAp">
+                                                <rect key="frame" x="34" y="150" width="325" height="464"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kGh-oh-tS3" customClass="CustomTextField" customModule="NeoSTORE" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="325" height="40"/>
+                                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="2yQ-4g-sgk"/>
+                                                        </constraints>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3n2-gl-bNG" customClass="CustomTextField" customModule="NeoSTORE" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="53" width="325" height="40"/>
+                                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="D6L-k8-CwZ"/>
+                                                        </constraints>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7O2-XU-jMa" customClass="CustomTextField" customModule="NeoSTORE" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="106" width="325" height="40"/>
+                                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="mCM-1R-yRF"/>
+                                                        </constraints>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="64F-QQ-VKT" customClass="CustomTextField" customModule="NeoSTORE" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="159" width="325" height="40"/>
+                                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="EdN-cp-4Zn"/>
+                                                        </constraints>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ngd-6q-l6K" customClass="CustomTextField" customModule="NeoSTORE" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="212" width="325" height="40"/>
+                                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="Fzm-Rn-u8A"/>
+                                                        </constraints>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                                    </textField>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="xyh-x8-9PC">
+                                                        <rect key="frame" x="0.0" y="265" width="325" height="40"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9m-fD-HBy">
+                                                                <rect key="frame" x="0.0" y="0.0" width="66.666666666666671" height="40"/>
+                                                                <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="18"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mf1-ws-SL8">
+                                                                <rect key="frame" x="81.666666666666686" y="0.0" width="73.333333333333314" height="40"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="  Male">
+                                                                    <fontDescription key="titleFontDescription" name="Gotham-Medium" family="Gotham" pointSize="16"/>
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="buttonTapped:" destination="SR1-k3-4MS" eventType="touchUpInside" id="ZJt-Sy-5fR"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="blU-NF-hw9">
+                                                                <rect key="frame" x="170" y="0.0" width="155" height="40"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="  Female">
+                                                                    <fontDescription key="titleFontDescription" name="Gotham-Medium" family="Gotham" pointSize="16"/>
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="buttonTapped:" destination="SR1-k3-4MS" eventType="touchUpInside" id="PS8-CZ-BUx"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1lN-X6-2JJ" customClass="CustomTextField" customModule="NeoSTORE" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="318" width="325" height="40"/>
+                                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="XvF-uq-MLp"/>
+                                                        </constraints>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    </textField>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xSZ-UB-P7H">
+                                                        <rect key="frame" x="0.0" y="371" width="325" height="40"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrU-b7-j0N">
+                                                                <rect key="frame" x="0.0" y="0.66666666666662877" width="68" height="39"/>
+                                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="check_icon"/>
+                                                                <connections>
+                                                                    <action selector="termConditionTapped:" destination="SR1-k3-4MS" eventType="touchUpInside" id="xCh-jU-mes"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I agree Terms &amp; Conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4w-wd-7JP">
+                                                                <rect key="frame" x="78" y="12.333333333333371" width="247" height="15.666666666666664"/>
+                                                                <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="13"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7g-dK-vKX">
+                                                        <rect key="frame" x="0.0" y="424" width="325" height="40"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="REGISTER">
+                                                            <fontDescription key="titleFontDescription" name="Gotham-Medium" family="Gotham" pointSize="26"/>
+                                                            <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="registerButtonTapped:" destination="SR1-k3-4MS" eventType="touchUpInside" id="U7p-7u-J6e"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="464" id="hkm-h7-GMo"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="Uz6-Gx-SbB" firstAttribute="centerX" secondItem="aT5-mQ-jWi" secondAttribute="centerX" id="9fd-Ou-XHs"/>
+                                            <constraint firstItem="Uz6-Gx-SbB" firstAttribute="top" secondItem="aT5-mQ-jWi" secondAttribute="top" constant="30" id="CjF-ur-tOV"/>
+                                            <constraint firstItem="RBz-30-HAp" firstAttribute="leading" secondItem="aT5-mQ-jWi" secondAttribute="leading" constant="34" id="H0R-ec-gzg"/>
+                                            <constraint firstItem="RBz-30-HAp" firstAttribute="top" secondItem="Uz6-Gx-SbB" secondAttribute="bottom" constant="75" id="P3k-ab-VE9"/>
+                                            <constraint firstAttribute="height" constant="700" id="pqw-gf-Hxg"/>
+                                            <constraint firstAttribute="trailing" secondItem="RBz-30-HAp" secondAttribute="trailing" constant="34" id="xaW-3g-8jf"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="aT5-mQ-jWi" firstAttribute="width" relation="greaterThanOrEqual" secondItem="2iQ-D7-lSe" secondAttribute="width" id="GE8-25-4zw"/>
+                                    <constraint firstAttribute="trailing" secondItem="aT5-mQ-jWi" secondAttribute="trailing" id="TMF-0v-cqY"/>
+                                    <constraint firstItem="aT5-mQ-jWi" firstAttribute="bottom" secondItem="2iQ-D7-lSe" secondAttribute="bottom" id="Tcn-qN-sfk"/>
+                                    <constraint firstItem="aT5-mQ-jWi" firstAttribute="leading" secondItem="2iQ-D7-lSe" secondAttribute="leading" id="lbz-Gc-nfr"/>
+                                    <constraint firstItem="aT5-mQ-jWi" firstAttribute="top" secondItem="2iQ-D7-lSe" secondAttribute="top" id="q1e-Xr-MYr"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wfi-Ld-Ivm"/>
+                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2iQ-D7-lSe" firstAttribute="leading" secondItem="ZYW-NM-1kX" secondAttribute="leading" id="EzN-TC-b19"/>
+                            <constraint firstAttribute="trailing" secondItem="2iQ-D7-lSe" secondAttribute="trailing" id="Iv7-Yg-1b8"/>
+                            <constraint firstAttribute="bottom" secondItem="2iQ-D7-lSe" secondAttribute="bottom" id="Nfp-1Q-kEr"/>
+                            <constraint firstItem="2iQ-D7-lSe" firstAttribute="top" secondItem="ZYW-NM-1kX" secondAttribute="top" id="dlb-i9-TMq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Register" id="8eh-MS-c63"/>
+                    <size key="freeformSize" width="393" height="852"/>
+                    <connections>
+                        <outlet property="btnFemale" destination="blU-NF-hw9" id="Iwc-Z2-fwJ"/>
+                        <outlet property="btnmale" destination="Mf1-ws-SL8" id="e9L-mJ-YNA"/>
+                        <outlet property="confirmPassword" destination="Ngd-6q-l6K" id="NkB-Vl-jqv"/>
+                        <outlet property="email" destination="7O2-XU-jMa" id="eh5-ZP-kTd"/>
+                        <outlet property="fisrtName" destination="kGh-oh-tS3" id="1zM-Uw-NRq"/>
+                        <outlet property="lastName" destination="3n2-gl-bNG" id="ET7-2a-yiq"/>
+                        <outlet property="passWord" destination="64F-QQ-VKT" id="i8T-7j-X59"/>
+                        <outlet property="phoneNumber" destination="1lN-X6-2JJ" id="CCx-9o-FgG"/>
+                        <outlet property="termAndConditionButton" destination="zrU-b7-j0N" id="O1R-gv-DxM"/>
+                        <outlet property="termAndConditionLabel" destination="L4w-wd-7JP" id="rCN-hI-SxG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xon-25-ep9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1761" y="-3"/>
+        </scene>
+        <!--Forgot Password View Controller-->
+        <scene sceneID="UJN-GZ-QwD">
+            <objects>
+                <viewController storyboardIdentifier="ForgotPasswordViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zyu-Od-lEB" customClass="ForgotPasswordViewController" customModule="NeoSTORE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Mg-CQ-TMC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NeoSTORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6t-lb-iTC">
+                                <rect key="frame" x="55" y="209" width="275" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="tSU-xt-ZTj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="45"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="shadowColor" systemColor="tertiarySystemBackgroundColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FWg-us-3IH" userLabel="ForgotUsername" customClass="CustomTextField" customModule="NeoSTORE" customModuleProvider="target">
+                                <rect key="frame" x="34" y="304" width="325" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="eUH-fD-uSh"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tmf-el-aj5">
+                                <rect key="frame" x="34" y="378" width="325" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="XpC-yS-EJU"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="SUBMIT">
+                                    <fontDescription key="titleFontDescription" name="Gotham-Medium" family="Gotham" pointSize="26"/>
+                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="submitTapped:" destination="zyu-Od-lEB" eventType="touchUpInside" id="fdX-Su-Yib"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vFH-Gj-mgz"/>
+                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FWg-us-3IH" firstAttribute="leading" secondItem="vFH-Gj-mgz" secondAttribute="leading" constant="34" id="1IX-V0-H3l"/>
+                            <constraint firstItem="j6t-lb-iTC" firstAttribute="top" secondItem="vFH-Gj-mgz" secondAttribute="top" constant="150" id="FoF-MR-Xep"/>
+                            <constraint firstItem="Tmf-el-aj5" firstAttribute="top" secondItem="FWg-us-3IH" secondAttribute="bottom" constant="34" id="OS0-mY-HX6"/>
+                            <constraint firstItem="j6t-lb-iTC" firstAttribute="leading" secondItem="vFH-Gj-mgz" secondAttribute="leading" constant="55" id="bxp-9b-cZ4"/>
+                            <constraint firstItem="Tmf-el-aj5" firstAttribute="leading" secondItem="vFH-Gj-mgz" secondAttribute="leading" constant="34" id="f78-8g-mju"/>
+                            <constraint firstItem="FWg-us-3IH" firstAttribute="top" secondItem="j6t-lb-iTC" secondAttribute="bottom" constant="50" id="pUl-5T-zCJ"/>
+                            <constraint firstItem="vFH-Gj-mgz" firstAttribute="trailing" secondItem="FWg-us-3IH" secondAttribute="trailing" constant="34" id="qZV-rb-G4a"/>
+                            <constraint firstItem="j6t-lb-iTC" firstAttribute="width" secondItem="9Mg-CQ-TMC" secondAttribute="width" multiplier="0.7" id="slw-o1-5b8"/>
+                            <constraint firstItem="vFH-Gj-mgz" firstAttribute="trailing" secondItem="Tmf-el-aj5" secondAttribute="trailing" constant="34" id="w9n-AD-ctg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="M3n-ZB-7gF"/>
+                    <connections>
+                        <outlet property="username" destination="FWg-us-3IH" id="mDV-hI-vOa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TSr-tp-t2y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2593" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="check_icon" width="25" height="25"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

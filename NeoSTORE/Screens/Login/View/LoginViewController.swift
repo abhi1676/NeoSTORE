@@ -33,7 +33,12 @@ class LoginViewController: UIViewController{
 //        let sb = UIStoryboard(name: "ForgotPassword", bundle: nil)
 //        let forgotPassVc = sb.instantiateViewController(withIdentifier: "ForgotPasswordViewController") as?                           ForgotPasswordViewController
 //        self.navigationController?.pushViewController(forgotPassVc!, animated: true)
+        
+//        showAlert(title: "FORGOT PASSWORD", message: "NAVIGATING TO FOGOT PASSWORD PAGE",completion: {
+//            self.navigate(storyboardName: EnumConstants.Main.rawValue , viewControllerID: EnumConstants.ForgotPasswordViewController.rawValue)
+//        })
         navigate(storyboardName: EnumConstants.Main.rawValue , viewControllerID: EnumConstants.ForgotPasswordViewController.rawValue)
+        
         
     }
     

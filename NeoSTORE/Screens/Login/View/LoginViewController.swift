@@ -35,7 +35,7 @@ class LoginViewController: UIViewController{
             [weak self] in
             DispatchQueue.main.async {
                 self?.showAlert(title: "LOGIN SUCCESSFULL", message: "Welcome Back!"){
-                    self?.navigate(storyboardName: EnumConstants.Main.rawValue, viewControllerID: EnumConstants.ForgotPassword.rawValue)
+                    self?.navigate(storyboardName: EnumConstants.Main.rawValue, viewControllerID: EnumConstants.ForgotPasswordViewController.rawValue)
                 }
             }
         }
@@ -72,6 +72,7 @@ class LoginViewController: UIViewController{
     
     
     @IBAction func loginButtonTapped(_ sender: UIButton) {
+        
         viewModel.login(email: userNameTextField.text ?? "", password: passwordTextField.text ?? "")
     }
     

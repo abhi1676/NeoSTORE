@@ -53,8 +53,15 @@ final class APIManager {
         // Post request
         if let requestModel = requestModel, method == .post {
             do {
-                urlRequest.httpBody = try JSONEncoder().encode(requestModel)
-                urlRequest.setValue(Constants.applicationOrJson, forHTTPHeaderField: Constants.httpHeaderField)
+                let encoder = URLFormParameterEncoder()
+                let parameterString = try encoder.encode(requestModel)
+           
+                if let httpBodyData = parameterString.data(using: .utf8) {
+                           urlRequest.httpBody = httpBodyData
+                       }
+               // let jsonString =
+               // let urlRequest.httpBody = requestModel.data(using: .utf8)
+                urlRequest.setValue(Constants.applicationOrFormURLEndcoded, forHTTPHeaderField: Constants.httpHeaderField)
             } catch {
                 completion(.failure(.network(Constants.requestModelFailure)))
                 return
@@ -93,5 +100,30 @@ final class APIManager {
         }
         
         task.resume()
+    }
+}
+
+
+struct URLFormParameterEncoder {
+    func encode<T: Encodable>(_ value: T) throws -> String {
+        let mirror = Mirror(reflecting: value)
+        var components: [String] = []
+        
+        for child in mirror.children {
+            guard let label = child.label else { continue }
+            if let value = child.value as? CustomStringConvertible {
+                let encodedKey = label.urlEncoded() ?? ""
+                let encodedValue = value.description.urlEncoded() ?? ""
+                components.append("\(encodedKey)=\(encodedValue)")
+            }
+        }
+        
+        return components.joined(separator: "&")
+    }
+}
+
+extension String {
+    func urlEncoded() -> String? {
+        return self.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
     }
 }

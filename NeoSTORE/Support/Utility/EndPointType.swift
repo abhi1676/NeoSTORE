@@ -9,7 +9,7 @@ import Foundation
 
 typealias HTTPHeaders = [String: String]
 
-protocol EndPointType:Codable {
+protocol EndPointType{
     var baseURL: String { get }
     var path: String { get }
     var url : URL? { get }
@@ -46,10 +46,10 @@ extension EndPointList:EndPointType{
   
     var headers: HTTPHeaders {
            var headers = [
-               "Accept": "application/json"
+            Constants.accept: Constants.applicationOrJson
            ]
            
-           if let token = UserDefaults.standard.string(forKey: "accessToken") {
+        if let token = UserDefaults.standard.string(forKey: Constants.accessToken) {
                headers["Authorization"] = "Bearer \(token)"
            }
            

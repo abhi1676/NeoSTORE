@@ -54,9 +54,9 @@ final class APIManager {
         if let requestModel = requestModel, method == .post {
             do {
                 urlRequest.httpBody = try JSONEncoder().encode(requestModel)
-                urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+                urlRequest.setValue(Constants.applicationOrJson, forHTTPHeaderField: Constants.httpHeaderField)
             } catch {
-                completion(.failure(.network("Failed to encode request model: \(error.localizedDescription)")))
+                completion(.failure(.network(Constants.requestModelFailure)))
                 return
             }
         }

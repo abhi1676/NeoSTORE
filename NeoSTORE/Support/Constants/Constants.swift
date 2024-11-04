@@ -35,6 +35,13 @@ struct Constants{
     static let baseURL = "http://staging.php-dev.in:8844/trainingapp/api/"
     static let register = "users/login"
     static let login = "users/register"
+    static let accessToken = "accessToken"
+    static let httpHeaderField = "Content-Type"
+    static let applicationOrJson = "application/json"
+    static let accept = "Accept"
+    //MARK: - ERROR MESSAGES
+    static let userNotFound = "No user data found."
+    static let requestModelFailure = "Failed to encode request model"
     
 }
 

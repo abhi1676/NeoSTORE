@@ -17,6 +17,7 @@ class LoginViewController: UIViewController{
     
     @IBOutlet var forgotPassLabel: UILabel!
     
+    private var viewModel = LoginViewModel()
     
     
     override func viewDidLoad() {
@@ -25,8 +26,30 @@ class LoginViewController: UIViewController{
         passwordTextField.delegate = self
         userNameTextField.delegate = self
         hideKeyboardWhenTappedAround()
+        setUpBindings()
     }
     
+    private func  setUpBindings(){
+        
+        viewModel.onLoginSuccess = {
+            [weak self] in
+            DispatchQueue.main.async {
+                self?.showAlert(title: "LOGIN SUCCESSFULL", message: "Welcome Back!"){
+                    self?.navigate(storyboardName: EnumConstants.Main.rawValue, viewControllerID: EnumConstants.ForgotPassword.rawValue)
+                }
+            }
+        }
+        
+        viewModel.onLoginFailure = {
+            
+            [weak self] errorMsg in
+            DispatchQueue.main.async {
+                print(errorMsg)
+                self?.showAlert(title: "LOGIN FAILED", message: "INVALID CREDENTIALS")
+            }
+        }
+        
+    }
   
     
     @IBAction func forgotPassWordTapped(_ sender: Any) {
@@ -48,6 +71,9 @@ class LoginViewController: UIViewController{
     }
     
     
+    @IBAction func loginButtonTapped(_ sender: UIButton) {
+        viewModel.login(email: userNameTextField.text ?? "", password: passwordTextField.text ?? "")
+    }
     
     
     

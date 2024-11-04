@@ -27,6 +27,15 @@ struct Constants{
     static let uncheckIcon = "uncheck_icon"
     static let checkYes = "chky"
     static let checkNo = "chkn"
+    
+    //MARK: - API HELPERS
+    
+    static let get = "GET"
+    static let post = "POST"
+    static let baseURL = "http://staging.php-dev.in:8844/trainingapp/api/"
+    static let register = "users/login"
+    static let login = "users/register"
+    
 }
 
 

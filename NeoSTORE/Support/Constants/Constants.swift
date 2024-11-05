@@ -51,6 +51,7 @@ struct Constants{
     static let passwordNotMatching = "Passwords do not match"
     static let invalidEmail = "Invalid email address"
     static let error = "Error"
+    static let noUserData = "No user data returned"
     
     
     //MARK: - HELPERS
@@ -62,6 +63,8 @@ struct Constants{
     static let loginFailed = "LOGIN FAILED"
     static let invalidCredentials = "INVALID CREDENTIALS"
     static let welcomBack = "WELCOME BACK"
+    static let male = "M"
+    static let female = "F"
 }
 
 

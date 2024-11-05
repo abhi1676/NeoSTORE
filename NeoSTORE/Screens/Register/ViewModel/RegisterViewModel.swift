@@ -10,6 +10,30 @@ import Foundation
 class RegisterViewModel{
     
     
+    var onRegisterSuccess : (()->Void)?
+    var onRegisterFailure : ((String)->Void)?
+    
+  
+    func register(firstName: String, lastName: String, email: String, password: String, confirmPassword: String, phoneNo: String?, gender: String?) {
+      
+        let registerRequest = RegistrationData(gender: gender, password: password, confirm_password: confirmPassword, last_name: lastName, email: email, phone_no: phoneNo, first_name: firstName)
+        APIManager.shared.manager(modelType: RegisterResponse.self, type: EndPointList.register, requestModel: registerRequest, method: .post) { result in
+            switch result {
+            case .success(let response):
+                guard let registerData = response.data else {
+                    self.onRegisterFailure?(Constants.noUserData)
+                       return
+                   }
+                UserDefaults.standard.set(registerData.access_token, forKey:Constants.accessToken)
+                   self.onRegisterSuccess?()
+                
+            case .failure(let error):
+                self.onRegisterFailure?(error.localizedDescription)
+            }
+        }
+    }
+    
+    
   func  validInputs(firstName:String?,lastName:String?,email:String?,password:String?,confirmPassword:String?,phoneNumber:String?, completion : @escaping (Bool,String?)->Void){
         
       typealias t = TextfieldType
@@ -45,4 +69,10 @@ class RegisterViewModel{
               completion(true, nil)
           }
     
+
+
+
 }
+      
+  
+ 

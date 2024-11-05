@@ -34,8 +34,23 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor:UIColor.white]
         setUpUI()
-      imageSetting()
+        imageSetting()
         hideKeyboardWhenTappedAround()
+        
+       
+        viewmodel.onRegisterSuccess = { [weak self]  in
+            DispatchQueue.main.async {
+                self?.showAlert(title: Constants.registartionComplete, message: Constants.userRegistered) {
+                    self?.navigationController?.popViewController(animated: true)
+                }
+            }
+        }
+        
+        viewmodel.onRegisterFailure = { [weak self] errorMessage in
+            DispatchQueue.main.async {
+                self?.showAlert(title: Constants.error, message: Constants.validationError)
+            }
+        }
     }
     
     func imageSetting(){
@@ -44,8 +59,9 @@ class RegisterViewController: UIViewController {
         btnFemale.setImage(UIImage.init(named: Constants.checkNo), for: .normal)
         btnFemale.setImage(UIImage.init(named: Constants.checkYes), for: .selected)
         btnmale.isSelected = true
+        btnFemale.isSelected = false
     }
-
+    
     func setUpUI(){
         fisrtName.setPlaceholderText(Constants.firstname, .white)
         lastName.setPlaceholderText(Constants.lastname, .white)
@@ -72,15 +88,13 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
-        sender.isSelected = !sender.isSelected
-               if sender.tag == 0{
-                   btnFemale.isSelected = false
-                   
-               }
-               else{
-                   btnmale.isSelected = false
-               
-               }
+        if sender == btnmale {
+            btnmale.isSelected = true
+            btnFemale.isSelected = false
+        } else if sender == btnFemale {
+            btnmale.isSelected = false
+            btnFemale.isSelected = true
+        }
     }
     
     @IBAction func termConditionTapped(_ sender: UIButton) {
@@ -88,27 +102,44 @@ class RegisterViewController: UIViewController {
         termAndConditionButton.isSelected.toggle()
         
         if termAndConditionButton.isSelected {
-                termAndConditionButton.setImage(UIImage(named: Constants.checkIcon), for: .normal)
-            } else {
-                termAndConditionButton.setImage(UIImage(named: Constants.uncheckIcon), for: .normal)
-            }
+            termAndConditionButton.setImage(UIImage(named: Constants.checkIcon), for: .normal)
+        } else {
+            termAndConditionButton.setImage(UIImage(named: Constants.uncheckIcon), for: .normal)
+        }
         
     }
     @IBAction func registerButtonTapped(_ sender: UIButton) {
         
-        viewmodel.validInputs(firstName: fisrtName.text, lastName: lastName.text, email: email.text, password: passWord.text, confirmPassword: confirmPassword.text, phoneNumber: phoneNumber.text, completion: {
-            isValid,errorMsg in
-            if isValid{
-                self.showAlert(title: Constants.registartionComplete , message: Constants.userRegistered){
-                    self.navigationController?.popViewController(animated: true)
-                }
-            }
-            else{
-                self.showAlert(title: Constants.error, message: Constants.validationError )
-            }
-        })
-            
-       
+        viewmodel.validInputs(
+                    firstName: fisrtName.text,
+                    lastName: lastName.text,
+                    email: email.text,
+                    password: passWord.text,
+                    confirmPassword: confirmPassword.text,
+                    phoneNumber: phoneNumber.text) { [weak self] isValid, errorMsg in
+                        guard let self = self else { return }
+                        if isValid {
+                            let gender = self.btnmale.isSelected ? Constants.male : Constants.female
+                            self.registerUser(gender: gender)
+                        } else {
+                            print("Validation error: \(errorMsg ?? "Unknown error")")
+                            self.showAlert(title: Constants.error, message: errorMsg ?? Constants.validationError)
+                        }
+                    }
+        
+        
     }
     
+    private func registerUser(gender: String) {
+        viewmodel.register(
+            firstName: fisrtName.text ?? "",
+            lastName: lastName.text ?? "",
+            email: email.text ?? "",
+            password: passWord.text ?? "",
+            confirmPassword: confirmPassword.text ?? "",
+            phoneNo: phoneNumber.text ?? "0",
+            gender: gender
+        )
+    }
+
 }

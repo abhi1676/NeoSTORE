@@ -27,6 +27,8 @@
 		18AABFA52CCF63DD00E35122 /* Gotham-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18AABFA42CCF63DD00E35122 /* Gotham-Bold.otf */; };
 		18AC6EB92CCF732000235314 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AC6EB82CCF732000235314 /* UITextFieldExtension.swift */; };
 		18B1C8432CCBA43F00DED2C5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B1C8422CCBA43F00DED2C5 /* LoginViewController.swift */; };
+		18E499092CDA136800B57CA2 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E499082CDA136800B57CA2 /* Register.swift */; };
+		18E4990C2CDA579300B57CA2 /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E4990B2CDA579300B57CA2 /* HomeScreen.storyboard */; };
 		18F5681B2CCF8F6C00B3EE8D /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5681A2CCF8F6C00B3EE8D /* LoginData.swift */; };
 		18F5681F2CCF94BB00B3EE8D /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5681E2CCF94BB00B3EE8D /* ForgotPasswordViewController.swift */; };
 		18F568232CCF9A6900B3EE8D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F568222CCF9A6900B3EE8D /* CustomTextField.swift */; };
@@ -57,6 +59,8 @@
 		18AABFA42CCF63DD00E35122 /* Gotham-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gotham-Bold.otf"; path = "../../../../Downloads/Gotham-Bold.otf"; sourceTree = "<group>"; };
 		18AC6EB82CCF732000235314 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		18B1C8422CCBA43F00DED2C5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		18E499082CDA136800B57CA2 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		18E4990B2CDA579300B57CA2 /* HomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreen.storyboard; sourceTree = "<group>"; };
 		18F5681A2CCF8F6C00B3EE8D /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
 		18F5681E2CCF94BB00B3EE8D /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		18F568222CCF9A6900B3EE8D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 		187918112CCFC1E900AADCC2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				18E499082CDA136800B57CA2 /* Register.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 		18B092A52CCB7DE2007F19F4 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				18E4990A2CDA576200B57CA2 /* HomeScreen */,
 				187918102CCFC1E100AADCC2 /* Register */,
 				18F568182CCF8BD300B3EE8D /* Login */,
 			);
@@ -218,6 +224,14 @@
 				186292112CD23BD50052DF4A /* EnumConstants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		18E4990A2CDA576200B57CA2 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				18E4990B2CDA579300B57CA2 /* HomeScreen.storyboard */,
+			);
+			path = HomeScreen;
 			sourceTree = "<group>";
 		};
 		18F568162CCF8BAE00B3EE8D /* View */ = {
@@ -337,6 +351,7 @@
 				18AABFA52CCF63DD00E35122 /* Gotham-Bold.otf in Resources */,
 				1818D5EE2CCB7C5B006FDFE1 /* LaunchScreen.storyboard in Resources */,
 				1818D5EB2CCB7C5B006FDFE1 /* Assets.xcassets in Resources */,
+				18E4990C2CDA579300B57CA2 /* HomeScreen.storyboard in Resources */,
 				18AABFA32CCF63D200E35122 /* Gotham-Book.otf in Resources */,
 				18AABFA12CCF63CC00E35122 /* Gotham-Medium.otf in Resources */,
 				1818D5E92CCB7C59006FDFE1 /* Main.storyboard in Resources */,
@@ -364,6 +379,7 @@
 				18F568272CCFA16500B3EE8D /* Navigation.swift in Sources */,
 				186292102CD20D2F0052DF4A /* RegisterViewModel.swift in Sources */,
 				18A3E4B52CD36E7200FA7CC2 /* APIManager.swift in Sources */,
+				18E499092CDA136800B57CA2 /* Register.swift in Sources */,
 				1862920E2CD206100052DF4A /* StringExtension.swift in Sources */,
 				1818D5E42CCB7C59006FDFE1 /* SceneDelegate.swift in Sources */,
 				1862920C2CD0DA8D0052DF4A /* UILabelExtension.swift in Sources */,

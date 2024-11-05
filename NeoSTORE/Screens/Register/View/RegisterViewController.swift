@@ -65,7 +65,7 @@ class RegisterViewController: UIViewController {
         phoneNumber.setIcon(UIImage(named: Constants.phonenumberIcon) ?? UIImage())
         
         
-        termAndConditionLabel.setUnderLineToLabel(termAndConditionLabel.self, "Terms & Conditions")
+        termAndConditionLabel.setUnderLineToLabel(termAndConditionLabel.self, Constants.termsAndConditions)
         
         hideNavigationBackButtton()
         
@@ -96,27 +96,19 @@ class RegisterViewController: UIViewController {
     }
     @IBAction func registerButtonTapped(_ sender: UIButton) {
         
-        typealias t = TextfieldType
-
-        let isNameValid = t.name(fisrtName.text ?? "").isValid
-        let isPasswordValid = t.password(passWord.text ?? "").isValid
-        let isPhoneNumberValid = t.phoneNumber(phoneNumber.text ?? "").isValid
-        let isEmailValid = t.email(email.text ?? "").isValid
-        let isPasswordMatching = passWord.text == confirmPassword.text
-           
-        print("Name: '\(fisrtName.text ?? "")', Valid: \(isNameValid)")
-        print("Password: '\(passWord.text ?? "")', Valid: \(isPasswordValid)")
-        print("Phone Number: '\(phoneNumber.text ?? "")', Valid: \(isPhoneNumberValid)")
-        print("Email: '\(email.text ?? "")', Valid: \(isEmailValid)")
-        
-            if isNameValid && isPasswordValid && isPhoneNumberValid && isEmailValid  && isPasswordMatching{
-                print("All validations passed!")
-               
-            } else {
-                print("Validation failed.")
+        viewmodel.validInputs(firstName: fisrtName.text, lastName: lastName.text, email: email.text, password: passWord.text, confirmPassword: confirmPassword.text, phoneNumber: phoneNumber.text, completion: {
+            isValid,errorMsg in
+            if isValid{
+                self.showAlert(title: Constants.registartionComplete , message: Constants.userRegistered){
+                    self.navigationController?.popViewController(animated: true)
+                }
             }
+            else{
+                self.showAlert(title: Constants.error, message: Constants.validationError )
+            }
+        })
             
-        navigationController?.popViewController(animated: true)
+       
     }
     
 }

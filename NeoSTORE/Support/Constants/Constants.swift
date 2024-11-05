@@ -17,6 +17,7 @@ struct Constants{
     static let email = "Email"
     static let phonenumber = "Phone Number"
     static let confirmpassword = "Confirm Password"
+    static let termsAndConditions = "Terms & Conditions"
     
     //MARK: - Icon
     static let usernameIcon = "username_icon"
@@ -39,11 +40,28 @@ struct Constants{
     static let httpHeaderField = "Content-Type"
     static let applicationOrJson = "application/json"
     static let applicationOrFormURLEndcoded = "application/x-www-form-urlencoded"
-    static let accept = "Accept"
+    static let authorization = "Authorization"
+    
     //MARK: - ERROR MESSAGES
     static let userNotFound = "No user data found."
     static let requestModelFailure = "Failed to encode request model"
+    static let invalidFirstName = "Invalid first name"
+    static let invalidLastName = "Invalid Last Name"
+    static let invalidPhonenumber = "Invalid phone number"
+    static let passwordNotMatching = "Passwords do not match"
+    static let invalidEmail = "Invalid email address"
+    static let error = "Error"
     
+    
+    //MARK: - HELPERS
+    static let accept = "Accept"
+    static let registartionComplete = "Registration Complete"
+    static let userRegistered = "User Registered SuccessFully"
+    static let validationError = "Please fill Valid Details"
+    static let loginSuccess = "LOGIN SUCCESSFULL"
+    static let loginFailed = "LOGIN FAILED"
+    static let invalidCredentials = "INVALID CREDENTIALS"
+    static let welcomBack = "WELCOME BACK"
 }
 
 

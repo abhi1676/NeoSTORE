@@ -50,7 +50,7 @@ extension EndPointList:EndPointType{
            ]
            
         if let token = UserDefaults.standard.string(forKey: Constants.accessToken) {
-               headers["Authorization"] = "Bearer \(token)"
+            headers[Constants.authorization] = "Bearer \(token)"
            }
            
            return headers

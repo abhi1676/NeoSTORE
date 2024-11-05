@@ -34,7 +34,7 @@ class LoginViewController: UIViewController{
         viewModel.onLoginSuccess = {
             [weak self] in
             DispatchQueue.main.async {
-                self?.showAlert(title: "LOGIN SUCCESSFULL", message: "Welcome Back!"){
+                self?.showAlert(title: Constants.loginSuccess, message: Constants.welcomBack){
                     self?.navigate(storyboardName: EnumConstants.Main.rawValue, viewControllerID: EnumConstants.ForgotPasswordViewController.rawValue)
                 }
             }
@@ -45,7 +45,7 @@ class LoginViewController: UIViewController{
             [weak self] errorMsg in
             DispatchQueue.main.async {
                 print(errorMsg)
-                self?.showAlert(title: "LOGIN FAILED", message: "INVALID CREDENTIALS")
+                self?.showAlert(title: Constants.loginFailed, message:Constants.invalidCredentials )
             }
         }
         

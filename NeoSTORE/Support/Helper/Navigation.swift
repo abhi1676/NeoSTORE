@@ -25,6 +25,21 @@ extension UIViewController {
     func hideNavigationBackButtton(){
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor:UIColor.white]
+    }
+    
+    
+     func setupNavigationBarButton(imageName: String, isLeft: Bool, action: Selector) {
+        guard let image = UIImage(named: imageName) else { return }
+        
+        let button = UIBarButtonItem(image: image, style: .plain, target: self, action: action)
+         
+        
+        if isLeft {
+            self.navigationItem.leftBarButtonItem = button
+        } else {
+            self.navigationItem.rightBarButtonItem = button
+        }
     }
 
 }

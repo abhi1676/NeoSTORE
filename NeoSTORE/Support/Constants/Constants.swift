@@ -28,7 +28,8 @@ struct Constants{
     static let uncheckIcon = "uncheck_icon"
     static let checkYes = "chky"
     static let checkNo = "chkn"
-    
+    static let menuIcon = "menu_icon"
+    static let searchIcon = "search_icon"
     //MARK: - API HELPERS
     
     static let get = "GET"

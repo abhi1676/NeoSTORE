@@ -27,6 +27,9 @@ class LoginViewController: UIViewController{
         userNameTextField.delegate = self
         hideKeyboardWhenTappedAround()
         setUpBindings()
+        
+        userNameTextField.text = "ribhug9@gmail.com"
+        passwordTextField.text = "Abcd@1234"
     }
     
     private func  setUpBindings(){
@@ -35,7 +38,7 @@ class LoginViewController: UIViewController{
             [weak self] in
             DispatchQueue.main.async {
                 self?.showAlert(title: Constants.loginSuccess, message: Constants.welcomBack){
-                    self?.navigate(storyboardName: EnumConstants.Main.rawValue, viewControllerID: EnumConstants.ForgotPasswordViewController.rawValue)
+                    self?.navigate(storyboardName: EnumConstants.HomeScreen.rawValue, viewControllerID: EnumConstants.HomeScreenViewController.rawValue)
                 }
             }
         }

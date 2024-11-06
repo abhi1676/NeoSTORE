@@ -32,8 +32,7 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor:UIColor.white]
-        setUpUI()
+         setUpUI()
         imageSetting()
         hideKeyboardWhenTappedAround()
         

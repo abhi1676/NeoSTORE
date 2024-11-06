@@ -8,13 +8,14 @@
 import Foundation
 
 enum EnumConstants:String{
-    case ForgotPassword = ""
+    case ForgotPassword
     case ForgotPasswordViewController
     case Register
     case RegisterViewController
     case Main
     case LoginViewController
-    
+    case HomeScreen
+    case HomeScreenViewController
     
     
 }

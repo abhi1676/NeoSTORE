@@ -27,6 +27,9 @@
 		18AABFA52CCF63DD00E35122 /* Gotham-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18AABFA42CCF63DD00E35122 /* Gotham-Bold.otf */; };
 		18AC6EB92CCF732000235314 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AC6EB82CCF732000235314 /* UITextFieldExtension.swift */; };
 		18B1C8432CCBA43F00DED2C5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B1C8422CCBA43F00DED2C5 /* LoginViewController.swift */; };
+		18DBF7782CDC9B1E00EEA8C5 /* HomeScreenVCE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBF7772CDC9B1E00EEA8C5 /* HomeScreenVCE.swift */; };
+		18DBF77B2CDCA22500EEA8C5 /* HomeScreenCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DBF77A2CDCA22500EEA8C5 /* HomeScreenCollectionViewCell.xib */; };
+		18DBF77D2CDCA22F00EEA8C5 /* HomeScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBF77C2CDCA22F00EEA8C5 /* HomeScreenCollectionViewCell.swift */; };
 		18E499092CDA136800B57CA2 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E499082CDA136800B57CA2 /* Register.swift */; };
 		18E4990C2CDA579300B57CA2 /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E4990B2CDA579300B57CA2 /* HomeScreen.storyboard */; };
 		18F5681B2CCF8F6C00B3EE8D /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5681A2CCF8F6C00B3EE8D /* LoginData.swift */; };
@@ -35,8 +38,6 @@
 		18F568252CCF9CE600B3EE8D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F568242CCF9CE600B3EE8D /* Constants.swift */; };
 		18F568272CCFA16500B3EE8D /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F568262CCFA16500B3EE8D /* Navigation.swift */; };
 		18FA7B5F2CDB688700BCFB32 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA7B5E2CDB688700BCFB32 /* HomeScreenViewController.swift */; };
-		18FA7B632CDBA14A00BCFB32 /* HomeScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA7B612CDBA14A00BCFB32 /* HomeScreenCollectionViewCell.swift */; };
-		18FA7B642CDBA14A00BCFB32 /* HomeScreenCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FA7B622CDBA14A00BCFB32 /* HomeScreenCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,9 @@
 		18AABFA42CCF63DD00E35122 /* Gotham-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gotham-Bold.otf"; path = "../../../../Downloads/Gotham-Bold.otf"; sourceTree = "<group>"; };
 		18AC6EB82CCF732000235314 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		18B1C8422CCBA43F00DED2C5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		18DBF7772CDC9B1E00EEA8C5 /* HomeScreenVCE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenVCE.swift; sourceTree = "<group>"; };
+		18DBF77A2CDCA22500EEA8C5 /* HomeScreenCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScreenCollectionViewCell.xib; sourceTree = "<group>"; };
+		18DBF77C2CDCA22F00EEA8C5 /* HomeScreenCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenCollectionViewCell.swift; sourceTree = "<group>"; };
 		18E499082CDA136800B57CA2 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		18E4990B2CDA579300B57CA2 /* HomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreen.storyboard; sourceTree = "<group>"; };
 		18F5681A2CCF8F6C00B3EE8D /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
@@ -70,8 +74,6 @@
 		18F568242CCF9CE600B3EE8D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		18F568262CCFA16500B3EE8D /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		18FA7B5E2CDB688700BCFB32 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
-		18FA7B612CDBA14A00BCFB32 /* HomeScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenCollectionViewCell.swift; sourceTree = "<group>"; };
-		18FA7B622CDBA14A00BCFB32 /* HomeScreenCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeScreenCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,9 +234,18 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		18DBF7792CDCA01C00EEA8C5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				18DBF7772CDC9B1E00EEA8C5 /* HomeScreenVCE.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		18E4990A2CDA576200B57CA2 /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				18DBF7792CDCA01C00EEA8C5 /* ViewModel */,
 				18FA7B602CDBA10900BCFB32 /* View */,
 				18E4990B2CDA579300B57CA2 /* HomeScreen.storyboard */,
 				18FA7B5E2CDB688700BCFB32 /* HomeScreenViewController.swift */,
@@ -301,8 +312,8 @@
 		18FA7B602CDBA10900BCFB32 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				18FA7B612CDBA14A00BCFB32 /* HomeScreenCollectionViewCell.swift */,
-				18FA7B622CDBA14A00BCFB32 /* HomeScreenCollectionViewCell.xib */,
+				18DBF77C2CDCA22F00EEA8C5 /* HomeScreenCollectionViewCell.swift */,
+				18DBF77A2CDCA22500EEA8C5 /* HomeScreenCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -367,7 +378,7 @@
 			files = (
 				18AABFA52CCF63DD00E35122 /* Gotham-Bold.otf in Resources */,
 				1818D5EE2CCB7C5B006FDFE1 /* LaunchScreen.storyboard in Resources */,
-				18FA7B642CDBA14A00BCFB32 /* HomeScreenCollectionViewCell.xib in Resources */,
+				18DBF77B2CDCA22500EEA8C5 /* HomeScreenCollectionViewCell.xib in Resources */,
 				1818D5EB2CCB7C5B006FDFE1 /* Assets.xcassets in Resources */,
 				18E4990C2CDA579300B57CA2 /* HomeScreen.storyboard in Resources */,
 				18AABFA32CCF63D200E35122 /* Gotham-Book.otf in Resources */,
@@ -391,6 +402,7 @@
 				18B1C8432CCBA43F00DED2C5 /* LoginViewController.swift in Sources */,
 				18F5681B2CCF8F6C00B3EE8D /* LoginData.swift in Sources */,
 				18F5681F2CCF94BB00B3EE8D /* ForgotPasswordViewController.swift in Sources */,
+				18DBF77D2CDCA22F00EEA8C5 /* HomeScreenCollectionViewCell.swift in Sources */,
 				18AC6EB92CCF732000235314 /* UITextFieldExtension.swift in Sources */,
 				1818D5E22CCB7C59006FDFE1 /* AppDelegate.swift in Sources */,
 				186292162CD26AC70052DF4A /* TextFieldType.swift in Sources */,
@@ -403,8 +415,8 @@
 				1862920C2CD0DA8D0052DF4A /* UILabelExtension.swift in Sources */,
 				187A61672CD8CD990028E3C3 /* LoginViewModel.swift in Sources */,
 				18F568252CCF9CE600B3EE8D /* Constants.swift in Sources */,
+				18DBF7782CDC9B1E00EEA8C5 /* HomeScreenVCE.swift in Sources */,
 				18FA7B5F2CDB688700BCFB32 /* HomeScreenViewController.swift in Sources */,
-				18FA7B632CDBA14A00BCFB32 /* HomeScreenCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

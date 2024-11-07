@@ -37,17 +37,17 @@ class LoginViewController: UIViewController{
         viewModel.onLoginSuccess = {
             [weak self] in
             DispatchQueue.main.async {
-                self?.showAlert(title: Constants.loginSuccess, message: Constants.welcomBack){
+                
                     self?.navigate(storyboardName: EnumConstants.HomeScreen.rawValue, viewControllerID: EnumConstants.HomeScreenViewController.rawValue)
                 }
             }
-        }
+        
         
         viewModel.onLoginFailure = {
             
             [weak self] errorMsg in
             DispatchQueue.main.async {
-                print(errorMsg)
+                
                 self?.showAlert(title: Constants.loginFailed, message:Constants.invalidCredentials )
             }
         }

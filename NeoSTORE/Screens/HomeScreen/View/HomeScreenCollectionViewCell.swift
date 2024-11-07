@@ -8,6 +8,8 @@
 import UIKit
 
 class HomeScreenCollectionViewCell: UICollectionViewCell {
+    
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

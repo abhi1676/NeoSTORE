@@ -16,17 +16,28 @@
                 <rect key="frame" x="0.0" y="0.0" width="371" height="253"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="OMA-3X-xIw">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WMV-xP-bef">
                         <rect key="frame" x="0.0" y="0.0" width="371" height="253"/>
-                    </pageControl>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="aQc-WY-730">
+                                <rect key="frame" x="0.0" y="197" width="371" height="26"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="aQc-WY-730" secondAttribute="trailing" id="0p7-WX-vWR"/>
+                            <constraint firstItem="aQc-WY-730" firstAttribute="leading" secondItem="WMV-xP-bef" secondAttribute="leading" id="YEj-Yx-KNq"/>
+                            <constraint firstAttribute="bottom" secondItem="aQc-WY-730" secondAttribute="bottom" constant="30" id="kkj-07-Gd1"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="OMA-3X-xIw" secondAttribute="trailing" id="3x0-kN-UUr"/>
-                <constraint firstAttribute="bottom" secondItem="OMA-3X-xIw" secondAttribute="bottom" id="TGz-iw-h4f"/>
-                <constraint firstItem="OMA-3X-xIw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="tDh-Uf-ZTm"/>
-                <constraint firstItem="OMA-3X-xIw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="vhp-2h-Djl"/>
+                <constraint firstAttribute="bottom" secondItem="WMV-xP-bef" secondAttribute="bottom" id="GM2-94-BlA"/>
+                <constraint firstItem="WMV-xP-bef" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Mbz-7l-Nm9"/>
+                <constraint firstItem="WMV-xP-bef" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Xbw-Sn-iU7"/>
+                <constraint firstAttribute="trailing" secondItem="WMV-xP-bef" secondAttribute="trailing" id="wtG-zK-zaR"/>
             </constraints>
             <size key="customSize" width="371" height="253"/>
             <point key="canvasLocation" x="353.43511450381681" y="91.197183098591552"/>

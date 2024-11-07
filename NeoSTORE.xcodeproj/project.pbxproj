@@ -27,7 +27,6 @@
 		18AABFA52CCF63DD00E35122 /* Gotham-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18AABFA42CCF63DD00E35122 /* Gotham-Bold.otf */; };
 		18AC6EB92CCF732000235314 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AC6EB82CCF732000235314 /* UITextFieldExtension.swift */; };
 		18B1C8432CCBA43F00DED2C5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B1C8422CCBA43F00DED2C5 /* LoginViewController.swift */; };
-		18DBF7782CDC9B1E00EEA8C5 /* HomeScreenVCE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBF7772CDC9B1E00EEA8C5 /* HomeScreenVCE.swift */; };
 		18DBF77B2CDCA22500EEA8C5 /* HomeScreenCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DBF77A2CDCA22500EEA8C5 /* HomeScreenCollectionViewCell.xib */; };
 		18DBF77D2CDCA22F00EEA8C5 /* HomeScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBF77C2CDCA22F00EEA8C5 /* HomeScreenCollectionViewCell.swift */; };
 		18E499092CDA136800B57CA2 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E499082CDA136800B57CA2 /* Register.swift */; };
@@ -63,7 +62,6 @@
 		18AABFA42CCF63DD00E35122 /* Gotham-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gotham-Bold.otf"; path = "../../../../Downloads/Gotham-Bold.otf"; sourceTree = "<group>"; };
 		18AC6EB82CCF732000235314 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		18B1C8422CCBA43F00DED2C5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		18DBF7772CDC9B1E00EEA8C5 /* HomeScreenVCE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenVCE.swift; sourceTree = "<group>"; };
 		18DBF77A2CDCA22500EEA8C5 /* HomeScreenCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScreenCollectionViewCell.xib; sourceTree = "<group>"; };
 		18DBF77C2CDCA22F00EEA8C5 /* HomeScreenCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenCollectionViewCell.swift; sourceTree = "<group>"; };
 		18E499082CDA136800B57CA2 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
@@ -237,7 +235,6 @@
 		18DBF7792CDCA01C00EEA8C5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				18DBF7772CDC9B1E00EEA8C5 /* HomeScreenVCE.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -415,7 +412,6 @@
 				1862920C2CD0DA8D0052DF4A /* UILabelExtension.swift in Sources */,
 				187A61672CD8CD990028E3C3 /* LoginViewModel.swift in Sources */,
 				18F568252CCF9CE600B3EE8D /* Constants.swift in Sources */,
-				18DBF7782CDC9B1E00EEA8C5 /* HomeScreenVCE.swift in Sources */,
 				18FA7B5F2CDB688700BCFB32 /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

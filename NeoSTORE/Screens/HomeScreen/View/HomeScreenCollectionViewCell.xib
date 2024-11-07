@@ -19,15 +19,22 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WMV-xP-bef">
                         <rect key="frame" x="0.0" y="0.0" width="371" height="253"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="aQc-WY-730">
-                                <rect key="frame" x="0.0" y="197" width="371" height="26"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SKk-It-GOm">
+                                <rect key="frame" x="0.0" y="0.0" width="371" height="253"/>
+                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="yvY-Os-NI2">
+                                <rect key="frame" x="0.0" y="217" width="371" height="26"/>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="aQc-WY-730" secondAttribute="trailing" id="0p7-WX-vWR"/>
-                            <constraint firstItem="aQc-WY-730" firstAttribute="leading" secondItem="WMV-xP-bef" secondAttribute="leading" id="YEj-Yx-KNq"/>
-                            <constraint firstAttribute="bottom" secondItem="aQc-WY-730" secondAttribute="bottom" constant="30" id="kkj-07-Gd1"/>
+                            <constraint firstAttribute="bottom" secondItem="yvY-Os-NI2" secondAttribute="bottom" constant="10" id="5v9-aq-YMH"/>
+                            <constraint firstItem="yvY-Os-NI2" firstAttribute="leading" secondItem="WMV-xP-bef" secondAttribute="leading" id="6su-oG-4Wf"/>
+                            <constraint firstAttribute="trailing" secondItem="SKk-It-GOm" secondAttribute="trailing" id="PoD-1J-Jzu"/>
+                            <constraint firstAttribute="bottom" secondItem="SKk-It-GOm" secondAttribute="bottom" id="VLU-39-6dj"/>
+                            <constraint firstItem="SKk-It-GOm" firstAttribute="top" secondItem="WMV-xP-bef" secondAttribute="top" id="Xk9-HD-zwg"/>
+                            <constraint firstAttribute="trailing" secondItem="yvY-Os-NI2" secondAttribute="trailing" id="pdE-Br-rbS"/>
+                            <constraint firstItem="SKk-It-GOm" firstAttribute="leading" secondItem="WMV-xP-bef" secondAttribute="leading" id="wau-Og-Y4h"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -40,6 +47,10 @@
                 <constraint firstAttribute="trailing" secondItem="WMV-xP-bef" secondAttribute="trailing" id="wtG-zK-zaR"/>
             </constraints>
             <size key="customSize" width="371" height="253"/>
+            <connections>
+                <outlet property="pageCOntrol" destination="yvY-Os-NI2" id="XCN-Er-8j0"/>
+                <outlet property="sliderImage" destination="SKk-It-GOm" id="Z94-p6-Bxz"/>
+            </connections>
             <point key="canvasLocation" x="353.43511450381681" y="91.197183098591552"/>
         </collectionViewCell>
     </objects>

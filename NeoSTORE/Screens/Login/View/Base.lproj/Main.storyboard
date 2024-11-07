@@ -166,10 +166,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2iQ-D7-lSe">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="664"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aT5-mQ-jWi">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="700"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="664"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NeoSTORE" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uz6-Gx-SbB">
                                                 <rect key="frame" x="71.666666666666686" y="30" width="250" height="45"/>
@@ -314,9 +314,6 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="464" id="hkm-h7-GMo"/>
-                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -325,16 +322,17 @@
                                             <constraint firstItem="Uz6-Gx-SbB" firstAttribute="top" secondItem="aT5-mQ-jWi" secondAttribute="top" constant="30" id="CjF-ur-tOV"/>
                                             <constraint firstItem="RBz-30-HAp" firstAttribute="leading" secondItem="aT5-mQ-jWi" secondAttribute="leading" constant="34" id="H0R-ec-gzg"/>
                                             <constraint firstItem="RBz-30-HAp" firstAttribute="top" secondItem="Uz6-Gx-SbB" secondAttribute="bottom" constant="75" id="P3k-ab-VE9"/>
-                                            <constraint firstAttribute="height" constant="700" id="pqw-gf-Hxg"/>
+                                            <constraint firstAttribute="bottom" secondItem="RBz-30-HAp" secondAttribute="bottom" constant="50" id="XID-cE-SoH"/>
                                             <constraint firstAttribute="trailing" secondItem="RBz-30-HAp" secondAttribute="trailing" constant="34" id="xaW-3g-8jf"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="aT5-mQ-jWi" firstAttribute="width" relation="greaterThanOrEqual" secondItem="2iQ-D7-lSe" secondAttribute="width" id="GE8-25-4zw"/>
+                                    <constraint firstItem="aT5-mQ-jWi" firstAttribute="width" secondItem="2iQ-D7-lSe" secondAttribute="width" id="Q8B-UN-v9O"/>
                                     <constraint firstAttribute="trailing" secondItem="aT5-mQ-jWi" secondAttribute="trailing" id="TMF-0v-cqY"/>
                                     <constraint firstItem="aT5-mQ-jWi" firstAttribute="bottom" secondItem="2iQ-D7-lSe" secondAttribute="bottom" id="Tcn-qN-sfk"/>
+                                    <constraint firstItem="aT5-mQ-jWi" firstAttribute="height" secondItem="2iQ-D7-lSe" secondAttribute="height" id="d6q-Av-LTW"/>
                                     <constraint firstItem="aT5-mQ-jWi" firstAttribute="leading" secondItem="2iQ-D7-lSe" secondAttribute="leading" id="lbz-Gc-nfr"/>
                                     <constraint firstItem="aT5-mQ-jWi" firstAttribute="top" secondItem="2iQ-D7-lSe" secondAttribute="top" id="q1e-Xr-MYr"/>
                                 </constraints>

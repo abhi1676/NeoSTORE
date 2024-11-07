@@ -7,12 +7,12 @@
 
 import UIKit
 
-class HomeScreenViewController: UIViewController {
+class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
 
     @IBOutlet var homeScreenCollectionView:
     UICollectionView!
     
-    
+    let images = [UIImage(named: "slider_img1"),UIImage(named: "slider_img2"),UIImage(named: "slider_img3"),UIImage(named: "slider_img4")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +23,7 @@ class HomeScreenViewController: UIViewController {
         homeScreenCollectionView.delegate = self
         homeScreenCollectionView.dataSource = self
         setUpNib()
+        homeScreenCollectionView.isPagingEnabled = true
     }
     
     func setUpNib(){
@@ -38,7 +39,35 @@ class HomeScreenViewController: UIViewController {
         print("search button tapped")
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        images.count
+    }
     
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeScreenCollectionViewCell", for: indexPath) as! HomeScreenCollectionViewCell
+        cell.configure(image: images[indexPath.row] ?? UIImage(), currentPage: indexPath.row, totalPages: images.count)
+        
+        return cell
+    }
+    
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        let pageIndex = round(scrollView.contentOffset.x / homeScreenCollectionView.frame.width)
+//        if let visibleCells = homeScreenCollectionView.visibleCells as? [HomeScreenCollectionViewCell] {
+//            visibleCells.forEach { cell in
+//                cell.pageCOntrol.currentPage = Int(pageIndex)
+//            }
+//        }
+//  }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+            let width =  homeScreenCollectionView.frame.width
+            let height =  homeScreenCollectionView.frame.height
+            return .init(width: width, height: height)
+            
+       
+       
+    }
 
 }
 

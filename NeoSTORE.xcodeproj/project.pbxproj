@@ -21,6 +21,7 @@
 		1879181B2CCFC28C00AADCC2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879181A2CCFC28C00AADCC2 /* RegisterViewController.swift */; };
 		187A61652CD88E710028E3C3 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A61642CD88E710028E3C3 /* EndPointType.swift */; };
 		187A61672CD8CD990028E3C3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A61662CD8CD990028E3C3 /* LoginViewModel.swift */; };
+		18801E282CDDEC4A00FF1D26 /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18801E272CDDEC4A00FF1D26 /* SlideViewController.swift */; };
 		18A3E4B52CD36E7200FA7CC2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A3E4B42CD36E7200FA7CC2 /* APIManager.swift */; };
 		18AABFA12CCF63CC00E35122 /* Gotham-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18AABFA02CCF63CC00E35122 /* Gotham-Medium.otf */; };
 		18AABFA32CCF63D200E35122 /* Gotham-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18AABFA22CCF63D200E35122 /* Gotham-Book.otf */; };
@@ -56,6 +57,7 @@
 		1879181A2CCFC28C00AADCC2 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		187A61642CD88E710028E3C3 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		187A61662CD8CD990028E3C3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		18801E272CDDEC4A00FF1D26 /* SlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewController.swift; sourceTree = "<group>"; };
 		18A3E4B42CD36E7200FA7CC2 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		18AABFA02CCF63CC00E35122 /* Gotham-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gotham-Medium.otf"; path = "../../../../Downloads/Gotham-Medium.otf"; sourceTree = "<group>"; };
 		18AABFA22CCF63D200E35122 /* Gotham-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gotham-Book.otf"; path = "../../../../Downloads/Gotham-Book.otf"; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 				18DBF7792CDCA01C00EEA8C5 /* ViewModel */,
 				18FA7B602CDBA10900BCFB32 /* View */,
 				18E4990B2CDA579300B57CA2 /* HomeScreen.storyboard */,
+				18801E272CDDEC4A00FF1D26 /* SlideViewController.swift */,
 				18FA7B5E2CDB688700BCFB32 /* HomeScreenViewController.swift */,
 			);
 			path = HomeScreen;
@@ -403,6 +406,7 @@
 				18AC6EB92CCF732000235314 /* UITextFieldExtension.swift in Sources */,
 				1818D5E22CCB7C59006FDFE1 /* AppDelegate.swift in Sources */,
 				186292162CD26AC70052DF4A /* TextFieldType.swift in Sources */,
+				18801E282CDDEC4A00FF1D26 /* SlideViewController.swift in Sources */,
 				18F568272CCFA16500B3EE8D /* Navigation.swift in Sources */,
 				186292102CD20D2F0052DF4A /* RegisterViewModel.swift in Sources */,
 				18A3E4B52CD36E7200FA7CC2 /* APIManager.swift in Sources */,

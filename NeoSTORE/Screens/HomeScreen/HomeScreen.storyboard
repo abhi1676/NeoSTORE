@@ -165,6 +165,35 @@
                                     <constraint firstItem="rfk-kJ-eou" firstAttribute="leading" secondItem="jT9-77-lVM" secondAttribute="leading" id="cVu-QB-MrW"/>
                                 </constraints>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GpW-Rv-HeU">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V25-iK-tnN">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="854"/>
+                                        <subviews>
+                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wsF-86-hhx">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="854"/>
+                                                <connections>
+                                                    <segue destination="yQT-4t-dPD" kind="embed" id="9sz-g7-mGO"/>
+                                                </connections>
+                                            </containerView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="280" id="4gK-nn-Zgc"/>
+                                            <constraint firstAttribute="bottom" secondItem="wsF-86-hhx" secondAttribute="bottom" id="AT0-WE-uga"/>
+                                            <constraint firstAttribute="trailing" secondItem="wsF-86-hhx" secondAttribute="trailing" id="GRL-47-HOi"/>
+                                            <constraint firstItem="wsF-86-hhx" firstAttribute="top" secondItem="V25-iK-tnN" secondAttribute="top" id="Gpr-05-ar7"/>
+                                            <constraint firstItem="wsF-86-hhx" firstAttribute="leading" secondItem="V25-iK-tnN" secondAttribute="leading" id="QxW-VU-amW"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="V25-iK-tnN" firstAttribute="top" secondItem="GpW-Rv-HeU" secondAttribute="top" id="HSF-fO-IG5"/>
+                                    <constraint firstItem="V25-iK-tnN" firstAttribute="leading" secondItem="GpW-Rv-HeU" secondAttribute="leading" id="Q1F-Pn-Rok"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qyd-c3-fRM"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -174,11 +203,17 @@
                             <constraint firstItem="jT9-77-lVM" firstAttribute="leading" secondItem="Qyd-c3-fRM" secondAttribute="leading" id="22I-m7-e18"/>
                             <constraint firstItem="jT9-77-lVM" firstAttribute="width" secondItem="sat-CB-5ye" secondAttribute="width" id="2pY-eW-7HK"/>
                             <constraint firstItem="z7i-Ya-3Mh" firstAttribute="height" secondItem="sat-CB-5ye" secondAttribute="height" multiplier="0.44" id="6s7-Xv-ar7"/>
+                            <constraint firstItem="Qyd-c3-fRM" firstAttribute="bottom" secondItem="GpW-Rv-HeU" secondAttribute="bottom" id="NsM-dC-Rma"/>
+                            <constraint firstItem="Qyd-c3-fRM" firstAttribute="top" secondItem="GpW-Rv-HeU" secondAttribute="top" constant="103" id="P1f-sJ-cMW"/>
+                            <constraint firstItem="V25-iK-tnN" firstAttribute="height" secondItem="sat-CB-5ye" secondAttribute="height" multiplier="1.00235" id="VjN-iG-eeL"/>
                             <constraint firstItem="jT9-77-lVM" firstAttribute="trailing" secondItem="Qyd-c3-fRM" secondAttribute="trailing" id="Wyq-jS-yZp"/>
                             <constraint firstAttribute="bottom" secondItem="jT9-77-lVM" secondAttribute="bottom" id="Xu7-q3-4Tv"/>
                             <constraint firstItem="jT9-77-lVM" firstAttribute="top" secondItem="sat-CB-5ye" secondAttribute="top" id="c2k-Yi-0Md"/>
+                            <constraint firstItem="Qyd-c3-fRM" firstAttribute="bottom" secondItem="GpW-Rv-HeU" secondAttribute="bottom" id="o0Y-TX-LmV"/>
+                            <constraint firstItem="Qyd-c3-fRM" firstAttribute="trailing" secondItem="GpW-Rv-HeU" secondAttribute="trailing" id="uYm-3P-N3d"/>
                             <constraint firstItem="D0S-nT-PWB" firstAttribute="height" secondItem="sat-CB-5ye" secondAttribute="height" multiplier="0.37" id="xA0-dE-KRn"/>
                             <constraint firstItem="rfk-kJ-eou" firstAttribute="height" secondItem="sat-CB-5ye" secondAttribute="height" multiplier="0.8" id="y2C-lF-epa"/>
+                            <constraint firstItem="GpW-Rv-HeU" firstAttribute="leading" secondItem="Qyd-c3-fRM" secondAttribute="leading" id="yBe-EA-toz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="NeoSTORE" id="IMj-70-fIQ"/>
@@ -215,6 +250,21 @@
             </objects>
             <point key="canvasLocation" x="1790.0763358778624" y="10.563380281690142"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="E65-Ue-EJU">
+            <objects>
+                <viewController id="yQT-4t-dPD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ruh-1b-hI2">
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="854"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="VTt-sV-5GK"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pQI-xS-yEf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3716" y="11"/>
+        </scene>
     </scenes>
     <resources>
         <image name="chairsicon" width="178" height="178"/>
@@ -223,6 +273,9 @@
         <image name="tableicon" width="178" height="178"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

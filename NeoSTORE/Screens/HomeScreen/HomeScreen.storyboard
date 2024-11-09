@@ -165,6 +165,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="rfk-kJ-eou" firstAttribute="trailing" secondItem="jT9-77-lVM" secondAttribute="trailing" id="8IE-VA-UJ3"/>
                                     <constraint firstAttribute="bottom" secondItem="rfk-kJ-eou" secondAttribute="bottom" id="D0H-Io-Qic"/>
@@ -172,9 +173,12 @@
                                     <constraint firstItem="rfk-kJ-eou" firstAttribute="centerX" secondItem="jT9-77-lVM" secondAttribute="centerX" id="bXh-fO-Rmt"/>
                                     <constraint firstItem="rfk-kJ-eou" firstAttribute="leading" secondItem="jT9-77-lVM" secondAttribute="leading" id="cVu-QB-MrW"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="FUs-Yq-Tbx" appends="YES" id="GV7-Ia-d8v"/>
+                                </connections>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GpW-Rv-HeU">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V25-iK-tnN">
                                         <rect key="frame" x="-280" y="0.0" width="280" height="854"/>
@@ -186,7 +190,7 @@
                                                 </connections>
                                             </containerView>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="280" id="4gK-nn-Zgc"/>
                                             <constraint firstAttribute="bottom" secondItem="wsF-86-hhx" secondAttribute="bottom" id="AT0-WE-uga"/>
@@ -198,6 +202,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="ADA-Mc-BjZ"/>
                                     <constraint firstItem="V25-iK-tnN" firstAttribute="top" secondItem="GpW-Rv-HeU" secondAttribute="top" id="HSF-fO-IG5"/>
                                     <constraint firstItem="V25-iK-tnN" firstAttribute="leading" secondItem="GpW-Rv-HeU" secondAttribute="leading" constant="-280" id="Q1F-Pn-Rok"/>
                                     <constraint firstAttribute="bottom" secondItem="V25-iK-tnN" secondAttribute="bottom" constant="-36" id="jzc-dX-8Jl"/>
@@ -218,7 +223,6 @@
                             <constraint firstAttribute="bottom" secondItem="jT9-77-lVM" secondAttribute="bottom" id="Xu7-q3-4Tv"/>
                             <constraint firstItem="jT9-77-lVM" firstAttribute="top" secondItem="sat-CB-5ye" secondAttribute="top" id="c2k-Yi-0Md"/>
                             <constraint firstItem="Qyd-c3-fRM" firstAttribute="bottom" secondItem="GpW-Rv-HeU" secondAttribute="bottom" id="o0Y-TX-LmV"/>
-                            <constraint firstItem="Qyd-c3-fRM" firstAttribute="trailing" secondItem="GpW-Rv-HeU" secondAttribute="trailing" id="uYm-3P-N3d"/>
                             <constraint firstItem="D0S-nT-PWB" firstAttribute="height" secondItem="sat-CB-5ye" secondAttribute="height" multiplier="0.37" id="xA0-dE-KRn"/>
                             <constraint firstItem="rfk-kJ-eou" firstAttribute="height" secondItem="sat-CB-5ye" secondAttribute="height" multiplier="0.8" id="y2C-lF-epa"/>
                             <constraint firstItem="GpW-Rv-HeU" firstAttribute="leading" secondItem="Qyd-c3-fRM" secondAttribute="leading" id="yBe-EA-toz"/>
@@ -296,7 +300,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="xMn-BJ-5DQ" firstAttribute="leading" secondItem="M4d-fe-NJ5" secondAttribute="leading" id="0IG-8b-zJC"/>
                                     <constraint firstAttribute="trailing" secondItem="xMn-BJ-5DQ" secondAttribute="trailing" id="Avy-Zn-vUD"/>
@@ -310,11 +314,11 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="23f-Uj-oQo">
                                 <rect key="frame" x="0.0" y="275" width="280" height="579"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VTt-sV-5GK"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="M4d-fe-NJ5" firstAttribute="height" secondItem="ruh-1b-hI2" secondAttribute="height" multiplier="0.24" id="39c-DX-RPA"/>
                             <constraint firstItem="M4d-fe-NJ5" firstAttribute="trailing" secondItem="VTt-sV-5GK" secondAttribute="trailing" id="4KU-Kp-Nyy"/>
@@ -328,6 +332,7 @@
                     </view>
                     <connections>
                         <outlet property="slideMenuTableView" destination="23f-Uj-oQo" id="AmO-Pz-ged"/>
+                        <outlet property="slideMenuView" destination="ruh-1b-hI2" id="U5g-Eu-4qF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pQI-xS-yEf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

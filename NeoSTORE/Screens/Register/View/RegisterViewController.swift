@@ -78,7 +78,7 @@ class RegisterViewController: UIViewController {
         
         email.setIcon(UIImage(named: Constants.emailIcon) ?? UIImage())
         phoneNumber.setIcon(UIImage(named: Constants.phonenumberIcon) ?? UIImage())
-        
+
         
         termAndConditionLabel.setUnderLineToLabel(termAndConditionLabel.self, Constants.termsAndConditions)
         

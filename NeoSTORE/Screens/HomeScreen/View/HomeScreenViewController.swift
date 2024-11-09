@@ -12,6 +12,12 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
     @IBOutlet var homeScreenCollectionView:
     UICollectionView!
     
+    @IBOutlet var slideMenuLeadingConstraint: NSLayoutConstraint!
+
+    
+    
+    @IBOutlet var backViewForSlideMenu: UIView!
+    
     let images = [UIImage(named: "slider_img1"),UIImage(named: "slider_img2"),UIImage(named: "slider_img3"),UIImage(named: "slider_img4")]
     
     override func viewDidLoad() {
@@ -24,6 +30,7 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
         homeScreenCollectionView.dataSource = self
         setUpNib()
         homeScreenCollectionView.isPagingEnabled = true
+        backViewForSlideMenu.isHidden = true
     }
     
     func setUpNib(){
@@ -31,8 +38,21 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
         homeScreenCollectionView.register(nib, forCellWithReuseIdentifier: "HomeScreenCollectionViewCell")
     }
     @objc func menuButtonTapped(){
-        print("menu button tapped")
+        backViewForSlideMenu.isHidden = false
+        UIView.animate(withDuration: 0.5) {
+            self.slideMenuLeadingConstraint.constant = 0
+            self.view.layoutIfNeeded()
+        }
     }
+    
+    @IBAction func homeScreentapped(_ sender: UITapGestureRecognizer) {
+        backViewForSlideMenu.isHidden = true
+        UIView.animate(withDuration: 0.5) {
+            self.slideMenuLeadingConstraint.constant = -280
+            self.view.layoutIfNeeded()
+        }
+    }
+    
     
     
     @objc func serachButtonTapped(){

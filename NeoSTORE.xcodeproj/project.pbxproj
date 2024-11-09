@@ -12,6 +12,8 @@
 		1818D5E92CCB7C59006FDFE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1818D5E72CCB7C59006FDFE1 /* Main.storyboard */; };
 		1818D5EB2CCB7C5B006FDFE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1818D5EA2CCB7C5B006FDFE1 /* Assets.xcassets */; };
 		1818D5EE2CCB7C5B006FDFE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1818D5EC2CCB7C5B006FDFE1 /* LaunchScreen.storyboard */; };
+		183507FB2CDF39DF008CC561 /* SlideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183507F92CDF39DF008CC561 /* SlideMenuTableViewCell.swift */; };
+		183507FC2CDF39DF008CC561 /* SlideMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183507FA2CDF39DF008CC561 /* SlideMenuTableViewCell.xib */; };
 		1862920C2CD0DA8D0052DF4A /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862920B2CD0DA8D0052DF4A /* UILabelExtension.swift */; };
 		1862920E2CD206100052DF4A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862920D2CD206100052DF4A /* StringExtension.swift */; };
 		186292102CD20D2F0052DF4A /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862920F2CD20D2F0052DF4A /* RegisterViewModel.swift */; };
@@ -48,6 +50,8 @@
 		1818D5EA2CCB7C5B006FDFE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1818D5ED2CCB7C5B006FDFE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1818D5EF2CCB7C5B006FDFE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		183507F92CDF39DF008CC561 /* SlideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenuTableViewCell.swift; sourceTree = "<group>"; };
+		183507FA2CDF39DF008CC561 /* SlideMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideMenuTableViewCell.xib; sourceTree = "<group>"; };
 		1862920B2CD0DA8D0052DF4A /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		1862920D2CD206100052DF4A /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		1862920F2CD20D2F0052DF4A /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
@@ -247,8 +251,6 @@
 				18DBF7792CDCA01C00EEA8C5 /* ViewModel */,
 				18FA7B602CDBA10900BCFB32 /* View */,
 				18E4990B2CDA579300B57CA2 /* HomeScreen.storyboard */,
-				18801E272CDDEC4A00FF1D26 /* SlideViewController.swift */,
-				18FA7B5E2CDB688700BCFB32 /* HomeScreenViewController.swift */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -312,8 +314,12 @@
 		18FA7B602CDBA10900BCFB32 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18801E272CDDEC4A00FF1D26 /* SlideViewController.swift */,
+				18FA7B5E2CDB688700BCFB32 /* HomeScreenViewController.swift */,
 				18DBF77C2CDCA22F00EEA8C5 /* HomeScreenCollectionViewCell.swift */,
 				18DBF77A2CDCA22500EEA8C5 /* HomeScreenCollectionViewCell.xib */,
+				183507F92CDF39DF008CC561 /* SlideMenuTableViewCell.swift */,
+				183507FA2CDF39DF008CC561 /* SlideMenuTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -381,6 +387,7 @@
 				18DBF77B2CDCA22500EEA8C5 /* HomeScreenCollectionViewCell.xib in Resources */,
 				1818D5EB2CCB7C5B006FDFE1 /* Assets.xcassets in Resources */,
 				18E4990C2CDA579300B57CA2 /* HomeScreen.storyboard in Resources */,
+				183507FC2CDF39DF008CC561 /* SlideMenuTableViewCell.xib in Resources */,
 				18AABFA32CCF63D200E35122 /* Gotham-Book.otf in Resources */,
 				18AABFA12CCF63CC00E35122 /* Gotham-Medium.otf in Resources */,
 				1818D5E92CCB7C59006FDFE1 /* Main.storyboard in Resources */,
@@ -410,6 +417,7 @@
 				18F568272CCFA16500B3EE8D /* Navigation.swift in Sources */,
 				186292102CD20D2F0052DF4A /* RegisterViewModel.swift in Sources */,
 				18A3E4B52CD36E7200FA7CC2 /* APIManager.swift in Sources */,
+				183507FB2CDF39DF008CC561 /* SlideMenuTableViewCell.swift in Sources */,
 				18E499092CDA136800B57CA2 /* Register.swift in Sources */,
 				1862920E2CD206100052DF4A /* StringExtension.swift in Sources */,
 				1818D5E42CCB7C59006FDFE1 /* SceneDelegate.swift in Sources */,

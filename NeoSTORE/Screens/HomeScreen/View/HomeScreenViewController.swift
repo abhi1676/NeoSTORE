@@ -32,7 +32,7 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
     
     @IBOutlet var tapGesture: UITapGestureRecognizer!
     
-    
+    var selectedCategoryId:Int?
     
     
     
@@ -140,28 +140,49 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
 
     @IBAction func tableProductTapped(_ sender: Any) {
         print("Tables tapped")
-        navigate(storyboardName: "HomeScreen", viewControllerID: "ProductListViewController")
+       navigateToProductList(categoryId: 1)
     }
     
     
     @IBAction func sofasProductTapped(_ sender: Any) {
         print("sofas tapped")
-        navigate(storyboardName: "HomeScreen", viewControllerID: "ProductListViewController")
+        navigateToProductList(categoryId: 3)
 
     }
     
     
     @IBAction func chairProductTapped(_ sender: Any) {
         print("chairs tapped")
-        navigate(storyboardName: "HomeScreen", viewControllerID: "ProductListViewController")
+
+        navigateToProductList(categoryId: 2)
 
     }
     
     @IBAction func cupboardProductTapped(_ sender: Any) {
+
         print("cupboards tapped")
-        navigate(storyboardName: "HomeScreen", viewControllerID: "ProductListViewController")
+        navigateToProductList(categoryId: 4)
 
     }
+    
+    func navigateToProductList(categoryId:Int) {
+        let sb = UIStoryboard(name: "HomeScreen", bundle: nil)
+      
+         if let nextVc = sb.instantiateViewController(withIdentifier: "ProductListViewController") as? ProductListViewController
+                
+        {
+             nextVc.categoryId = categoryId
+             if let navigationController = self.navigationController {
+                 navigationController.pushViewController(nextVc, animated: true)
+             }
+             else{
+                 print("Error! In Navigation")
+             }
+             
+         }
+       
+     }
+    
 }
 
 

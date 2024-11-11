@@ -409,7 +409,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JPi-cB-C81">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="109" width="393" height="709"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProductCell" id="aeh-Xj-lOX">
@@ -422,13 +422,23 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aw8-z6-wHC">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="D0Q-EZ-Ly5"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="X1R-wR-crp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="aw8-z6-wHC" firstAttribute="leading" secondItem="X1R-wR-crp" secondAttribute="leading" id="6Hr-k4-e1D"/>
                             <constraint firstItem="X1R-wR-crp" firstAttribute="bottom" secondItem="JPi-cB-C81" secondAttribute="bottom" id="7zv-CO-MWu"/>
+                            <constraint firstItem="X1R-wR-crp" firstAttribute="trailing" secondItem="aw8-z6-wHC" secondAttribute="trailing" id="8Zl-Fk-NQH"/>
+                            <constraint firstItem="aw8-z6-wHC" firstAttribute="top" secondItem="rFh-57-WXe" secondAttribute="top" id="RaS-cZ-jft"/>
                             <constraint firstItem="JPi-cB-C81" firstAttribute="leading" secondItem="X1R-wR-crp" secondAttribute="leading" id="Tlr-Yt-wEw"/>
-                            <constraint firstItem="JPi-cB-C81" firstAttribute="top" secondItem="X1R-wR-crp" secondAttribute="top" id="hxP-gG-Dax"/>
+                            <constraint firstItem="JPi-cB-C81" firstAttribute="top" secondItem="X1R-wR-crp" secondAttribute="top" constant="50" id="hxP-gG-Dax"/>
                             <constraint firstItem="X1R-wR-crp" firstAttribute="trailing" secondItem="JPi-cB-C81" secondAttribute="trailing" id="y7o-rT-q0U"/>
                         </constraints>
                     </view>

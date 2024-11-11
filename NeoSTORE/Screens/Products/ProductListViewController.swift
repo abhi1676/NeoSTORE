@@ -3,9 +3,8 @@ import UIKit
 class ProductListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
-    var categoryId: Int = 1
     var viewModel = ProductViewModel()
-
+    var categoryId:Int?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -15,7 +14,9 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
     }
 
     func fetchProductsForCategory() {
-        viewModel.fetchProducts(categoryId: categoryId) {
+        
+        viewModel.fetchProducts(categoryId: categoryId!) {
+            
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -34,4 +35,6 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
         
         return cell
     }
+    
+   
 }

@@ -13,7 +13,6 @@ extension UIViewController {
        let sb = UIStoryboard(name: storyboardName, bundle: nil)
      
         let nextVc = sb.instantiateViewController(withIdentifier: viewControllerID)
-        
         if let navigationController = self.navigationController {
             navigationController.pushViewController(nextVc, animated: true)
         }

@@ -19,12 +19,21 @@ class LoginViewModel {
             switch result {
             case .success(let response):
                 
-                guard let user = response.data else {
+                guard let user = response.data,
+                        let firstName = user.first_name,
+                        let lastName = user.last_name,
+                         let email = user.email else {
                     self.onLoginFailure?(Constants.userNotFound)
                     return
                 }
-                
+                let fullname = "\(firstName + lastName)"
+           
+             
+                UserDefaults.standard.set(fullname,forKey: Constants.fullname)
+                UserDefaults.standard.set(email,forKey:Constants.email)
+                print(fullname," ",email)
                 UserDefaults.standard.set(user.access_token, forKey: Constants.accessToken)
+                
                 self.onLoginSuccess?()
                 
             case .failure(let error):

@@ -11,9 +11,14 @@ class SlideViewController: UIViewController {
 
     @IBOutlet var slideMenuTableView: UITableView!
     
-    let slideImages = ["chair","table"]
-    let slideItems = ["My Cart","Tables"]
+    let slideImages = ["chair","table","sofa","chair","cupboard","username_icon","storelocator_icon","logout_icon"]
+    let slideItems = ["My Cart","Tables","Sofas","Chairs","Cupboards","My Account","Store Locator","My Orders","Logout"]
     @IBOutlet var slideMenuView: UIView!
+    
+    @IBOutlet var fullname: UILabel!
+    
+    @IBOutlet var email: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +28,9 @@ class SlideViewController: UIViewController {
         slideMenuTableView.delegate = self
         slideMenuTableView.dataSource = self
         slideMenuView.layer.cornerRadius = 10
+        
+        fullname.text = UserDefaults.standard.string(forKey: Constants.fullname)
+        email.text = UserDefaults.standard.string(forKey: Constants.email)
         
     }
     
@@ -38,10 +46,13 @@ extension SlideViewController:UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SlideMenuTableViewCell", for: indexPath) as! SlideMenuTableViewCell
         cell.layer.borderColor = UIColor.black.cgColor
-        cell.layer.borderWidth = 1
+
         cell.slideImage.image = UIImage(named: slideImages[indexPath.row])
         cell.slideItem.text = slideItems[indexPath.row]
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("tapped on ",slideItems[indexPath.row])
     }
     
     

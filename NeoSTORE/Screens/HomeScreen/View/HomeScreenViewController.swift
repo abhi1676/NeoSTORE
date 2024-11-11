@@ -14,7 +14,9 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
     
     @IBOutlet var slideMenuLeadingConstraint: NSLayoutConstraint!
 
+    @IBOutlet var backViewLeading: NSLayoutConstraint!
     
+    @IBOutlet var backView: UIView!
     
     @IBOutlet var backViewForSlideMenu: UIView!
     
@@ -32,6 +34,7 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
         homeScreenCollectionView.isPagingEnabled = true
         backViewForSlideMenu.isHidden = true
         backViewForSlideMenu.layer.cornerRadius = 10
+        
     }
     
     func setUpNib(){
@@ -39,6 +42,8 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
         homeScreenCollectionView.register(nib, forCellWithReuseIdentifier: "HomeScreenCollectionViewCell")
     }
     @objc func menuButtonTapped(){
+        backView.isUserInteractionEnabled = true
+
         self.navigationController?.navigationBar.isHidden = true
         backViewForSlideMenu.isHidden = false
         UIView.animate(withDuration: 0.5) {
@@ -49,6 +54,7 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
     
     @IBAction func homeScreentapped(_ sender: UITapGestureRecognizer) {
         
+        backView.isUserInteractionEnabled = false
 
        print("homescrren tapped")
         UIView.animate(withDuration: 0.5) {

@@ -222,7 +222,6 @@
                             <constraint firstItem="jT9-77-lVM" firstAttribute="trailing" secondItem="Qyd-c3-fRM" secondAttribute="trailing" id="Wyq-jS-yZp"/>
                             <constraint firstAttribute="bottom" secondItem="jT9-77-lVM" secondAttribute="bottom" id="Xu7-q3-4Tv"/>
                             <constraint firstItem="jT9-77-lVM" firstAttribute="top" secondItem="sat-CB-5ye" secondAttribute="top" id="c2k-Yi-0Md"/>
-                            <constraint firstItem="Qyd-c3-fRM" firstAttribute="bottom" secondItem="GpW-Rv-HeU" secondAttribute="bottom" id="o0Y-TX-LmV"/>
                             <constraint firstItem="D0S-nT-PWB" firstAttribute="height" secondItem="sat-CB-5ye" secondAttribute="height" multiplier="0.37" id="xA0-dE-KRn"/>
                             <constraint firstItem="rfk-kJ-eou" firstAttribute="height" secondItem="sat-CB-5ye" secondAttribute="height" multiplier="0.8" id="y2C-lF-epa"/>
                             <constraint firstItem="GpW-Rv-HeU" firstAttribute="leading" secondItem="Qyd-c3-fRM" secondAttribute="leading" id="yBe-EA-toz"/>
@@ -230,7 +229,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="NeoSTORE" id="IMj-70-fIQ"/>
                     <connections>
+                        <outlet property="backView" destination="GpW-Rv-HeU" id="2jr-Eh-0gf"/>
                         <outlet property="backViewForSlideMenu" destination="GpW-Rv-HeU" id="0Ud-nT-bq5"/>
+                        <outlet property="backViewLeading" destination="yBe-EA-toz" id="Zxb-jR-suu"/>
                         <outlet property="homeScreenCollectionView" destination="D0S-nT-PWB" id="62D-gy-WGH"/>
                         <outlet property="slideMenuLeadingConstraint" destination="Q1F-Pn-Rok" id="Kjo-Zy-EaA"/>
                     </connections>
@@ -281,20 +282,19 @@
                                 <rect key="frame" x="0.0" y="70" width="280" height="205"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="username_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Lhd-cq-m4g">
-                                        <rect key="frame" x="98.666666666666686" y="36" width="83" height="83"/>
+                                        <rect key="frame" x="98" y="15" width="84" height="83"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="83" id="gHK-4n-LOw"/>
-                                            <constraint firstAttribute="height" constant="83" id="wBr-Mi-x3F"/>
+                                            <constraint firstAttribute="height" constant="83" id="DNn-Db-VN8"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abhi Kadam" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMn-BJ-5DQ">
-                                        <rect key="frame" x="0.0" y="132" width="280" height="27"/>
+                                        <rect key="frame" x="0.0" y="111" width="280" height="27"/>
                                         <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abhi2@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PsK-fX-jiK">
-                                        <rect key="frame" x="0.0" y="172" width="280" height="15.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="151" width="280" height="15.666666666666657"/>
                                         <fontDescription key="fontDescription" name="Gotham-Book" family="Gotham" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -304,15 +304,17 @@
                                 <constraints>
                                     <constraint firstItem="xMn-BJ-5DQ" firstAttribute="leading" secondItem="M4d-fe-NJ5" secondAttribute="leading" id="0IG-8b-zJC"/>
                                     <constraint firstAttribute="trailing" secondItem="xMn-BJ-5DQ" secondAttribute="trailing" id="Avy-Zn-vUD"/>
+                                    <constraint firstItem="Lhd-cq-m4g" firstAttribute="width" secondItem="M4d-fe-NJ5" secondAttribute="width" multiplier="0.3" id="Dhe-s3-tDB"/>
                                     <constraint firstItem="PsK-fX-jiK" firstAttribute="top" secondItem="xMn-BJ-5DQ" secondAttribute="bottom" constant="13" id="DvN-op-2Ks"/>
+                                    <constraint firstItem="xMn-BJ-5DQ" firstAttribute="top" secondItem="Lhd-cq-m4g" secondAttribute="bottom" constant="13" id="NEB-xv-MNs"/>
                                     <constraint firstItem="PsK-fX-jiK" firstAttribute="leading" secondItem="M4d-fe-NJ5" secondAttribute="leading" id="SMe-a1-wWe"/>
-                                    <constraint firstItem="Lhd-cq-m4g" firstAttribute="top" secondItem="M4d-fe-NJ5" secondAttribute="top" constant="36" id="dka-bQ-vWG"/>
-                                    <constraint firstItem="xMn-BJ-5DQ" firstAttribute="top" secondItem="Lhd-cq-m4g" secondAttribute="bottom" constant="13" id="wAD-YL-LST"/>
+                                    <constraint firstItem="Lhd-cq-m4g" firstAttribute="top" secondItem="M4d-fe-NJ5" secondAttribute="top" constant="15" id="o7R-f5-aKh"/>
+                                    <constraint firstItem="xMn-BJ-5DQ" firstAttribute="centerX" secondItem="M4d-fe-NJ5" secondAttribute="centerX" id="qMK-jE-rmU"/>
                                     <constraint firstAttribute="trailing" secondItem="PsK-fX-jiK" secondAttribute="trailing" id="wYK-3N-ggB"/>
                                     <constraint firstItem="Lhd-cq-m4g" firstAttribute="centerX" secondItem="M4d-fe-NJ5" secondAttribute="centerX" id="xgj-Ve-myG"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="23f-Uj-oQo">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="23f-Uj-oQo">
                                 <rect key="frame" x="0.0" y="275" width="280" height="579"/>
                                 <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
@@ -322,15 +324,17 @@
                         <constraints>
                             <constraint firstItem="M4d-fe-NJ5" firstAttribute="height" secondItem="ruh-1b-hI2" secondAttribute="height" multiplier="0.24" id="39c-DX-RPA"/>
                             <constraint firstItem="M4d-fe-NJ5" firstAttribute="trailing" secondItem="VTt-sV-5GK" secondAttribute="trailing" id="4KU-Kp-Nyy"/>
+                            <constraint firstItem="M4d-fe-NJ5" firstAttribute="top" secondItem="VTt-sV-5GK" secondAttribute="top" constant="11" id="9hZ-vk-fSK"/>
                             <constraint firstItem="23f-Uj-oQo" firstAttribute="leading" secondItem="VTt-sV-5GK" secondAttribute="leading" id="Bp5-Lj-db9"/>
                             <constraint firstAttribute="bottom" secondItem="23f-Uj-oQo" secondAttribute="bottom" id="KVQ-3V-fEN"/>
                             <constraint firstItem="23f-Uj-oQo" firstAttribute="top" secondItem="M4d-fe-NJ5" secondAttribute="bottom" id="OgC-Qa-LrM"/>
                             <constraint firstItem="M4d-fe-NJ5" firstAttribute="leading" secondItem="VTt-sV-5GK" secondAttribute="leading" id="aSb-Du-KsP"/>
-                            <constraint firstItem="M4d-fe-NJ5" firstAttribute="top" secondItem="ruh-1b-hI2" secondAttribute="top" constant="70" id="dgf-1K-VXE"/>
                             <constraint firstItem="VTt-sV-5GK" firstAttribute="trailing" secondItem="23f-Uj-oQo" secondAttribute="trailing" id="r8m-OT-Nse"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="email" destination="PsK-fX-jiK" id="Vvl-gj-bTg"/>
+                        <outlet property="fullname" destination="xMn-BJ-5DQ" id="wer-vq-zDn"/>
                         <outlet property="slideMenuTableView" destination="23f-Uj-oQo" id="AmO-Pz-ged"/>
                         <outlet property="slideMenuView" destination="ruh-1b-hI2" id="U5g-Eu-4qF"/>
                     </connections>

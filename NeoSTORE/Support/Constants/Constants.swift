@@ -66,6 +66,8 @@ struct Constants{
     static let welcomBack = "WELCOME BACK"
     static let male = "M"
     static let female = "F"
+    static let fullname = "fullname"
+    
 }
 
 

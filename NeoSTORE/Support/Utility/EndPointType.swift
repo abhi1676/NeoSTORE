@@ -22,6 +22,7 @@ protocol EndPointType{
 enum EndPointList{
     case login
     case register
+    case products
 }
 
 extension EndPointList:EndPointType{
@@ -41,6 +42,8 @@ extension EndPointList:EndPointType{
             return Constants.login
         case .register:
            return Constants.register
+        case .products : 
+            return Constants.products
         }
     }
   

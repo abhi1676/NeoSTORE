@@ -20,6 +20,23 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
     
     @IBOutlet var backViewForSlideMenu: UIView!
     
+    
+    @IBOutlet var tableProductView: UIView!
+    
+    @IBOutlet var sofaProductView: UIImageView!
+    
+    @IBOutlet var chairProductView: UIView!
+    
+    
+    @IBOutlet var cupboardProductView: UIView!
+    
+    @IBOutlet var tapGesture: UITapGestureRecognizer!
+    
+    
+    
+    
+    
+    
     let images = [UIImage(named: "slider_img1"),UIImage(named: "slider_img2"),UIImage(named: "slider_img3"),UIImage(named: "slider_img4")]
     
     override func viewDidLoad() {
@@ -50,6 +67,8 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
             self.slideMenuLeadingConstraint.constant = 0
             self.view.layoutIfNeeded()
         }
+        tapGesture.isEnabled = true
+
     }
     
     @IBAction func homeScreentapped(_ sender: UITapGestureRecognizer) {
@@ -66,6 +85,8 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
             self.navigationController?.navigationBar.isHidden = false
 
         }
+        
+        tapGesture.isEnabled = false
         
     }
     
@@ -104,7 +125,43 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
        
        
     }
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else {return}
+        print("Tables tapped")
+        if tableProductView == touch.view{
+            print("Tables tapped")
+        }
+        if sofaProductView == touch.view{
+            print("sofas tapped")
+        }
+    }
 
+    @IBAction func tableProductTapped(_ sender: Any) {
+        print("Tables tapped")
+        navigate(storyboardName: "HomeScreen", viewControllerID: "ProductListViewController")
+    }
+    
+    
+    @IBAction func sofasProductTapped(_ sender: Any) {
+        print("sofas tapped")
+        navigate(storyboardName: "HomeScreen", viewControllerID: "ProductListViewController")
+
+    }
+    
+    
+    @IBAction func chairProductTapped(_ sender: Any) {
+        print("chairs tapped")
+        navigate(storyboardName: "HomeScreen", viewControllerID: "ProductListViewController")
+
+    }
+    
+    @IBAction func cupboardProductTapped(_ sender: Any) {
+        print("cupboards tapped")
+        navigate(storyboardName: "HomeScreen", viewControllerID: "ProductListViewController")
+
+    }
 }
 
 

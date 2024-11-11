@@ -36,7 +36,7 @@ final class APIManager {
         method: HTTPMethod,
         completion: @escaping Handler<T>
     ) {
-        guard let url = type.url else {
+        guard var url = type.url else {
             completion(.failure(.invalidURL))
             return
         }
@@ -68,6 +68,28 @@ final class APIManager {
             }
         }
         
+//         get request
+        else  if let requestModel = requestModel, method == .get {
+            do {
+                let encoder = URLFormParameterEncoder()
+                let parameterString = try encoder.encode(requestModel)
+                let url = "\(type.url!)"
+                if !parameterString.isEmpty {
+                    let fullURLString =  url + "?" + parameterString
+                    urlRequest.url = URL(string: fullURLString) // Update the URL with query parameters
+                } else {
+                    urlRequest.url = URL(string: url)
+                }
+                // let jsonString =
+                // let urlRequest.httpBody = requestModel.data(using: .utf8)
+                urlRequest.setValue(Constants.applicationOrFormURLEndcoded, forHTTPHeaderField: Constants.httpHeaderField)
+            } catch {
+                completion(.failure(.network(Constants.requestModelFailure)))
+                return
+            }
+        }
+//        }
+        
        
         let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
             if let error = error {
@@ -94,8 +116,23 @@ final class APIManager {
                 let decoder = JSONDecoder()
                 let decoded = try decoder.decode(T.self, from: data)
                 completion(.success(decoded))
-            } catch {
+            }  catch let decodingError as DecodingError {
+                switch decodingError {
+                case .typeMismatch(let type, let context):
+                    print("Type mismatch error: expected \(type), but got \(context.debugDescription)")
+                case .valueNotFound(let type, let context):
+                    print("Value not found: expected \(type), but got \(context.debugDescription)")
+                case .keyNotFound(let key, let context):
+                    print("Key not found: expected key \(key) but got \(context.debugDescription)")
+                case .dataCorrupted(let context):
+                    print("Data corrupted: \(context.debugDescription)")
+                @unknown default:
+                    print("Unknown error")
+                }
+            }
+            catch {
                 completion(.failure(.invalidDecoding))
+
             }
         }
         

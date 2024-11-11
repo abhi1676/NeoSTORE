@@ -14,6 +14,9 @@
 		1818D5EE2CCB7C5B006FDFE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1818D5EC2CCB7C5B006FDFE1 /* LaunchScreen.storyboard */; };
 		183507FB2CDF39DF008CC561 /* SlideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183507F92CDF39DF008CC561 /* SlideMenuTableViewCell.swift */; };
 		183507FC2CDF39DF008CC561 /* SlideMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183507FA2CDF39DF008CC561 /* SlideMenuTableViewCell.xib */; };
+		183A0D172CE20ABC002D9850 /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A0D162CE20ABC002D9850 /* ProductList.swift */; };
+		183A0D192CE20B0D002D9850 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A0D182CE20B0D002D9850 /* ProductViewModel.swift */; };
+		183A0D1B2CE20C3A002D9850 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A0D1A2CE20C3A002D9850 /* ProductListViewController.swift */; };
 		1862920C2CD0DA8D0052DF4A /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862920B2CD0DA8D0052DF4A /* UILabelExtension.swift */; };
 		1862920E2CD206100052DF4A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862920D2CD206100052DF4A /* StringExtension.swift */; };
 		186292102CD20D2F0052DF4A /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862920F2CD20D2F0052DF4A /* RegisterViewModel.swift */; };
@@ -52,6 +55,9 @@
 		1818D5EF2CCB7C5B006FDFE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		183507F92CDF39DF008CC561 /* SlideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		183507FA2CDF39DF008CC561 /* SlideMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideMenuTableViewCell.xib; sourceTree = "<group>"; };
+		183A0D162CE20ABC002D9850 /* ProductList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
+		183A0D182CE20B0D002D9850 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		183A0D1A2CE20C3A002D9850 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		1862920B2CD0DA8D0052DF4A /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		1862920D2CD206100052DF4A /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		1862920F2CD20D2F0052DF4A /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
@@ -119,6 +125,16 @@
 				18AABF9F2CCF636300E35122 /* CustomFont */,
 			);
 			path = NeoSTORE;
+			sourceTree = "<group>";
+		};
+		183A0D152CE20AA1002D9850 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				183A0D162CE20ABC002D9850 /* ProductList.swift */,
+				183A0D182CE20B0D002D9850 /* ProductViewModel.swift */,
+				183A0D1A2CE20C3A002D9850 /* ProductListViewController.swift */,
+			);
+			path = Products;
 			sourceTree = "<group>";
 		};
 		187918102CCFC1E100AADCC2 /* Register */ = {
@@ -201,6 +217,7 @@
 		18B092A52CCB7DE2007F19F4 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				183A0D152CE20AA1002D9850 /* Products */,
 				18E4990A2CDA576200B57CA2 /* HomeScreen */,
 				187918102CCFC1E100AADCC2 /* Register */,
 				18F568182CCF8BD300B3EE8D /* Login */,
@@ -412,12 +429,15 @@
 				18DBF77D2CDCA22F00EEA8C5 /* HomeScreenCollectionViewCell.swift in Sources */,
 				18AC6EB92CCF732000235314 /* UITextFieldExtension.swift in Sources */,
 				1818D5E22CCB7C59006FDFE1 /* AppDelegate.swift in Sources */,
+				183A0D172CE20ABC002D9850 /* ProductList.swift in Sources */,
 				186292162CD26AC70052DF4A /* TextFieldType.swift in Sources */,
 				18801E282CDDEC4A00FF1D26 /* SlideViewController.swift in Sources */,
 				18F568272CCFA16500B3EE8D /* Navigation.swift in Sources */,
 				186292102CD20D2F0052DF4A /* RegisterViewModel.swift in Sources */,
 				18A3E4B52CD36E7200FA7CC2 /* APIManager.swift in Sources */,
 				183507FB2CDF39DF008CC561 /* SlideMenuTableViewCell.swift in Sources */,
+				183A0D192CE20B0D002D9850 /* ProductViewModel.swift in Sources */,
+				183A0D1B2CE20C3A002D9850 /* ProductListViewController.swift in Sources */,
 				18E499092CDA136800B57CA2 /* Register.swift in Sources */,
 				1862920E2CD206100052DF4A /* StringExtension.swift in Sources */,
 				1818D5E42CCB7C59006FDFE1 /* SceneDelegate.swift in Sources */,

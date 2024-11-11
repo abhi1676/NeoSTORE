@@ -37,6 +37,7 @@ struct Constants{
     static let baseURL = "http://staging.php-dev.in:8844/trainingapp/api/"
     static let login = "users/login"
     static let register = "users/register"
+    static let products = "products/getList"
     static let accessToken = "accessToken"
     static let httpHeaderField = "Content-Type"
     static let applicationOrJson = "application/json"

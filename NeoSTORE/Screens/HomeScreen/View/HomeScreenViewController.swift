@@ -27,6 +27,7 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
     
     @IBOutlet var chairProductView: UIView!
     
+    @IBOutlet var rightSideView: UIView!
     
     @IBOutlet var cupboardProductView: UIView!
     
@@ -51,7 +52,8 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
         homeScreenCollectionView.isPagingEnabled = true
         backViewForSlideMenu.isHidden = true
         backViewForSlideMenu.layer.cornerRadius = 10
-        
+        rightSideView.isUserInteractionEnabled = false
+
     }
     
     func setUpNib(){
@@ -59,22 +61,20 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
         homeScreenCollectionView.register(nib, forCellWithReuseIdentifier: "HomeScreenCollectionViewCell")
     }
     @objc func menuButtonTapped(){
+        rightSideView.isUserInteractionEnabled = true
         backView.isUserInteractionEnabled = true
-
         self.navigationController?.navigationBar.isHidden = true
         backViewForSlideMenu.isHidden = false
         UIView.animate(withDuration: 0.5) {
             self.slideMenuLeadingConstraint.constant = 0
             self.view.layoutIfNeeded()
         }
-        tapGesture.isEnabled = true
 
     }
     
     @IBAction func homeScreentapped(_ sender: UITapGestureRecognizer) {
-        
         backView.isUserInteractionEnabled = false
-
+        rightSideView.isUserInteractionEnabled = false
        print("homescrren tapped")
         UIView.animate(withDuration: 0.5) {
             self.slideMenuLeadingConstraint.constant = -280
@@ -86,7 +86,6 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
 
         }
         
-        tapGesture.isEnabled = false
         
     }
     

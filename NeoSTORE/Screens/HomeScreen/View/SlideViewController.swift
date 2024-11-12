@@ -11,7 +11,7 @@ class SlideViewController: UIViewController {
 
     @IBOutlet var slideMenuTableView: UITableView!
     
-    let slideImages = ["chair","table","sofa","chair","cupboard","username_icon","storelocator_icon","logout_icon"]
+    let slideImages = ["shopping_cart","table","sofa","chair","cupboard","username_icon","storelocator_icon","myorders_icon","logout_icon"]
     let slideItems = ["My Cart","Tables","Sofas","Chairs","Cupboards","My Account","Store Locator","My Orders","Logout"]
     @IBOutlet var slideMenuView: UIView!
     

@@ -28,6 +28,8 @@
 		186292122CD23BD50052DF4A /* EnumConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186292112CD23BD50052DF4A /* EnumConstants.swift */; };
 		186292142CD251550052DF4A /* UiViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186292132CD251550052DF4A /* UiViewControllerExtension.swift */; };
 		186292162CD26AC70052DF4A /* TextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186292152CD26AC70052DF4A /* TextFieldType.swift */; };
+		186A03732CE4D7E20011923A /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A03722CE4D7E20011923A /* UIViewExtension.swift */; };
+		186A03752CE4DF700011923A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A03742CE4DF700011923A /* Event.swift */; };
 		1879181B2CCFC28C00AADCC2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879181A2CCFC28C00AADCC2 /* RegisterViewController.swift */; };
 		187A61652CD88E710028E3C3 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A61642CD88E710028E3C3 /* EndPointType.swift */; };
 		187A61672CD8CD990028E3C3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A61662CD8CD990028E3C3 /* LoginViewModel.swift */; };
@@ -76,6 +78,8 @@
 		186292112CD23BD50052DF4A /* EnumConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumConstants.swift; sourceTree = "<group>"; };
 		186292132CD251550052DF4A /* UiViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiViewControllerExtension.swift; sourceTree = "<group>"; };
 		186292152CD26AC70052DF4A /* TextFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldType.swift; sourceTree = "<group>"; };
+		186A03722CE4D7E20011923A /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		186A03742CE4DF700011923A /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		1879181A2CCFC28C00AADCC2 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		187A61642CD88E710028E3C3 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		187A61662CD8CD990028E3C3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -298,6 +302,7 @@
 				18F568262CCFA16500B3EE8D /* Navigation.swift */,
 				186292152CD26AC70052DF4A /* TextFieldType.swift */,
 				18A3E4B42CD36E7200FA7CC2 /* APIManager.swift */,
+				186A03742CE4DF700011923A /* Event.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 				1862920D2CD206100052DF4A /* StringExtension.swift */,
 				186292132CD251550052DF4A /* UiViewControllerExtension.swift */,
 				18280E5B2CE33B1F00FD8411 /* UIImageExtension.swift */,
+				186A03722CE4D7E20011923A /* UIViewExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -496,6 +502,7 @@
 				188BF7FA2CE38F4400475E7A /* ProductDetailViewModel.swift in Sources */,
 				1879181B2CCFC28C00AADCC2 /* RegisterViewController.swift in Sources */,
 				18B1C8432CCBA43F00DED2C5 /* LoginViewController.swift in Sources */,
+				186A03732CE4D7E20011923A /* UIViewExtension.swift in Sources */,
 				18F5681B2CCF8F6C00B3EE8D /* LoginData.swift in Sources */,
 				18F5681F2CCF94BB00B3EE8D /* ForgotPasswordViewController.swift in Sources */,
 				18DBF77D2CDCA22F00EEA8C5 /* HomeScreenCollectionViewCell.swift in Sources */,
@@ -506,6 +513,7 @@
 				18280E5C2CE33B1F00FD8411 /* UIImageExtension.swift in Sources */,
 				18801E282CDDEC4A00FF1D26 /* SlideViewController.swift in Sources */,
 				18F568272CCFA16500B3EE8D /* Navigation.swift in Sources */,
+				186A03752CE4DF700011923A /* Event.swift in Sources */,
 				186292102CD20D2F0052DF4A /* RegisterViewModel.swift in Sources */,
 				18A3E4B52CD36E7200FA7CC2 /* APIManager.swift in Sources */,
 				183507FB2CDF39DF008CC561 /* SlideMenuTableViewCell.swift in Sources */,

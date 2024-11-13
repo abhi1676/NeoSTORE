@@ -444,7 +444,7 @@
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="barTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="20"/>
+                                    <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="20"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </textAttributes>
                                 <items>
@@ -502,22 +502,86 @@
                                     <navigationItem id="rgC-p7-dZB"/>
                                 </items>
                             </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iyo-1r-xEw">
+                                <rect key="frame" x="0.0" y="104" width="393" height="80"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="F3X-YK-Hyx">
+                                        <rect key="frame" x="13" y="13" width="367" height="67"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOV-hZ-q41">
+                                                <rect key="frame" x="0.0" y="0.0" width="367" height="19"/>
+                                                <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Id-0Q-1ur">
+                                                <rect key="frame" x="0.0" y="24" width="367" height="19"/>
+                                                <fontDescription key="fontDescription" name="Gotham-Book" family="Gotham" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="PIg-ZX-eVv">
+                                                <rect key="frame" x="0.0" y="48" width="367" height="19"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gwl-jJ-FSz">
+                                                        <rect key="frame" x="0.0" y="0.0" width="176" height="19"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pOW-FW-jaP" customClass="StarRatingView" customModule="NeoSTORE" customModuleProvider="target">
+                                                        <rect key="frame" x="191" y="0.0" width="176" height="19"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="F3X-YK-Hyx" secondAttribute="bottom" id="dfL-lk-dV5"/>
+                                    <constraint firstItem="F3X-YK-Hyx" firstAttribute="top" secondItem="Iyo-1r-xEw" secondAttribute="top" constant="13" id="lF1-6X-cSf"/>
+                                    <constraint firstAttribute="trailing" secondItem="F3X-YK-Hyx" secondAttribute="trailing" constant="13" id="mOU-Fc-ZAy"/>
+                                    <constraint firstAttribute="height" constant="80" id="u29-hc-Xdk"/>
+                                    <constraint firstItem="F3X-YK-Hyx" firstAttribute="leading" secondItem="Iyo-1r-xEw" secondAttribute="leading" constant="13" id="yI4-5n-D5K"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T1u-EN-vpw" userLabel="ShimmerView">
+                                <rect key="frame" x="0.0" y="104" width="393" height="714"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Nmp-YP-ctE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Iyo-1r-xEw" firstAttribute="leading" secondItem="Nmp-YP-ctE" secondAttribute="leading" id="3XU-0r-2Sy"/>
+                            <constraint firstItem="Iyo-1r-xEw" firstAttribute="top" secondItem="jrL-kf-MW0" secondAttribute="bottom" id="6Pl-St-hk7"/>
                             <constraint firstItem="jrL-kf-MW0" firstAttribute="top" secondItem="wjh-Ln-9Wk" secondAttribute="bottom" id="94S-B5-Ifs"/>
+                            <constraint firstItem="T1u-EN-vpw" firstAttribute="top" secondItem="Iyo-1r-xEw" secondAttribute="top" id="Nia-Tg-l96"/>
+                            <constraint firstItem="Nmp-YP-ctE" firstAttribute="trailing" secondItem="T1u-EN-vpw" secondAttribute="trailing" id="PJn-o7-qhc"/>
                             <constraint firstItem="wjh-Ln-9Wk" firstAttribute="leading" secondItem="hh7-jn-5Sn" secondAttribute="leading" id="UEG-JE-vrX"/>
+                            <constraint firstItem="T1u-EN-vpw" firstAttribute="leading" secondItem="Nmp-YP-ctE" secondAttribute="leading" id="WIh-hU-dzY"/>
+                            <constraint firstItem="Nmp-YP-ctE" firstAttribute="trailing" secondItem="Iyo-1r-xEw" secondAttribute="trailing" id="Whv-in-fIi"/>
                             <constraint firstItem="jrL-kf-MW0" firstAttribute="trailing" secondItem="Nmp-YP-ctE" secondAttribute="trailing" id="c4q-U1-ZG1"/>
+                            <constraint firstItem="Nmp-YP-ctE" firstAttribute="bottom" secondItem="T1u-EN-vpw" secondAttribute="bottom" id="kBG-4i-cdg"/>
                             <constraint firstItem="jrL-kf-MW0" firstAttribute="leading" secondItem="Nmp-YP-ctE" secondAttribute="leading" id="kBW-FH-TmP"/>
                             <constraint firstAttribute="trailing" secondItem="wjh-Ln-9Wk" secondAttribute="trailing" id="lbB-hh-3PT"/>
                             <constraint firstItem="wjh-Ln-9Wk" firstAttribute="top" secondItem="hh7-jn-5Sn" secondAttribute="top" id="o0j-Dw-m4C"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="productCategoryLbl" destination="8Id-0Q-1ur" id="8Ii-Mo-UqJ"/>
+                        <outlet property="productInfoLbl" destination="Gwl-jJ-FSz" id="Ain-7v-5Af"/>
+                        <outlet property="productNameLbl" destination="ZOV-hZ-q41" id="qfm-Af-g8F"/>
+                        <outlet property="productStarView" destination="pOW-FW-jaP" id="Mv9-ez-mK2"/>
+                        <outlet property="shimmerView" destination="T1u-EN-vpw" id="YAk-mO-Tav"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Cq-vp-NCd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5613" y="11"/>
+            <point key="canvasLocation" x="5612.9770992366412" y="10.563380281690142"/>
         </scene>
     </scenes>
     <resources>
@@ -528,6 +592,9 @@
         <image name="username_icon" width="15" height="21"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

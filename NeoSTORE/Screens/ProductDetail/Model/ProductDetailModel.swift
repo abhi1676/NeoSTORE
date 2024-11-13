@@ -16,7 +16,7 @@ struct ProductDetailData:Codable{
     let id, product_category_id: Int
        let name, producer, description: String
        let cost, rating, view_count: Int
-       let created, modified: Date
+       let created, modified: String
        let product_images: [ProductImage]
 
     
@@ -25,7 +25,7 @@ struct ProductDetailData:Codable{
 struct ProductImage:Codable{
     let id, product_id: Int
         let image: String
-        let created, modified: Date
+        let created, modified: String
 
         
 }

@@ -49,6 +49,7 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
         let product = viewModel.products?.data?[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductsTableViewCell", for: indexPath) as! ProductsTableViewCell
         cell.productName.text = product?.name
+     
         cell.productMaker.text = product?.producer
         cell.productPrice.text = "Rs.\(product?.cost ?? 0)"
         if let imageurl = URL(string: product?.product_images ?? "")
@@ -66,13 +67,16 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        // navigate(storyboardName: EnumConstants.HomeScreen.rawValue, viewControllerID: "ProductDetailViewController")
-        navigateToProductDetails(index: indexPath.row)
+        let product = viewModel.products?.data?[indexPath.row]
+
+        navigateToProductDetails(index: product?.id ?? 1,name:product?.name ?? "")
     }
     
-    private func navigateToProductDetails(index:Int){
+    private func navigateToProductDetails(index:Int,name:String){
         let sb = UIStoryboard(name: "HomeScreen", bundle: nil)
         let productDetailVC = sb.instantiateViewController(withIdentifier: "ProductDetailViewController") as! ProductDetailViewController
-        productDetailVC.productName = self.viewModel.products?.data?[index].name ?? ""
+        productDetailVC.productId = index
+        productDetailVC.productName = name
         navigationController?.pushViewController(productDetailVC, animated: true)
         //navigate(storyboardName: "HomeScreen", viewControllerID: "ProductDetailViewController")
     }

@@ -38,6 +38,7 @@ struct Constants{
     static let login = "users/login"
     static let register = "users/register"
     static let products = "products/getList"
+    static let productDeatil = "products/getDetail"
     static let accessToken = "accessToken"
     static let httpHeaderField = "Content-Type"
     static let applicationOrJson = "application/json"

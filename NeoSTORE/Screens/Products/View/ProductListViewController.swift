@@ -5,6 +5,9 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var tableView: UITableView!
     var viewModel = ProductViewModel()
     var categoryId:Int?
+    
+    @IBOutlet var shimmerView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -15,6 +18,9 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
         self.navigationController?.navigationBar.topItem?.title = ""
         let nib = UINib(nibName: "ProductsTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "ProductsTableViewCell")
+        self.observeEvent()
+        shimmerView.isUserInteractionEnabled = false
+        self.shimmerView.isShimmering = true
         
     }
     func setNavigationTitle(){
@@ -32,6 +38,36 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
 
         }
     }
+    func observeEvent(){
+        viewModel.eventHandler = { [weak self] event in
+            guard let self = self else {return}
+            
+            switch event {
+            case .loading :
+                
+                self.shimmerView.isHidden = false
+                self.shimmerView.startShimmering()
+                print("loading")
+                
+            case .stopLoading :
+                self.shimmerView.stopShimmering()
+                DispatchQueue.main.async {
+                    self.shimmerView.isHidden = true
+                }
+                print("Loading Stopped")
+            case .dataLoaded :
+                print("data loaded")
+                self.shimmerView.stopShimmering()
+                DispatchQueue.main.async {
+                    self.shimmerView.isHidden = true
+                }
+              
+            case .error(let error):
+                print(error ?? "error")
+            }
+        }
+    }
+    
     func fetchProductsForCategory() {
         viewModel.fetchProducts(categoryId: categoryId!) {
             

@@ -42,6 +42,11 @@
 		18AABFA52CCF63DD00E35122 /* Gotham-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18AABFA42CCF63DD00E35122 /* Gotham-Bold.otf */; };
 		18AC6EB92CCF732000235314 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AC6EB82CCF732000235314 /* UITextFieldExtension.swift */; };
 		18B1C8432CCBA43F00DED2C5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B1C8422CCBA43F00DED2C5 /* LoginViewController.swift */; };
+		18B7F2412CE5FBD3003264BF /* CartListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7F2402CE5FBD3003264BF /* CartListModel.swift */; };
+		18B7F2442CE5FCF2003264BF /* CartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7F2432CE5FCF2003264BF /* CartModel.swift */; };
+		18B7F2492CE5FDA9003264BF /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7F2482CE5FDA9003264BF /* CartViewModel.swift */; };
+		18B7F24B2CE5FDC3003264BF /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7F24A2CE5FDC3003264BF /* CartViewController.swift */; };
+		18B7F24D2CE5FE13003264BF /* OrderScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B7F24C2CE5FE13003264BF /* OrderScreen.storyboard */; };
 		18DBF77B2CDCA22500EEA8C5 /* HomeScreenCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DBF77A2CDCA22500EEA8C5 /* HomeScreenCollectionViewCell.xib */; };
 		18DBF77D2CDCA22F00EEA8C5 /* HomeScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBF77C2CDCA22F00EEA8C5 /* HomeScreenCollectionViewCell.swift */; };
 		18E499092CDA136800B57CA2 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E499082CDA136800B57CA2 /* Register.swift */; };
@@ -92,6 +97,11 @@
 		18AABFA42CCF63DD00E35122 /* Gotham-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gotham-Bold.otf"; path = "../../../../Downloads/Gotham-Bold.otf"; sourceTree = "<group>"; };
 		18AC6EB82CCF732000235314 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		18B1C8422CCBA43F00DED2C5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		18B7F2402CE5FBD3003264BF /* CartListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListModel.swift; sourceTree = "<group>"; };
+		18B7F2432CE5FCF2003264BF /* CartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartModel.swift; sourceTree = "<group>"; };
+		18B7F2482CE5FDA9003264BF /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		18B7F24A2CE5FDC3003264BF /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		18B7F24C2CE5FE13003264BF /* OrderScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrderScreen.storyboard; sourceTree = "<group>"; };
 		18DBF77A2CDCA22500EEA8C5 /* HomeScreenCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScreenCollectionViewCell.xib; sourceTree = "<group>"; };
 		18DBF77C2CDCA22F00EEA8C5 /* HomeScreenCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenCollectionViewCell.swift; sourceTree = "<group>"; };
 		18E499082CDA136800B57CA2 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
@@ -287,6 +297,7 @@
 		18B092A52CCB7DE2007F19F4 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				18B7F2422CE5FC02003264BF /* CartList */,
 				18280E642CE35D5300FD8411 /* ProductDetail */,
 				183A0D152CE20AA1002D9850 /* Products */,
 				18E4990A2CDA576200B57CA2 /* HomeScreen */,
@@ -327,6 +338,42 @@
 				186292112CD23BD50052DF4A /* EnumConstants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		18B7F2422CE5FC02003264BF /* CartList */ = {
+			isa = PBXGroup;
+			children = (
+				18B7F2472CE5FD87003264BF /* ViewModel */,
+				18B7F2462CE5FD7E003264BF /* View */,
+				18B7F2452CE5FD70003264BF /* Model */,
+				18B7F24C2CE5FE13003264BF /* OrderScreen.storyboard */,
+			);
+			path = CartList;
+			sourceTree = "<group>";
+		};
+		18B7F2452CE5FD70003264BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18B7F2402CE5FBD3003264BF /* CartListModel.swift */,
+				18B7F2432CE5FCF2003264BF /* CartModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18B7F2462CE5FD7E003264BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18B7F24A2CE5FDC3003264BF /* CartViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18B7F2472CE5FD87003264BF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				18B7F2482CE5FDA9003264BF /* CartViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		18DBF7792CDCA01C00EEA8C5 /* ViewModel */ = {
@@ -483,6 +530,7 @@
 				183507FC2CDF39DF008CC561 /* SlideMenuTableViewCell.xib in Resources */,
 				18AABFA32CCF63D200E35122 /* Gotham-Book.otf in Resources */,
 				18AABFA12CCF63CC00E35122 /* Gotham-Medium.otf in Resources */,
+				18B7F24D2CE5FE13003264BF /* OrderScreen.storyboard in Resources */,
 				1818D5E92CCB7C59006FDFE1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,12 +557,15 @@
 				18AC6EB92CCF732000235314 /* UITextFieldExtension.swift in Sources */,
 				1818D5E22CCB7C59006FDFE1 /* AppDelegate.swift in Sources */,
 				183A0D172CE20ABC002D9850 /* Product Model.swift in Sources */,
+				18B7F2442CE5FCF2003264BF /* CartModel.swift in Sources */,
 				186292162CD26AC70052DF4A /* TextFieldType.swift in Sources */,
 				18280E5C2CE33B1F00FD8411 /* UIImageExtension.swift in Sources */,
 				18801E282CDDEC4A00FF1D26 /* SlideViewController.swift in Sources */,
+				18B7F24B2CE5FDC3003264BF /* CartViewController.swift in Sources */,
 				18F568272CCFA16500B3EE8D /* Navigation.swift in Sources */,
 				186A03752CE4DF700011923A /* Event.swift in Sources */,
 				186292102CD20D2F0052DF4A /* RegisterViewModel.swift in Sources */,
+				18B7F2492CE5FDA9003264BF /* CartViewModel.swift in Sources */,
 				18A3E4B52CD36E7200FA7CC2 /* APIManager.swift in Sources */,
 				183507FB2CDF39DF008CC561 /* SlideMenuTableViewCell.swift in Sources */,
 				183A0D192CE20B0D002D9850 /* ProductViewModel.swift in Sources */,
@@ -523,6 +574,7 @@
 				183A0D1B2CE20C3A002D9850 /* ProductListViewController.swift in Sources */,
 				188BF7F72CE38E0300475E7A /* ProductDetailModel.swift in Sources */,
 				18E499092CDA136800B57CA2 /* Register.swift in Sources */,
+				18B7F2412CE5FBD3003264BF /* CartListModel.swift in Sources */,
 				1862920E2CD206100052DF4A /* StringExtension.swift in Sources */,
 				1818D5E42CCB7C59006FDFE1 /* SceneDelegate.swift in Sources */,
 				1862920C2CD0DA8D0052DF4A /* UILabelExtension.swift in Sources */,
@@ -680,7 +732,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -710,7 +762,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

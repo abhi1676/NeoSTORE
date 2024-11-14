@@ -10,8 +10,9 @@ import Foundation
 
 class ProductViewModel {
     var products: Product? 
-
+    var eventHandler : ((_ event:Event) -> Void)?
     func fetchProducts(categoryId: Int, completion: @escaping () -> Void) {
+        self.eventHandler?(.loading)
         let requestModel = ProductRequest(product_category_id: categoryId)
         
         APIManager.shared.manager(
@@ -23,9 +24,11 @@ class ProductViewModel {
             switch result {
             case .success(let fetchedProducts):
                 self.products = fetchedProducts
+                self.eventHandler?(.dataLoaded)
                 completion()
             case .failure(let error):
                 print("Error: \(error)")
+                self.eventHandler?(.error(error))
             }
         }
     }

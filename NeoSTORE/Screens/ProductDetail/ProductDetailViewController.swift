@@ -21,6 +21,28 @@ class ProductDetailViewController: UIViewController {
     
     @IBOutlet var productStarView: StarRatingView!
     
+    @IBOutlet var productPrice: UILabel!
+    
+    @IBOutlet var shareButton: UIButton!
+    
+    @IBOutlet var productImage1: UIImageView!
+    
+    @IBOutlet var productImage2: UIImageView!
+    
+    
+    @IBOutlet var productImage3: UIImageView!
+    
+    @IBOutlet var productImage4: UIImageView!
+    
+    @IBOutlet var productDescription: UITextView!
+    
+    @IBAction func productBuyButtonTapped(_ sender: Any) {
+    }
+    
+    @IBAction func productRateButtonTapped(_ sender: Any) {
+    }
+    
+    
     @IBOutlet var shimmerView: UIView!
     
     override func viewDidLoad() {
@@ -29,7 +51,7 @@ class ProductDetailViewController: UIViewController {
         self.navigationController?.navigationBar.topItem?.title = ""
         fetchProductDetail()
         self.observeEvent()
-        shimmerView.isUserInteractionEnabled = false
+        self.shimmerView.isUserInteractionEnabled = false
         self.shimmerView.isShimmering = true
     }
     
@@ -40,8 +62,9 @@ class ProductDetailViewController: UIViewController {
     
 
     func setUpUI(data:ProductDetail?){
-        productNameLbl.text = data?.data.name
-         
+        guard let product = data?.data else {return}
+        productNameLbl.text = product.name
+        productPrice.text = "Rs\(product.cost)"
             switch viewmodel?.productDetail?.data.product_category_id {
             case 1:
                 productCategoryLbl.text = "Category - Table"
@@ -54,11 +77,23 @@ class ProductDetailViewController: UIViewController {
             default:
                 break
             }
-        
-        productInfoLbl.text = data?.data.producer
-        if let rating = data?.data.rating{
-            productStarView.rating = rating
+        productInfoLbl.text = product.producer
+        productStarView.rating = product.rating
+        if let imgurl = URL(string: product.product_images[0].image){
+            productImage1.loadImage(from: imgurl)
+            productImage2.loadImage(from: imgurl)
+            productImage3.loadImage(from: imgurl)
+            productImage4.loadImage(from: imgurl)
+
+
         }
+            
+        
+       
+
+        
+        
+        
         
     }
     func fetchProductDetail(){

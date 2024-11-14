@@ -24,6 +24,7 @@ enum EndPointList{
     case register
     case products
     case productDetail
+    case cart
 }
 
 extension EndPointList:EndPointType{
@@ -47,6 +48,8 @@ extension EndPointList:EndPointType{
             return Constants.products
         case .productDetail :
             return Constants.productDeatil
+        case .cart :
+            return Constants.cart
         }
     }
   

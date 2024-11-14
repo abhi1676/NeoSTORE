@@ -34,6 +34,23 @@ class SlideViewController: UIViewController {
         
     }
     
+    func navigateToProductList(categoryId:Int) {
+        let sb = UIStoryboard(name: "HomeScreen", bundle: nil)
+      
+         if let nextVc = sb.instantiateViewController(withIdentifier: "ProductListViewController") as? ProductListViewController
+                
+        {
+             nextVc.categoryId = categoryId
+             if let navigationController = self.navigationController {
+                 navigationController.pushViewController(nextVc, animated: true)
+             }
+             else{
+                 print("Error! In Navigation")
+             }
+             
+         }
+       
+     }
 
 
 }
@@ -42,7 +59,7 @@ extension SlideViewController:UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         slideImages.count
     }
-    
+   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SlideMenuTableViewCell", for: indexPath) as! SlideMenuTableViewCell
         cell.layer.borderColor = UIColor.black.cgColor
@@ -59,6 +76,9 @@ extension SlideViewController:UITableViewDataSource,UITableViewDelegate{
         }
         cell.slideImage.image = UIImage(named: slideImages[indexPath.row])
         cell.slideItem.text = slideItems[indexPath.row]
+        
+        
+      
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

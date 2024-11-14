@@ -37,9 +37,11 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet var productDescription: UITextView!
     
     @IBAction func productBuyButtonTapped(_ sender: Any) {
+        navigate(storyboardName: "OrderScreen", viewControllerID: "AddressViewController")
     }
     
     @IBAction func productRateButtonTapped(_ sender: Any) {
+        navigate(storyboardName: "OrderScreen", viewControllerID: "AddressListViewController")
     }
     
     

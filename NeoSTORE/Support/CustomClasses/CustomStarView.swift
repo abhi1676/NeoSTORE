@@ -10,7 +10,7 @@ import UIKit
 
 class StarRatingView: UIView {
     
-    private var starImageViews: [UIImageView] = []
+     var starImageViews: [UIImageView] = []
     private let maxRating = 5
     var checkedStarImage: UIImage?
     var uncheckedStarImage: UIImage?
@@ -66,5 +66,31 @@ class StarRatingView: UIView {
         for (index, imageView) in starImageViews.enumerated() {
             imageView.image = (index < rating) ? checkedStarImage : uncheckedStarImage
         }
+    }
+    
+    
+}
+class PopupStarRatingView: StarRatingView {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        addTapGestures()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        addTapGestures()
+    }
+    
+    private func addTapGestures() {
+        for imageView in starImageViews {
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleStarTap(_:)))
+            imageView.addGestureRecognizer(tapGesture)
+        }
+    }
+    
+    @objc private func handleStarTap(_ gesture: UITapGestureRecognizer) {
+        guard let tappedStar = gesture.view else { return }
+        rating = tappedStar.tag + 1
     }
 }

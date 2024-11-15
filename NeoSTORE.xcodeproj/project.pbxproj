@@ -37,6 +37,8 @@
 		188BF7F72CE38E0300475E7A /* ProductDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BF7F62CE38E0300475E7A /* ProductDetailModel.swift */; };
 		188BF7FA2CE38F4400475E7A /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BF7F92CE38F4400475E7A /* ProductDetailViewModel.swift */; };
 		18A3E4B52CD36E7200FA7CC2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A3E4B42CD36E7200FA7CC2 /* APIManager.swift */; };
+		18A9084A2CE750A00056C499 /* RatePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A908482CE750A00056C499 /* RatePopUpViewController.swift */; };
+		18A9084B2CE750A00056C499 /* RatePopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A908492CE750A00056C499 /* RatePopUpViewController.xib */; };
 		18AABFA12CCF63CC00E35122 /* Gotham-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18AABFA02CCF63CC00E35122 /* Gotham-Medium.otf */; };
 		18AABFA32CCF63D200E35122 /* Gotham-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18AABFA22CCF63D200E35122 /* Gotham-Book.otf */; };
 		18AABFA52CCF63DD00E35122 /* Gotham-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18AABFA42CCF63DD00E35122 /* Gotham-Bold.otf */; };
@@ -96,6 +98,8 @@
 		188BF7F62CE38E0300475E7A /* ProductDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailModel.swift; sourceTree = "<group>"; };
 		188BF7F92CE38F4400475E7A /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
 		18A3E4B42CD36E7200FA7CC2 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		18A908482CE750A00056C499 /* RatePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatePopUpViewController.swift; sourceTree = "<group>"; };
+		18A908492CE750A00056C499 /* RatePopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatePopUpViewController.xib; sourceTree = "<group>"; };
 		18AABFA02CCF63CC00E35122 /* Gotham-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gotham-Medium.otf"; path = "../../../../Downloads/Gotham-Medium.otf"; sourceTree = "<group>"; };
 		18AABFA22CCF63D200E35122 /* Gotham-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gotham-Book.otf"; path = "../../../../Downloads/Gotham-Book.otf"; sourceTree = "<group>"; };
 		18AABFA42CCF63DD00E35122 /* Gotham-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gotham-Bold.otf"; path = "../../../../Downloads/Gotham-Bold.otf"; sourceTree = "<group>"; };
@@ -192,6 +196,7 @@
 		18280E642CE35D5300FD8411 /* ProductDetail */ = {
 			isa = PBXGroup;
 			children = (
+				18A908472CE750830056C499 /* View */,
 				188BF7F82CE38F1E00475E7A /* ViewModel */,
 				188BF7F52CE38DEC00475E7A /* Model */,
 				18280E672CE3746E00FD8411 /* ProductDetailViewController.swift */,
@@ -265,6 +270,15 @@
 				188BF7F92CE38F4400475E7A /* ProductDetailViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		18A908472CE750830056C499 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18A908482CE750A00056C499 /* RatePopUpViewController.swift */,
+				18A908492CE750A00056C499 /* RatePopUpViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		18AABF9F2CCF636300E35122 /* CustomFont */ = {
@@ -567,6 +581,7 @@
 				18AABFA32CCF63D200E35122 /* Gotham-Book.otf in Resources */,
 				18AABFA12CCF63CC00E35122 /* Gotham-Medium.otf in Resources */,
 				18B7F24D2CE5FE13003264BF /* OrderScreen.storyboard in Resources */,
+				18A9084B2CE750A00056C499 /* RatePopUpViewController.xib in Resources */,
 				18B7F2582CE6372D003264BF /* AddressListTableViewCell.xib in Resources */,
 				1818D5E92CCB7C59006FDFE1 /* Main.storyboard in Resources */,
 			);
@@ -618,6 +633,7 @@
 				1862920E2CD206100052DF4A /* StringExtension.swift in Sources */,
 				1818D5E42CCB7C59006FDFE1 /* SceneDelegate.swift in Sources */,
 				1862920C2CD0DA8D0052DF4A /* UILabelExtension.swift in Sources */,
+				18A9084A2CE750A00056C499 /* RatePopUpViewController.swift in Sources */,
 				187A61672CD8CD990028E3C3 /* LoginViewModel.swift in Sources */,
 				18F568252CCF9CE600B3EE8D /* Constants.swift in Sources */,
 				18FA7B5F2CDB688700BCFB32 /* HomeScreenViewController.swift in Sources */,

@@ -37,8 +37,8 @@ class RegisterViewController: UIViewController {
         hideKeyboardWhenTappedAround()
         
        
-        viewmodel.onRegisterSuccess = { [weak self]  in
-            DispatchQueue.main.async {
+        viewmodel.onRegisterSuccess = {
+            DispatchQueue.main.async {  [weak self]  in
                 self?.showAlert(title: Constants.registartionComplete, message: Constants.userRegistered) {
                     self?.navigationController?.popViewController(animated: true)
                 }

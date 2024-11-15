@@ -3,4 +3,22 @@
    uuid = "E7BC2163-6269-4DC4-A92C-31200D81A566"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B868E4DC-E175-478D-A449-5697838A13E6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeoSTORE/Screens/HomeScreen/View/HomeScreenViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "homeScreentapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

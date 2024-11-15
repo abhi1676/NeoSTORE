@@ -12,7 +12,6 @@ class ProductDetailViewController: UIViewController {
     var productName = ""
     var viewmodel : ProductDetailViewModel?
     var productId : Int?
-    
     @IBOutlet var productNameLbl: UILabel!
     
     @IBOutlet var productCategoryLbl: UILabel!
@@ -37,11 +36,27 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet var productDescription: UITextView!
     
     @IBAction func productBuyButtonTapped(_ sender: Any) {
-        navigate(storyboardName: "OrderScreen", viewControllerID: "AddressViewController")
+        //navigate(storyboardName: "OrderScreen", viewControllerID: "AddressViewController")
+        let ratepop = RatePopUpViewController()
+
+        guard let product = viewmodel?.productDetail?.data  else {return}
+        ratepop.product = product
+        ratepop.id = 2
+        ratepop.modalPresentationStyle = .overCurrentContext
+        ratepop.modalTransitionStyle = .flipHorizontal
+        present(ratepop, animated: true)
     }
     
     @IBAction func productRateButtonTapped(_ sender: Any) {
-        navigate(storyboardName: "OrderScreen", viewControllerID: "AddressListViewController")
+        let ratepop = RatePopUpViewController()
+
+        //navigate(storyboardName: "OrderScreen", viewControllerID: "AddressListViewController")
+        guard let product = viewmodel?.productDetail?.data  else {return}
+        ratepop.product = product
+        ratepop.id = 1
+        ratepop.modalPresentationStyle = .overCurrentContext
+        ratepop.modalTransitionStyle = .flipHorizontal
+        present(ratepop, animated: true)
     }
     
     
@@ -86,11 +101,11 @@ class ProductDetailViewController: UIViewController {
             productImage2.loadImage(from: imgurl)
             productImage3.loadImage(from: imgurl)
             productImage4.loadImage(from: imgurl)
-
+           
 
         }
             
-        
+     
        
 
         

@@ -35,6 +35,8 @@
 		1873ADE12CEB4759009B731E /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873ADE02CEB4759009B731E /* EditProfileViewController.swift */; };
 		1873ADE32CEB4E26009B731E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873ADE22CEB4E26009B731E /* UserModel.swift */; };
 		1873ADE52CEB507D009B731E /* MyAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873ADE42CEB507D009B731E /* MyAccountViewModel.swift */; };
+		1873ADE72CEB7815009B731E /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873ADE62CEB7815009B731E /* EditProfileViewModel.swift */; };
+		1873ADE92CEB782D009B731E /* EditProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873ADE82CEB782D009B731E /* EditProfileModel.swift */; };
 		1879181B2CCFC28C00AADCC2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879181A2CCFC28C00AADCC2 /* RegisterViewController.swift */; };
 		187A61652CD88E710028E3C3 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A61642CD88E710028E3C3 /* EndPointType.swift */; };
 		187A61672CD8CD990028E3C3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A61662CD8CD990028E3C3 /* LoginViewModel.swift */; };
@@ -101,6 +103,8 @@
 		1873ADE02CEB4759009B731E /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		1873ADE22CEB4E26009B731E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		1873ADE42CEB507D009B731E /* MyAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewModel.swift; sourceTree = "<group>"; };
+		1873ADE62CEB7815009B731E /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
+		1873ADE82CEB782D009B731E /* EditProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileModel.swift; sourceTree = "<group>"; };
 		1879181A2CCFC28C00AADCC2 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		187A61642CD88E710028E3C3 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		187A61662CD8CD990028E3C3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -232,6 +236,8 @@
 				1873ADE02CEB4759009B731E /* EditProfileViewController.swift */,
 				1873ADE22CEB4E26009B731E /* UserModel.swift */,
 				1873ADE42CEB507D009B731E /* MyAccountViewModel.swift */,
+				1873ADE62CEB7815009B731E /* EditProfileViewModel.swift */,
+				1873ADE82CEB782D009B731E /* EditProfileModel.swift */,
 			);
 			path = MyAccount;
 			sourceTree = "<group>";
@@ -642,6 +648,8 @@
 				186292162CD26AC70052DF4A /* TextFieldType.swift in Sources */,
 				18280E5C2CE33B1F00FD8411 /* UIImageExtension.swift in Sources */,
 				18801E282CDDEC4A00FF1D26 /* SlideViewController.swift in Sources */,
+				1873ADE92CEB782D009B731E /* EditProfileModel.swift in Sources */,
+				1873ADE72CEB7815009B731E /* EditProfileViewModel.swift in Sources */,
 				18B7F24B2CE5FDC3003264BF /* CartViewController.swift in Sources */,
 				18F568272CCFA16500B3EE8D /* Navigation.swift in Sources */,
 				186A03752CE4DF700011923A /* Event.swift in Sources */,

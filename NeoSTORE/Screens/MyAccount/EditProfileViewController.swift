@@ -21,12 +21,13 @@ class EditProfileViewController: UIViewController {
     
     @IBOutlet var accountImg: UIImageView!
     
-    
+    var viewModel = EditProfileViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
 
 hideKeyboardWhenTappedAround()
         
+        setUpBinding()
     }
     
     func setUpUI(){
@@ -56,6 +57,50 @@ hideKeyboardWhenTappedAround()
         DOB.setIcon(UIImage(named: "dob_icon") ?? UIImage())
         phoneNumber.setIcon(UIImage(named: Constants.phonenumberIcon) ?? UIImage())
     }
-   
 
-}
+
+    func setUpBinding() {
+        viewModel.eventHandler = { [weak self] event in
+            DispatchQueue.main.async {
+                guard let self = self else { return }
+                switch event {
+                case .loading:
+           
+                    print("Loading user details...")
+                case .dataLoaded:
+              
+                    print("User details loaded successfully!")
+                    self.setUpUI()
+                case .error(let error):
+                   
+                    print("An error occurred : \(error?.localizedDescription ?? "")")
+                   
+                case .stopLoading:
+               
+                    print("Stopped loading")
+                   
+                }
+            }
+        }
+    }
+
+
+    @IBAction func submitButtonTapped(_ sender: Any) {
+        guard let firstName = firstName.text, !firstName.isEmpty,
+                  let lastName = lastName.text, !lastName.isEmpty,
+                  let email = email.text, !email.isEmpty,
+                  let dob = DOB.text, !dob.isEmpty,
+                  let phoneNo = phoneNumber.text, !phoneNo.isEmpty else {
+                
+                      showAlert(title: "Error", message: "All Fields Are Required")
+                      return
+            }
+            
+            let requestModel = EditProfileRequest(first_name: firstName, last_name: lastName, email: email, dob: dob, profile_pic: "", phone_no: phoneNo)
+            
+            viewModel.updateProfile(requestModel: requestModel)
+        
+        
+    }
+    }
+

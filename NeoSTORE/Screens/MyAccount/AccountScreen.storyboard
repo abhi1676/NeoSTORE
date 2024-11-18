@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gotham-Medium.otf">
+            <string>Gotham-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--My Account-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MyAccountViewController" id="Y6W-OH-hqX" customClass="MyAccountViewController" customModule="NeoSTORE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="leH-cB-vfF">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="6p7-6m-T83"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="48T-If-Zij">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8he-OP-Wg5">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="667"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="km7-4M-BQj">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="494"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cricket" translatesAutoresizingMaskIntoConstraints="NO" id="goo-3E-qVS">
+                                                        <rect key="frame" x="129" y="0.0" width="135" height="135"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="135" id="2tv-zd-Vru"/>
+                                                            <constraint firstAttribute="height" constant="135" id="Qer-1k-RvK"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="RzR-rt-QLn">
+                                                        <rect key="frame" x="20" y="155" width="353" height="339"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NSi-Ch-c2K" customClass="CustomTextField" customModule="NeoSTORE" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="353" height="44"/>
+                                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="44" id="Obl-cl-CmO"/>
+                                                                </constraints>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="18"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4ho-lv-BSE" customClass="CustomTextField" customModule="NeoSTORE" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="59" width="353" height="44"/>
+                                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="44" id="Had-xm-lCg"/>
+                                                                </constraints>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="18"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EZq-09-agr" customClass="CustomTextField" customModule="NeoSTORE" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="118" width="353" height="44"/>
+                                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="44" id="mMz-lk-fFd"/>
+                                                                </constraints>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="18"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yLC-7q-7xZ" customClass="CustomTextField" customModule="NeoSTORE" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="177" width="353" height="44"/>
+                                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="44" id="FJp-c4-tC6"/>
+                                                                </constraints>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="18"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hq1-5m-fqF" customClass="CustomTextField" customModule="NeoSTORE" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="236" width="353" height="44"/>
+                                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="44" id="b3j-xY-kZ9"/>
+                                                                </constraints>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="18"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8W-IY-a03">
+                                                                <rect key="frame" x="0.0" y="295" width="353" height="44"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="EDIT PROFILE">
+                                                                    <fontDescription key="titleFontDescription" name="Gotham-Medium" family="Gotham" pointSize="20"/>
+                                                                    <color key="baseForegroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="editButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="lKW-0f-Znt"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="RzR-rt-QLn" firstAttribute="leading" secondItem="km7-4M-BQj" secondAttribute="leading" constant="20" id="2fw-rd-kfl"/>
+                                                    <constraint firstAttribute="trailing" secondItem="RzR-rt-QLn" secondAttribute="trailing" constant="20" id="tks-Um-xrz"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="km7-4M-BQj" secondAttribute="trailing" id="5b1-CO-5iS"/>
+                                            <constraint firstAttribute="bottom" secondItem="km7-4M-BQj" secondAttribute="bottom" id="Z2D-tZ-4C8"/>
+                                            <constraint firstItem="km7-4M-BQj" firstAttribute="leading" secondItem="8he-OP-Wg5" secondAttribute="leading" id="ouE-Rk-kky"/>
+                                            <constraint firstItem="km7-4M-BQj" firstAttribute="top" secondItem="8he-OP-Wg5" secondAttribute="top" id="uOc-Mz-MrV"/>
+                                        </constraints>
+                                    </scrollView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfg-vy-qCW">
+                                        <rect key="frame" x="0.0" y="667" width="393" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="Srv-Zm-rmZ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="RESET PASSWORD">
+                                            <fontDescription key="titleFontDescription" name="Gotham-Medium" family="Gotham" pointSize="21"/>
+                                            <color key="baseForegroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="resetButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="F5k-8g-YVE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="1" green="0.14901960784313725" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="48T-If-Zij" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="2qR-LU-V2k"/>
+                            <constraint firstItem="leH-cB-vfF" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Brv-aC-9x8"/>
+                            <constraint firstItem="48T-If-Zij" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="PuD-WD-8Ph"/>
+                            <constraint firstAttribute="trailing" secondItem="leH-cB-vfF" secondAttribute="trailing" id="dFd-qG-59N"/>
+                            <constraint firstItem="48T-If-Zij" firstAttribute="trailing" secondItem="5EZ-qb-Rvc" secondAttribute="trailing" id="hXw-aL-0Gz"/>
+                            <constraint firstItem="48T-If-Zij" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="kcz-NT-PkT"/>
+                            <constraint firstItem="leH-cB-vfF" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="ne7-nE-Bw3"/>
+                            <constraint firstItem="km7-4M-BQj" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="sha-ur-zKA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Account" id="4Id-BD-cQf"/>
+                    <connections>
+                        <outlet property="DOB" destination="hq1-5m-fqF" id="NrG-Hf-Xeh"/>
+                        <outlet property="accountImg" destination="goo-3E-qVS" id="aME-fy-cpQ"/>
+                        <outlet property="email" destination="EZq-09-agr" id="MK5-vL-klT"/>
+                        <outlet property="firstName" destination="NSi-Ch-c2K" id="SZg-gM-d50"/>
+                        <outlet property="lastName" destination="4ho-lv-BSE" id="PLi-Xx-G0e"/>
+                        <outlet property="phoneNumber" destination="yLC-7q-7xZ" id="Fpg-3v-bV8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1063" y="-13"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vuz-vn-Xqm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dqM-QI-Gjw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FIH-Ok-at6">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="wHb-pg-9o8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rKX-6V-WoH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-45.038167938931295" y="3.5211267605633805"/>
+        </scene>
+        <!--Edit Profile View Controller-->
+        <scene sceneID="9ra-1P-sJW">
+            <objects>
+                <viewController storyboardIdentifier="EditProfileViewController" id="kSg-iU-dGN" customClass="EditProfileViewController" customModule="NeoSTORE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KgZ-hS-Xvd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Urg-VL-3Ki">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="8Fl-AZ-8EO"/>
+                                </constraints>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aqB-tY-Ifb">
+                                <rect key="frame" x="0.0" y="60" width="393" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="D7Y-CC-U3H"/>
+                                </constraints>
+                                <color key="barTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="20"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="EDIT PROFILE" id="eHG-Ua-EQU"/>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2QC-lG-zir">
+                                <rect key="frame" x="0.0" y="104" width="393" height="714"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gX4-20-u1g">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="714"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SEy-ue-hUf">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="494"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cricket" translatesAutoresizingMaskIntoConstraints="NO" id="fXF-1Q-yFW">
+                                                        <rect key="frame" x="129" y="0.0" width="135" height="135"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="135" id="XgI-Au-jfe"/>
+                                                            <constraint firstAttribute="height" constant="135" id="kiK-QP-ytx"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="OJt-u2-rEc">
+                                                        <rect key="frame" x="20" y="155" width="353" height="339"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PXR-AT-ncZ" customClass="CustomTextField" customModule="NeoSTORE" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="353" height="44"/>
+                                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="44" id="ORC-OF-JsJ"/>
+                                                                </constraints>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="18"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CKX-PS-O6K" customClass="CustomTextField" customModule="NeoSTORE" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="59" width="353" height="44"/>
+                                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="44" id="Xkm-7H-iGI"/>
+                                                                </constraints>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="18"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K1I-pU-Sug" customClass="CustomTextField" customModule="NeoSTORE" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="118" width="353" height="44"/>
+                                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="44" id="2WZ-zG-oCf"/>
+                                                                </constraints>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="18"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7WV-dj-Wfi" customClass="CustomTextField" customModule="NeoSTORE" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="177" width="353" height="44"/>
+                                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="44" id="xOt-2P-6LQ"/>
+                                                                </constraints>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="18"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="08I-8o-a3i" customClass="CustomTextField" customModule="NeoSTORE" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="236" width="353" height="44"/>
+                                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="44" id="1jS-iF-cGw"/>
+                                                                </constraints>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="18"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pty-dD-9AW">
+                                                                <rect key="frame" x="0.0" y="295" width="353" height="44"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="SUBMIT">
+                                                                    <fontDescription key="titleFontDescription" name="Gotham-Medium" family="Gotham" pointSize="20"/>
+                                                                    <color key="baseForegroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="OJt-u2-rEc" secondAttribute="trailing" constant="20" id="F4F-jr-dVq"/>
+                                                    <constraint firstItem="OJt-u2-rEc" firstAttribute="leading" secondItem="SEy-ue-hUf" secondAttribute="leading" constant="20" id="Rh9-zB-MDV"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="SEy-ue-hUf" secondAttribute="bottom" id="9nG-fW-ikw"/>
+                                            <constraint firstItem="SEy-ue-hUf" firstAttribute="leading" secondItem="gX4-20-u1g" secondAttribute="leading" id="VT6-pu-S6x"/>
+                                            <constraint firstAttribute="trailing" secondItem="SEy-ue-hUf" secondAttribute="trailing" id="cjC-o3-qAf"/>
+                                            <constraint firstItem="SEy-ue-hUf" firstAttribute="top" secondItem="gX4-20-u1g" secondAttribute="top" id="he9-9J-3FC"/>
+                                        </constraints>
+                                    </scrollView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ly9-Ph-VEy"/>
+                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aqB-tY-Ifb" firstAttribute="trailing" secondItem="Ly9-Ph-VEy" secondAttribute="trailing" id="5J4-FA-xcW"/>
+                            <constraint firstItem="Urg-VL-3Ki" firstAttribute="leading" secondItem="KgZ-hS-Xvd" secondAttribute="leading" id="6SE-vO-oIz"/>
+                            <constraint firstItem="aqB-tY-Ifb" firstAttribute="top" secondItem="Urg-VL-3Ki" secondAttribute="bottom" id="7hU-GY-uV6"/>
+                            <constraint firstItem="Urg-VL-3Ki" firstAttribute="top" secondItem="KgZ-hS-Xvd" secondAttribute="top" id="Dx0-wC-uFT"/>
+                            <constraint firstItem="2QC-lG-zir" firstAttribute="trailing" secondItem="Ly9-Ph-VEy" secondAttribute="trailing" id="E93-qc-ozu"/>
+                            <constraint firstItem="SEy-ue-hUf" firstAttribute="width" secondItem="KgZ-hS-Xvd" secondAttribute="width" id="JKX-zx-WbJ"/>
+                            <constraint firstItem="aqB-tY-Ifb" firstAttribute="leading" secondItem="Ly9-Ph-VEy" secondAttribute="leading" id="LsY-y4-gse"/>
+                            <constraint firstItem="2QC-lG-zir" firstAttribute="top" secondItem="aqB-tY-Ifb" secondAttribute="bottom" id="VoQ-h7-CYi"/>
+                            <constraint firstItem="2QC-lG-zir" firstAttribute="bottom" secondItem="Ly9-Ph-VEy" secondAttribute="bottom" id="ZVD-4q-CIe"/>
+                            <constraint firstItem="2QC-lG-zir" firstAttribute="leading" secondItem="Ly9-Ph-VEy" secondAttribute="leading" id="ojw-Ms-MTl"/>
+                            <constraint firstAttribute="trailing" secondItem="Urg-VL-3Ki" secondAttribute="trailing" id="prE-VF-as2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="DOB" destination="08I-8o-a3i" id="Y70-5D-UaP"/>
+                        <outlet property="accountImg" destination="fXF-1Q-yFW" id="EzV-Lj-R4n"/>
+                        <outlet property="email" destination="K1I-pU-Sug" id="DGq-eS-Qyi"/>
+                        <outlet property="firstName" destination="PXR-AT-ncZ" id="uDD-cq-vTK"/>
+                        <outlet property="lastName" destination="CKX-PS-O6K" id="2B9-7X-BYd"/>
+                        <outlet property="phoneNumber" destination="7WV-dj-Wfi" id="o7R-y2-jwQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Md8-Rr-4pg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1902" y="-13"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cricket" width="256" height="256"/>
+    </resources>
+</document>

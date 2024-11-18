@@ -30,6 +30,11 @@
 		186292162CD26AC70052DF4A /* TextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186292152CD26AC70052DF4A /* TextFieldType.swift */; };
 		186A03732CE4D7E20011923A /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A03722CE4D7E20011923A /* UIViewExtension.swift */; };
 		186A03752CE4DF700011923A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A03742CE4DF700011923A /* Event.swift */; };
+		1873ADDD2CEB31AC009B731E /* AccountScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1873ADDC2CEB31AC009B731E /* AccountScreen.storyboard */; };
+		1873ADDF2CEB31E3009B731E /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873ADDE2CEB31E3009B731E /* MyAccountViewController.swift */; };
+		1873ADE12CEB4759009B731E /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873ADE02CEB4759009B731E /* EditProfileViewController.swift */; };
+		1873ADE32CEB4E26009B731E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873ADE22CEB4E26009B731E /* UserModel.swift */; };
+		1873ADE52CEB507D009B731E /* MyAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873ADE42CEB507D009B731E /* MyAccountViewModel.swift */; };
 		1879181B2CCFC28C00AADCC2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879181A2CCFC28C00AADCC2 /* RegisterViewController.swift */; };
 		187A61652CD88E710028E3C3 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A61642CD88E710028E3C3 /* EndPointType.swift */; };
 		187A61672CD8CD990028E3C3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A61662CD8CD990028E3C3 /* LoginViewModel.swift */; };
@@ -91,6 +96,11 @@
 		186292152CD26AC70052DF4A /* TextFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldType.swift; sourceTree = "<group>"; };
 		186A03722CE4D7E20011923A /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		186A03742CE4DF700011923A /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		1873ADDC2CEB31AC009B731E /* AccountScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AccountScreen.storyboard; sourceTree = "<group>"; };
+		1873ADDE2CEB31E3009B731E /* MyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
+		1873ADE02CEB4759009B731E /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		1873ADE22CEB4E26009B731E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		1873ADE42CEB507D009B731E /* MyAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewModel.swift; sourceTree = "<group>"; };
 		1879181A2CCFC28C00AADCC2 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		187A61642CD88E710028E3C3 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		187A61662CD8CD990028E3C3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -214,6 +224,18 @@
 			path = Products;
 			sourceTree = "<group>";
 		};
+		1873ADDB2CEB3183009B731E /* MyAccount */ = {
+			isa = PBXGroup;
+			children = (
+				1873ADDC2CEB31AC009B731E /* AccountScreen.storyboard */,
+				1873ADDE2CEB31E3009B731E /* MyAccountViewController.swift */,
+				1873ADE02CEB4759009B731E /* EditProfileViewController.swift */,
+				1873ADE22CEB4E26009B731E /* UserModel.swift */,
+				1873ADE42CEB507D009B731E /* MyAccountViewModel.swift */,
+			);
+			path = MyAccount;
+			sourceTree = "<group>";
+		};
 		187918102CCFC1E100AADCC2 /* Register */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +341,7 @@
 		18B092A52CCB7DE2007F19F4 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				1873ADDB2CEB3183009B731E /* MyAccount */,
 				18B7F2512CE6360D003264BF /* AddressList */,
 				18B7F24E2CE61859003264BF /* Address */,
 				18B7F2422CE5FC02003264BF /* CartList */,
@@ -583,6 +606,7 @@
 				18B7F24D2CE5FE13003264BF /* OrderScreen.storyboard in Resources */,
 				18A9084B2CE750A00056C499 /* RatePopUpViewController.xib in Resources */,
 				18B7F2582CE6372D003264BF /* AddressListTableViewCell.xib in Resources */,
+				1873ADDD2CEB31AC009B731E /* AccountScreen.storyboard in Resources */,
 				1818D5E92CCB7C59006FDFE1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -602,6 +626,8 @@
 				18F568232CCF9A6900B3EE8D /* CustomTextField.swift in Sources */,
 				18B7F2572CE6372D003264BF /* AddressListTableViewCell.swift in Sources */,
 				188BF7FA2CE38F4400475E7A /* ProductDetailViewModel.swift in Sources */,
+				1873ADE32CEB4E26009B731E /* UserModel.swift in Sources */,
+				1873ADE12CEB4759009B731E /* EditProfileViewController.swift in Sources */,
 				1879181B2CCFC28C00AADCC2 /* RegisterViewController.swift in Sources */,
 				18B1C8432CCBA43F00DED2C5 /* LoginViewController.swift in Sources */,
 				18B7F2532CE63638003264BF /* AddressListViewController.swift in Sources */,
@@ -630,8 +656,10 @@
 				188BF7F72CE38E0300475E7A /* ProductDetailModel.swift in Sources */,
 				18E499092CDA136800B57CA2 /* Register.swift in Sources */,
 				18B7F2412CE5FBD3003264BF /* CartListModel.swift in Sources */,
+				1873ADE52CEB507D009B731E /* MyAccountViewModel.swift in Sources */,
 				1862920E2CD206100052DF4A /* StringExtension.swift in Sources */,
 				1818D5E42CCB7C59006FDFE1 /* SceneDelegate.swift in Sources */,
+				1873ADDF2CEB31E3009B731E /* MyAccountViewController.swift in Sources */,
 				1862920C2CD0DA8D0052DF4A /* UILabelExtension.swift in Sources */,
 				18A9084A2CE750A00056C499 /* RatePopUpViewController.swift in Sources */,
 				187A61672CD8CD990028E3C3 /* LoginViewModel.swift in Sources */,

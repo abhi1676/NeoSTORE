@@ -87,6 +87,24 @@ final class APIManager {
                 completion(.failure(.network(Constants.requestModelFailure)))
                 return
             }
+        } else  if method == .get {
+            do {
+                let encoder = URLFormParameterEncoder()
+                let parameterString = try encoder.encode(requestModel)
+                let url = "\(type.url!)"
+                if !parameterString.isEmpty {
+                    let fullURLString =  url + "?" + parameterString
+                    urlRequest.url = URL(string: fullURLString) // Update the URL with query parameters
+                } else {
+                    urlRequest.url = URL(string: url)
+                }
+                // let jsonString =
+                // let urlRequest.httpBody = requestModel.data(using: .utf8)
+                urlRequest.setValue(Constants.applicationOrFormURLEndcoded, forHTTPHeaderField: Constants.httpHeaderField)
+            } catch {
+                completion(.failure(.network(Constants.requestModelFailure)))
+                return
+            }
         }
 //        }
         

@@ -17,6 +17,7 @@
             <connections>
                 <outlet property="button" destination="2jF-Wz-3Q3" id="uKe-3R-uvn"/>
                 <outlet property="lblProductName" destination="LgQ-KR-V40" id="r4c-gP-3YD"/>
+                <outlet property="popUpView" destination="jDN-Kr-FEj" id="w8O-13-b7Q"/>
                 <outlet property="productImage" destination="FaW-M0-QoY" id="Nkf-uK-c9b"/>
                 <outlet property="qtyTextField" destination="ngC-84-HnU" id="E3T-xd-DdN"/>
                 <outlet property="startRating" destination="jBN-KZ-VRc" id="plt-hw-kb7"/>

@@ -55,6 +55,10 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
         rightSideView.isUserInteractionEnabled = false
 
     }
+    override func viewWillAppear(_ animated: Bool) {
+    
+        self.navigationItem.title = "NeoSTORE"
+    }
     
     func setUpNib(){
         let nib = UINib(nibName: "HomeScreenCollectionViewCell", bundle: nil)

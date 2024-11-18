@@ -14,14 +14,19 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
         fetchProductsForCategory()
         tableView.delegate = self
         tableView.dataSource = self
-        setNavigationTitle()
         self.navigationController?.navigationBar.topItem?.title = ""
         let nib = UINib(nibName: "ProductsTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "ProductsTableViewCell")
         self.observeEvent()
         shimmerView.isUserInteractionEnabled = false
         self.shimmerView.isShimmering = true
+        self.navigationController?.navigationBar.backgroundColor = UIColor(red: 1.0, green: 0.149, blue: 0.0, alpha: 1.0)
+
         
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        setNavigationTitle()
+
     }
     func setNavigationTitle(){
         switch categoryId{

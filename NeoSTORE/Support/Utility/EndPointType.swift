@@ -25,6 +25,7 @@ enum EndPointList{
     case products
     case productDetail
     case cart
+    case getUserData
 }
 
 extension EndPointList:EndPointType{
@@ -50,19 +51,31 @@ extension EndPointList:EndPointType{
             return Constants.productDeatil
         case .cart :
             return Constants.cart
+        case .getUserData :
+            return Constants.getuserData
         }
     }
   
     var headers: HTTPHeaders {
-           var headers = [
-            Constants.accept: Constants.applicationOrJson
-           ]
-           
-        if let token = UserDefaults.standard.string(forKey: Constants.accessToken) {
-            headers[Constants.authorization] = "Bearer \(token)"
-           }
-           
-           return headers
-       }
+        switch self {
+        case .getUserData:
+            var header = [String:String]()
+            if let token = UserDefaults.standard.string(forKey: Constants.accessToken) {
+                header["access_token"] = "\(token)"
+            }
+            //"access_token": UserDefaults.standard.string(forKey: Constants.accessToken)
+
+            return header
+        default:
+            var headers = [
+                Constants.accept: Constants.applicationOrJson
+            ]
+            
+            if let token = UserDefaults.standard.string(forKey: Constants.accessToken) {
+                headers[Constants.authorization] = "\(token)"
+            }
+            return headers
+        }
+    }
     
 }

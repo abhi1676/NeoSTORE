@@ -18,13 +18,14 @@ class RatePopUpViewController: UIViewController {
     
     @IBOutlet var button: UIButton!
     
+    @IBOutlet var popUpView: UIView!
     var product: ProductDetailData?
     var id : Int?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .black.withAlphaComponent(0.6)
         startRating.rating =  2
-        
+        popUpView.layer.cornerRadius = 15
         setData()
     }
 

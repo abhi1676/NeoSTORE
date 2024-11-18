@@ -43,7 +43,7 @@ class ProductDetailViewController: UIViewController {
         ratepop.product = product
         ratepop.id = 2
         ratepop.modalPresentationStyle = .overCurrentContext
-        ratepop.modalTransitionStyle = .flipHorizontal
+        ratepop.modalTransitionStyle = .crossDissolve
         present(ratepop, animated: true)
     }
     
@@ -55,7 +55,7 @@ class ProductDetailViewController: UIViewController {
         ratepop.product = product
         ratepop.id = 1
         ratepop.modalPresentationStyle = .overCurrentContext
-        ratepop.modalTransitionStyle = .flipHorizontal
+        ratepop.modalTransitionStyle = .crossDissolve
         present(ratepop, animated: true)
     }
     
@@ -64,20 +64,24 @@ class ProductDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = productName
         self.navigationController?.navigationBar.topItem?.title = ""
         fetchProductDetail()
         self.observeEvent()
         self.shimmerView.isUserInteractionEnabled = false
         self.shimmerView.isShimmering = true
+        self.navigationController?.navigationBar.backgroundColor = UIColor(red: 1.0, green: 0.149, blue: 0.0, alpha: 1.0)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-      
+        self.navigationItem.title = productName
+        
     }
     
-
+    @IBAction func shareButtonTapped(_ sender: Any) {
+        navigate(storyboardName: "AccountScreen", viewControllerID: "MyAccountViewController")
+    }
+    
     func setUpUI(data:ProductDetail?){
         guard let product = data?.data else {return}
         productNameLbl.text = product.name
@@ -101,17 +105,7 @@ class ProductDetailViewController: UIViewController {
             productImage2.loadImage(from: imgurl)
             productImage3.loadImage(from: imgurl)
             productImage4.loadImage(from: imgurl)
-           
-
         }
-            
-     
-       
-
-        
-        
-        
-        
     }
     func fetchProductDetail(){
         viewmodel = ProductDetailViewModel()

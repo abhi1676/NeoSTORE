@@ -61,7 +61,7 @@ extension EndPointList:EndPointType{
   
     var headers: HTTPHeaders {
         switch self {
-        case .getUserData:
+        case .getUserData, .updateUserData:
             var header = [String:String]()
             if let token = UserDefaults.standard.string(forKey: Constants.accessToken) {
                 header["access_token"] = "\(token)"
@@ -69,6 +69,8 @@ extension EndPointList:EndPointType{
             //"access_token": UserDefaults.standard.string(forKey: Constants.accessToken)
 
             return header
+        
+            
         default:
             var headers = [
                 Constants.accept: Constants.applicationOrJson

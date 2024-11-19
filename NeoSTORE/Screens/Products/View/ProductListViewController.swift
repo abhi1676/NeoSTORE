@@ -29,8 +29,10 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
 
     }
     func setNavigationTitle(){
+        self.navigationController?.navigationBar.isHidden = false
         switch categoryId{
         case 1 :
+            
             self.navigationItem.title = "Tables"
         case 2 :
             self.navigationItem.title = "Chairs"
@@ -39,7 +41,7 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
         case 4:
             self.navigationItem.title = "Cupboards"
         default:
-            self.navigationItem.title = "NeoStore"
+            break
 
         }
     }

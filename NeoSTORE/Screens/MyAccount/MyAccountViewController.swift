@@ -19,15 +19,23 @@ class MyAccountViewController: UIViewController {
     
     @IBOutlet var phoneNumber: CustomTextField!
     
+    @IBOutlet var shimmerView: UIView!
+    
+    
     @IBOutlet var DOB: CustomTextField!
     var viewModel = MyAccountViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        shimmerView.isShimmering = true
         setUpUI()
         hideKeyboardWhenTappedAround()
         bindViewModel()
         viewModel.fetchUserDetails()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.title = "MY ACCOUNT"
     }
     
     func setUpUI(){
@@ -56,16 +64,31 @@ class MyAccountViewController: UIViewController {
         viewModel.eventHandler = { [weak self] event in
             DispatchQueue.main.async {
                 guard let self = self else { return }
+                
                 switch event {
-                case .loading:
                     
+                case .loading:
+                    self.shimmerView.isHidden = false
+                    self.shimmerView.startShimmering()
+                  
                     print("Loading user details...")
                 case .dataLoaded:
-                    
+                    self.shimmerView.stopShimmering()
+                    DispatchQueue.main.async {
+                        self.shimmerView.isHidden = true
+                    }
+                  
+
                     self.updateUI()
                 case .error(let error):
                     print(error)
                 case .stopLoading:
+                    self.shimmerView.stopShimmering()
+                    DispatchQueue.main.async {
+                        self.shimmerView.isHidden = true
+                    }
+              
+
                     print("Stopped loading")
                 }
             }
@@ -88,5 +111,6 @@ class MyAccountViewController: UIViewController {
     }
     
     @IBAction func resetButtonTapped(_ sender: Any) {
+        navigate(storyboardName: "AccountScreen", viewControllerID: "ResetPasswordViewController")
     }
 }

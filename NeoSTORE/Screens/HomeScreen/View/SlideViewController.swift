@@ -82,7 +82,23 @@ extension SlideViewController:UITableViewDataSource,UITableViewDelegate{
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("tapped on ",slideItems[indexPath.row])
+        UserDefaults.standard.set(false, forKey: "displayHomeNavBar")
+        switch indexPath.row {
+        case 0 :
+            print("Cart tapped")
+        case 1 :
+            navigateToProductList(categoryId: 1)
+        case 2 :
+            navigateToProductList(categoryId: 3)
+        case 3 :
+            navigateToProductList(categoryId: 2)
+        case 4 :
+            navigateToProductList(categoryId: 4)
+        default :
+            break
+        }
+        
+        
     }
     
     

@@ -28,8 +28,11 @@ class LoginViewController: UIViewController{
         hideKeyboardWhenTappedAround()
         setUpBindings()
         
-        userNameTextField.text = "Abhi2@gmail.com"
-        passwordTextField.text = "Abhi@123"
+//        userNameTextField.text = "Abhi2@gmail.com"
+//        passwordTextField.text = "Abhi@123"
+        userNameTextField.text = "Dummy123@gmail.com"
+        passwordTextField.text = "Dummy@123"
+        
     }
     
     private func  setUpBindings(){

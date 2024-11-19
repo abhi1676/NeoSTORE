@@ -24,9 +24,12 @@ class EditProfileViewController: UIViewController {
     var viewModel = EditProfileViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "EDIT PROFILE"
+        self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationController?.navigationBar.backgroundColor = UIColor(red: 1.0, green: 0.149, blue: 0.0, alpha: 1.0)
 
 hideKeyboardWhenTappedAround()
-        
+        setUpUI()
         setUpBinding()
     }
     
@@ -41,6 +44,7 @@ hideKeyboardWhenTappedAround()
         email.setPlaceholderText(Constants.email, .white)
         DOB.setPlaceholderText("DOB", .white)
         phoneNumber.setPlaceholderText(Constants.phonenumber, .white)
+        
         
         lastName.setIcon(UIImage(named: Constants.usernameIcon) ?? UIImage())
         firstName.setIcon(UIImage(named: Constants.usernameIcon) ?? UIImage())
@@ -99,7 +103,9 @@ hideKeyboardWhenTappedAround()
             let requestModel = EditProfileRequest(first_name: firstName, last_name: lastName, email: email, dob: dob, profile_pic: "", phone_no: phoneNo)
             
             viewModel.updateProfile(requestModel: requestModel)
-        
+        showAlert(title: "UPDATED", message: "PROFILE DATA UPDATED SUCCESSFULLY",completion: {
+            self.navigate(storyboardName: "HomeScreen", viewControllerID: "HomeScreenViewController")
+        })
         
     }
     }

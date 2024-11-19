@@ -22,6 +22,8 @@
 		183A0D172CE20ABC002D9850 /* Product Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A0D162CE20ABC002D9850 /* Product Model.swift */; };
 		183A0D192CE20B0D002D9850 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A0D182CE20B0D002D9850 /* ProductViewModel.swift */; };
 		183A0D1B2CE20C3A002D9850 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A0D1A2CE20C3A002D9850 /* ProductListViewController.swift */; };
+		185C1B282CEC5FBF007DFEDB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C1B272CEC5FBF007DFEDB /* BaseViewController.swift */; };
+		185C1B2E2CECB2BE007DFEDB /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C1B2D2CECB2BE007DFEDB /* ResetPasswordViewController.swift */; };
 		1862920C2CD0DA8D0052DF4A /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862920B2CD0DA8D0052DF4A /* UILabelExtension.swift */; };
 		1862920E2CD206100052DF4A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862920D2CD206100052DF4A /* StringExtension.swift */; };
 		186292102CD20D2F0052DF4A /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862920F2CD20D2F0052DF4A /* RegisterViewModel.swift */; };
@@ -90,6 +92,8 @@
 		183A0D162CE20ABC002D9850 /* Product Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product Model.swift"; sourceTree = "<group>"; };
 		183A0D182CE20B0D002D9850 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		183A0D1A2CE20C3A002D9850 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		185C1B272CEC5FBF007DFEDB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		185C1B2D2CECB2BE007DFEDB /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		1862920B2CD0DA8D0052DF4A /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		1862920D2CD206100052DF4A /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		1862920F2CD20D2F0052DF4A /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
@@ -228,6 +232,38 @@
 			path = Products;
 			sourceTree = "<group>";
 		};
+		185C1B292CECB27C007DFEDB /* ResetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				185C1B2C2CECB2A2007DFEDB /* ViewModel */,
+				185C1B2B2CECB29B007DFEDB /* Model */,
+				185C1B2A2CECB294007DFEDB /* View */,
+			);
+			path = ResetPassword;
+			sourceTree = "<group>";
+		};
+		185C1B2A2CECB294007DFEDB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				185C1B2D2CECB2BE007DFEDB /* ResetPasswordViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		185C1B2B2CECB29B007DFEDB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		185C1B2C2CECB2A2007DFEDB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		1873ADDB2CEB3183009B731E /* MyAccount */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,6 +383,7 @@
 		18B092A52CCB7DE2007F19F4 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				185C1B292CECB27C007DFEDB /* ResetPassword */,
 				1873ADDB2CEB3183009B731E /* MyAccount */,
 				18B7F2512CE6360D003264BF /* AddressList */,
 				18B7F24E2CE61859003264BF /* Address */,
@@ -525,6 +562,7 @@
 			children = (
 				18F568222CCF9A6900B3EE8D /* CustomTextField.swift */,
 				18280E652CE3632900FD8411 /* CustomStarView.swift */,
+				185C1B272CEC5FBF007DFEDB /* BaseViewController.swift */,
 			);
 			path = CustomClasses;
 			sourceTree = "<group>";
@@ -660,6 +698,7 @@
 				183A0D192CE20B0D002D9850 /* ProductViewModel.swift in Sources */,
 				18280E622CE34FF200FD8411 /* ProductsTableViewCell.swift in Sources */,
 				18280E662CE3632900FD8411 /* CustomStarView.swift in Sources */,
+				185C1B2E2CECB2BE007DFEDB /* ResetPasswordViewController.swift in Sources */,
 				183A0D1B2CE20C3A002D9850 /* ProductListViewController.swift in Sources */,
 				188BF7F72CE38E0300475E7A /* ProductDetailModel.swift in Sources */,
 				18E499092CDA136800B57CA2 /* Register.swift in Sources */,
@@ -669,6 +708,7 @@
 				1818D5E42CCB7C59006FDFE1 /* SceneDelegate.swift in Sources */,
 				1873ADDF2CEB31E3009B731E /* MyAccountViewController.swift in Sources */,
 				1862920C2CD0DA8D0052DF4A /* UILabelExtension.swift in Sources */,
+				185C1B282CEC5FBF007DFEDB /* BaseViewController.swift in Sources */,
 				18A9084A2CE750A00056C499 /* RatePopUpViewController.swift in Sources */,
 				187A61672CD8CD990028E3C3 /* LoginViewModel.swift in Sources */,
 				18F568252CCF9CE600B3EE8D /* Constants.swift in Sources */,
@@ -824,7 +864,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -854,7 +894,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

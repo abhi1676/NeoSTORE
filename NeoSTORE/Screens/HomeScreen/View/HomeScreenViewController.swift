@@ -41,6 +41,7 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
     let images = [UIImage(named: "slider_img1"),UIImage(named: "slider_img2"),UIImage(named: "slider_img3"),UIImage(named: "slider_img4")]
     
     override func viewDidLoad() {
+        UserDefaults.standard.set(true, forKey: "displayHomeNavBar")
         super.viewDidLoad()
         self.navigationItem.backBarButtonItem?.isHidden = true
         hideNavigationBackButtton()
@@ -56,8 +57,12 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
 
     }
     override func viewWillAppear(_ animated: Bool) {
-    
         self.navigationItem.title = "NeoSTORE"
+        if UserDefaults.standard.bool(forKey: "displayHomeNavBar") == false {
+            self.navigationController?.navigationBar.isHidden = true
+        } else {
+            self.navigationController?.navigationBar.isHidden = false
+        }
     }
     
     func setUpNib(){
@@ -85,9 +90,8 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
             self.view.layoutIfNeeded()
            
         }
-        UIView.animate(withDuration: 0.6){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
             self.navigationController?.navigationBar.isHidden = false
-
         }
         
         
@@ -144,12 +148,14 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
     @IBAction func tableProductTapped(_ sender: Any) {
         print("Tables tapped")
        navigateToProductList(categoryId: 1)
+        UserDefaults.standard.set(true, forKey: "displayHomeNavBar")
     }
     
     
     @IBAction func sofasProductTapped(_ sender: Any) {
         print("sofas tapped")
         navigateToProductList(categoryId: 3)
+        UserDefaults.standard.set(true, forKey: "displayHomeNavBar")
 
     }
     
@@ -158,6 +164,7 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
         print("chairs tapped")
 
         navigateToProductList(categoryId: 2)
+        UserDefaults.standard.set(true, forKey: "displayHomeNavBar")
 
     }
     
@@ -165,7 +172,7 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
 
         print("cupboards tapped")
         navigateToProductList(categoryId: 4)
-
+        UserDefaults.standard.set(true, forKey: "displayHomeNavBar")
     }
     
     func navigateToProductList(categoryId:Int) {

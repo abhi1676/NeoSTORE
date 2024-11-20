@@ -32,6 +32,7 @@ class SlideViewController: UIViewController {
         fullname.text = UserDefaults.standard.string(forKey: Constants.fullname)
         email.text = UserDefaults.standard.string(forKey: Constants.email)
         
+        
     }
     
     func navigateToProductList(categoryId:Int) {

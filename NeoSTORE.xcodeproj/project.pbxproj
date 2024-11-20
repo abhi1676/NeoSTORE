@@ -45,6 +45,10 @@
 		18801E282CDDEC4A00FF1D26 /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18801E272CDDEC4A00FF1D26 /* SlideViewController.swift */; };
 		188BF7F72CE38E0300475E7A /* ProductDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BF7F62CE38E0300475E7A /* ProductDetailModel.swift */; };
 		188BF7FA2CE38F4400475E7A /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BF7F92CE38F4400475E7A /* ProductDetailViewModel.swift */; };
+		189977D22CEDE3FA004E9943 /* RatingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189977D12CEDE3FA004E9943 /* RatingModel.swift */; };
+		189977D42CEDE41A004E9943 /* RatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189977D32CEDE41A004E9943 /* RatingViewModel.swift */; };
+		189977D72CEE0EEE004E9943 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189977D52CEE0EEE004E9943 /* CartTableViewCell.swift */; };
+		189977D82CEE0EEE004E9943 /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189977D62CEE0EEE004E9943 /* CartTableViewCell.xib */; };
 		18A3E4B52CD36E7200FA7CC2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A3E4B42CD36E7200FA7CC2 /* APIManager.swift */; };
 		18A9084A2CE750A00056C499 /* RatePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A908482CE750A00056C499 /* RatePopUpViewController.swift */; };
 		18A9084B2CE750A00056C499 /* RatePopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A908492CE750A00056C499 /* RatePopUpViewController.xib */; };
@@ -115,6 +119,10 @@
 		18801E272CDDEC4A00FF1D26 /* SlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewController.swift; sourceTree = "<group>"; };
 		188BF7F62CE38E0300475E7A /* ProductDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailModel.swift; sourceTree = "<group>"; };
 		188BF7F92CE38F4400475E7A /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
+		189977D12CEDE3FA004E9943 /* RatingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingModel.swift; sourceTree = "<group>"; };
+		189977D32CEDE41A004E9943 /* RatingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewModel.swift; sourceTree = "<group>"; };
+		189977D52CEE0EEE004E9943 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		189977D62CEE0EEE004E9943 /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 		18A3E4B42CD36E7200FA7CC2 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		18A908482CE750A00056C499 /* RatePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatePopUpViewController.swift; sourceTree = "<group>"; };
 		18A908492CE750A00056C499 /* RatePopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatePopUpViewController.xib; sourceTree = "<group>"; };
@@ -336,6 +344,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		189977D02CEDE2C6004E9943 /* ProductRating */ = {
+			isa = PBXGroup;
+			children = (
+				189977D12CEDE3FA004E9943 /* RatingModel.swift */,
+				189977D32CEDE41A004E9943 /* RatingViewModel.swift */,
+			);
+			path = ProductRating;
+			sourceTree = "<group>";
+		};
 		18A908472CE750830056C499 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +400,7 @@
 		18B092A52CCB7DE2007F19F4 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				189977D02CEDE2C6004E9943 /* ProductRating */,
 				185C1B292CECB27C007DFEDB /* ResetPassword */,
 				1873ADDB2CEB3183009B731E /* MyAccount */,
 				18B7F2512CE6360D003264BF /* AddressList */,
@@ -454,6 +472,8 @@
 			isa = PBXGroup;
 			children = (
 				18B7F24A2CE5FDC3003264BF /* CartViewController.swift */,
+				189977D52CEE0EEE004E9943 /* CartTableViewCell.swift */,
+				189977D62CEE0EEE004E9943 /* CartTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -638,6 +658,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189977D82CEE0EEE004E9943 /* CartTableViewCell.xib in Resources */,
 				18280E632CE34FF200FD8411 /* ProductsTableViewCell.xib in Resources */,
 				18AABFA52CCF63DD00E35122 /* Gotham-Bold.otf in Resources */,
 				1818D5EE2CCB7C5B006FDFE1 /* LaunchScreen.storyboard in Resources */,
@@ -678,6 +699,7 @@
 				186A03732CE4D7E20011923A /* UIViewExtension.swift in Sources */,
 				18F5681B2CCF8F6C00B3EE8D /* LoginData.swift in Sources */,
 				18F5681F2CCF94BB00B3EE8D /* ForgotPasswordViewController.swift in Sources */,
+				189977D42CEDE41A004E9943 /* RatingViewModel.swift in Sources */,
 				18DBF77D2CDCA22F00EEA8C5 /* HomeScreenCollectionViewCell.swift in Sources */,
 				18AC6EB92CCF732000235314 /* UITextFieldExtension.swift in Sources */,
 				1818D5E22CCB7C59006FDFE1 /* AppDelegate.swift in Sources */,
@@ -700,10 +722,12 @@
 				18280E662CE3632900FD8411 /* CustomStarView.swift in Sources */,
 				185C1B2E2CECB2BE007DFEDB /* ResetPasswordViewController.swift in Sources */,
 				183A0D1B2CE20C3A002D9850 /* ProductListViewController.swift in Sources */,
+				189977D72CEE0EEE004E9943 /* CartTableViewCell.swift in Sources */,
 				188BF7F72CE38E0300475E7A /* ProductDetailModel.swift in Sources */,
 				18E499092CDA136800B57CA2 /* Register.swift in Sources */,
 				18B7F2412CE5FBD3003264BF /* CartListModel.swift in Sources */,
 				1873ADE52CEB507D009B731E /* MyAccountViewModel.swift in Sources */,
+				189977D22CEDE3FA004E9943 /* RatingModel.swift in Sources */,
 				1862920E2CD206100052DF4A /* StringExtension.swift in Sources */,
 				1818D5E42CCB7C59006FDFE1 /* SceneDelegate.swift in Sources */,
 				1873ADDF2CEB31E3009B731E /* MyAccountViewController.swift in Sources */,

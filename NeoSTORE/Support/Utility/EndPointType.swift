@@ -27,6 +27,7 @@ enum EndPointList{
     case cart
     case getUserData
     case updateUserData
+    case setRating
 }
 
 extension EndPointList:EndPointType{
@@ -56,6 +57,8 @@ extension EndPointList:EndPointType{
             return Constants.getuserData
         case .updateUserData :
             return Constants.updateData
+        case .setRating:
+            return Constants.setRating
         }
     }
   

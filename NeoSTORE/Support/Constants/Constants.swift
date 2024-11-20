@@ -42,6 +42,7 @@ struct Constants{
     static let cart = "/cart"
     static let getuserData = "users/getUserData"
     static let updateData = "users/update"
+    static let setRating = "products/setRating"
     static let accessToken = "accessToken"
     static let httpHeaderField = "Content-Type"
     static let applicationOrJson = "application/json"

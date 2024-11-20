@@ -40,8 +40,12 @@ class ProductDetailViewController: UIViewController {
         let ratepop = RatePopUpViewController()
 
         guard let product = viewmodel?.productDetail?.data  else {return}
+       
         ratepop.product = product
         ratepop.id = 2
+        ratepop.onDismiss = { [weak self] in
+                    self?.navigateToCartViewController(with: product)
+                }
         ratepop.modalPresentationStyle = .overCurrentContext
         ratepop.modalTransitionStyle = .crossDissolve
         present(ratepop, animated: true)
@@ -146,6 +150,13 @@ class ProductDetailViewController: UIViewController {
             }
         }
     }
-    
+    func navigateToCartViewController(with product: ProductDetailData) {
+        let storyboard = UIStoryboard(name: "OrderScreen", bundle: nil)
+        if let cartVC = storyboard.instantiateViewController(withIdentifier: "CartViewController") as? CartViewController {
+            cartVC.product = product // Pass the product data
+            cartVC.modalPresentationStyle = .fullScreen // Set full screen for presentation
+            self.present(cartVC, animated: true, completion: nil) // Present CartViewController
+        }
+    }
 
 }

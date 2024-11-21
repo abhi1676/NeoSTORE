@@ -50,6 +50,11 @@ class MyAccountViewController: UIViewController {
         email.setPlaceholderText(Constants.email, .white)
         DOB.setPlaceholderText("DOB", .white)
         phoneNumber.setPlaceholderText(Constants.phonenumber, .white)
+        if let imageData = UserDefaults.standard.data(forKey: "profileImage") {
+            accountImg.image = UIImage(data: imageData)
+        } else {
+            print("No image found in UserDefaults")
+        }
         
         lastName.setIcon(UIImage(named: Constants.usernameIcon) ?? UIImage())
         firstName.setIcon(UIImage(named: Constants.usernameIcon) ?? UIImage())

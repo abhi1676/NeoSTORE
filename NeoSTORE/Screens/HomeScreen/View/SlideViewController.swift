@@ -38,6 +38,8 @@ class SlideViewController: UIViewController {
         } else {
             print("No image found in UserDefaults")
         }
+        profilePic.layer.cornerRadius = profilePic.frame.size.width/2
+        profilePic.clipsToBounds = true
     }
     
     func navigateToProductList(categoryId:Int) {

@@ -38,7 +38,11 @@ hideKeyboardWhenTappedAround()
         accountImg.layer.cornerRadius = accountImg.frame.width/2
         accountImg.layer.borderColor = UIColor.black.cgColor
         accountImg.layer.borderWidth = 0.5
-    
+        if let imageData = UserDefaults.standard.data(forKey: "profileImage") {
+            accountImg.image = UIImage(data: imageData)
+        } else {
+            print("No image found in UserDefaults")
+        }
         firstName.setPlaceholderText(Constants.firstname, .white)
         lastName.setPlaceholderText(Constants.lastname, .white)
         email.setPlaceholderText(Constants.email, .white)
@@ -150,7 +154,7 @@ hideKeyboardWhenTappedAround()
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.sourceType = .photoLibrary
-            imagePicker.allowsEditing = true 
+            imagePicker.allowsEditing = true
             present(imagePicker, animated: true, completion: nil)
         } else {
             print("Photo Library not available")

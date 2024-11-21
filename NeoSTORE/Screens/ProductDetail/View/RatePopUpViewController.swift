@@ -7,7 +7,9 @@
 
 import UIKit
 
-
+protocol ProductQuantityDelegate{
+    func onDismiss(productQty: Int)
+}
 class RatePopUpViewController: UIViewController {
     @IBOutlet var lblProductName: UILabel!
     
@@ -30,8 +32,8 @@ class RatePopUpViewController: UIViewController {
     var product: ProductDetailData?
     var id : Int?
     var viewModel = RatingViewModel()
-    
-    var onDismiss: (() -> Void)?
+    var delegate : ProductQuantityDelegate?
+   // var onDismiss: (() -> Void)?
 
     
     override func viewDidLoad() {
@@ -126,11 +128,15 @@ class RatePopUpViewController: UIViewController {
         else if id == 2{
             
             guard let product = product else {return}
+//            let storyboard = UIStoryboard(name: "OrderScreen", bundle: nil).instantiateViewController(withIdentifier: "CartViewController") as!  CartViewController
+//            self.navigationController?.pushViewController(storyboard, animated: true)
+            
+//            self.dismiss(animated: true, completion: {
+//                self.onDismiss?()
+            
+            dismiss(animated: true)
+            delegate?.onDismiss(productQty: Int(qtyTextField.text ?? "") ?? 0)
            
-            self.dismiss(animated: true, completion: {
-                self.onDismiss?()
-            })
-
         }
         
     }

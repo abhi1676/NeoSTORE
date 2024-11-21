@@ -11,6 +11,7 @@ class CartViewController: UIViewController {
 
     @IBOutlet var cartTableView: UITableView!
     var product : ProductDetailData?
+    var productQty: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +19,8 @@ class CartViewController: UIViewController {
         cartTableView.delegate = self
         cartTableView.dataSource = self
         setUpNib()
-        
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.topItem?.title = ""
     }
     
     func setUpNib(){
@@ -26,8 +28,12 @@ class CartViewController: UIViewController {
         cartTableView.register(nib, forCellReuseIdentifier: "CartTableViewCell")
     }
   
-
+    @IBAction func orderButtonTapped(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }
+
 extension CartViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         1
@@ -35,11 +41,11 @@ extension CartViewController:UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CartTableViewCell", for: indexPath) as! CartTableViewCell
-        cell.configureCell(with: product )
+        cell.configureCell(with:product, qty: productQty)
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        150
+        120
     }
     
 }

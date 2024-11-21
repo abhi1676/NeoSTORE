@@ -7,45 +7,68 @@
 
 import UIKit
 
-class ProductDetailViewController: UIViewController {
+class ProductDetailViewController: UIViewController{
+
     
     var productName = ""
     var viewmodel : ProductDetailViewModel?
     var productId : Int?
+    var ratePopUp = RatePopUpViewController()
+    
+    @IBOutlet var shimmerView: UIView!
+    
     @IBOutlet var productNameLbl: UILabel!
-    
     @IBOutlet var productCategoryLbl: UILabel!
-    
     @IBOutlet var productInfoLbl: UILabel!
-    
     @IBOutlet var productStarView: StarRatingView!
-    
     @IBOutlet var productPrice: UILabel!
     
     @IBOutlet var shareButton: UIButton!
     
     @IBOutlet var productImage1: UIImageView!
-    
     @IBOutlet var productImage2: UIImageView!
-    
-    
     @IBOutlet var productImage3: UIImageView!
-    
     @IBOutlet var productImage4: UIImageView!
     
     @IBOutlet var productDescription: UITextView!
+
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationController?.navigationBar.topItem?.title = ""
+        fetchProductDetail()
+        self.observeEvent()
+        self.shimmerView.isUserInteractionEnabled = false
+        self.shimmerView.isShimmering = true
+        self.navigationController?.navigationBar.backgroundColor = UIColor(red: 1.0, green: 0.149, blue: 0.0, alpha: 1.0)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.title = productName
+        ratePopUp.delegate = self
+    
+    }
+    
+    
+    
+    @IBAction func shareButtonTapped(_ sender: Any) {
+        navigate(storyboardName: "AccountScreen", viewControllerID: "MyAccountViewController")
+    }
     
     @IBAction func productBuyButtonTapped(_ sender: Any) {
         //navigate(storyboardName: "OrderScreen", viewControllerID: "AddressViewController")
         let ratepop = RatePopUpViewController()
 
         guard let product = viewmodel?.productDetail?.data  else {return}
-       
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "RatePopUpViewController") as RatePopUpViewController
         ratepop.product = product
         ratepop.id = 2
-        ratepop.onDismiss = { [weak self] in
-                    self?.navigateToCartViewController(with: product)
-                }
+//        ratepop.onDismiss = { [weak self] in
+//                    self?.navigateToCartViewController(with: product)
+//                }
+        ratepop.delegate = self
         ratepop.modalPresentationStyle = .overCurrentContext
         ratepop.modalTransitionStyle = .crossDissolve
         present(ratepop, animated: true)
@@ -61,29 +84,6 @@ class ProductDetailViewController: UIViewController {
         ratepop.modalPresentationStyle = .overCurrentContext
         ratepop.modalTransitionStyle = .crossDissolve
         present(ratepop, animated: true)
-    }
-    
-    
-    @IBOutlet var shimmerView: UIView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.navigationController?.navigationBar.topItem?.title = ""
-        fetchProductDetail()
-        self.observeEvent()
-        self.shimmerView.isUserInteractionEnabled = false
-        self.shimmerView.isShimmering = true
-        self.navigationController?.navigationBar.backgroundColor = UIColor(red: 1.0, green: 0.149, blue: 0.0, alpha: 1.0)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationItem.title = productName
-        
-    }
-    
-    @IBAction func shareButtonTapped(_ sender: Any) {
-        navigate(storyboardName: "AccountScreen", viewControllerID: "MyAccountViewController")
     }
     
     func setUpUI(data:ProductDetail?){
@@ -150,13 +150,16 @@ class ProductDetailViewController: UIViewController {
             }
         }
     }
-    func navigateToCartViewController(with product: ProductDetailData) {
+}
+
+
+extension ProductDetailViewController: ProductQuantityDelegate {
+    func onDismiss(productQty: Int) {
         let storyboard = UIStoryboard(name: "OrderScreen", bundle: nil)
         if let cartVC = storyboard.instantiateViewController(withIdentifier: "CartViewController") as? CartViewController {
-            cartVC.product = product // Pass the product data
-            cartVC.modalPresentationStyle = .fullScreen // Set full screen for presentation
-            self.present(cartVC, animated: true, completion: nil) // Present CartViewController
+            cartVC.product = viewmodel?.productDetail?.data
+            cartVC.productQty = productQty
+            self.navigationController?.pushViewController(cartVC, animated: true)
         }
     }
-
 }

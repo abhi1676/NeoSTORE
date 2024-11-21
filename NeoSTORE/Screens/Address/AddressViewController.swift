@@ -28,7 +28,9 @@ class AddressViewController: UIViewController {
         self.navigationController?.navigationBar.topItem?.title = ""
         print(UserDefaults.standard.stringArray(forKey: "Address") ?? "")
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.title = "Add Address"
+    }
 
     @IBAction func saveAddressTapped(_ sender: Any) {
         

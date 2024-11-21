@@ -57,7 +57,7 @@ class MyAccountViewController: UIViewController {
         DOB.setIcon(UIImage(named: "dob_icon") ?? UIImage())
         phoneNumber.setIcon(UIImage(named: Constants.phonenumberIcon) ?? UIImage())
 
-
+        self.navigationController?.navigationBar.isHidden = false
     }
     
     func bindViewModel() {
@@ -113,4 +113,7 @@ class MyAccountViewController: UIViewController {
     @IBAction func resetButtonTapped(_ sender: Any) {
         navigate(storyboardName: "AccountScreen", viewControllerID: "ResetPasswordViewController")
     }
+    
+    
+    
 }

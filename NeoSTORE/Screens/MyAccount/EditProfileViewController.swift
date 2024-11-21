@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EditProfileViewController: UIViewController {
+class EditProfileViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet var firstName: CustomTextField!
    
@@ -87,7 +87,11 @@ hideKeyboardWhenTappedAround()
             }
         }
     }
-
+    
+    @IBAction func uploadImageTapped(_ sender: Any) {
+        presentImagePickerActionSheet()
+    }
+    
 
     @IBAction func submitButtonTapped(_ sender: Any) {
         guard let firstName = firstName.text, !firstName.isEmpty,
@@ -108,5 +112,74 @@ hideKeyboardWhenTappedAround()
         })
         
     }
+  
+
+
+
+
+    func presentImagePickerActionSheet() {
+        let actionSheet = UIAlertController(title: "Choose Profile Picture", message: nil, preferredStyle: .actionSheet)
+        
+        actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
+            self.openCamera()
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: { _ in
+            self.openPhotoLibrary()
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        present(actionSheet, animated: true, completion: nil)
     }
+
+    func openCamera() {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .camera
+            imagePicker.allowsEditing = true
+            present(imagePicker, animated: true, completion: nil)
+        } else {
+            print("Camera not available")
+        }
+    }
+
+    func openPhotoLibrary() {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .photoLibrary
+            imagePicker.allowsEditing = true 
+            present(imagePicker, animated: true, completion: nil)
+        } else {
+            print("Photo Library not available")
+        }
+    }
+
+    // UIImagePickerControllerDelegate Method
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let editedImage = info[.editedImage] as? UIImage {
+            accountImg.image = editedImage
+            saveImageToUserDefaults(image: editedImage, forKey: "profileImage")
+        } else if let originalImage = info[.originalImage] as? UIImage {
+            accountImg.image = originalImage
+            saveImageToUserDefaults(image: originalImage, forKey: "profileImage")
+        }
+        picker.dismiss(animated: true, completion: nil)
+    }
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func saveImageToUserDefaults(image: UIImage, forKey key: String) {
+        if let imageData = image.jpegData(compressionQuality: 1.0) {
+            UserDefaults.standard.set(imageData, forKey: key)
+        } else {
+            print("Error: Unable to convert image to data")
+        }
+    }
+
+}
 

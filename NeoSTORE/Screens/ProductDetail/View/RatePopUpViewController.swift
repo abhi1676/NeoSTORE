@@ -34,7 +34,7 @@ class RatePopUpViewController: UIViewController {
     var viewModel = RatingViewModel()
     var delegate : ProductQuantityDelegate?
    // var onDismiss: (() -> Void)?
-
+var viewModel2 = CartViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,38 +107,43 @@ class RatePopUpViewController: UIViewController {
         if let userMessage = viewModel.ratingResponse?.user_msg {
             print(userMessage)
         }
-        dismiss(animated: true)
     }
     
     //MARK: IBAction
     @IBAction func rateButtonTapped(_ sender: Any) {
-        if id == 1 {
-            print(startRating.rating ,"Star Rating Given")
-            guard let product = product else { return }
-            viewModel.setRating(productId: "\(product.id)", rating: startRating.rating)
-            let alertController = UIAlertController(title: "RATING SUCCESSFULL", message: "THANK YOU FOR RATING !", preferredStyle: .alert)
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
             
-            let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {
-                UIAlertAction in
-                self.dismiss(animated: true)
+            
+            if self.id == 1 {
+                print(self.startRating.rating ,"Star Rating Given")
+                guard let product = self.product else { return }
+                self.viewModel.setRating(productId: "\(product.id)",
+                                         rating: self.startRating.rating)
+                let alertController = UIAlertController(title: "RATING SUCCESSFULL", message: "THANK YOU FOR RATING !", preferredStyle: .alert)
+                
+                let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {
+                    UIAlertAction in
+                    self.dismiss(animated: true)
+                }
+                alertController.addAction(okAction)
+                self.present(alertController, animated: true)
             }
-            alertController.addAction(okAction)
-            self.present(alertController, animated: true)
+            else if self.id == 2{
+                
+                guard let product = self.product else {return}
+                //            let storyboard = UIStoryboard(name: "OrderScreen", bundle: nil).instantiateViewController(withIdentifier: "CartViewController") as!  CartViewController
+                //            self.navigationController?.pushViewController(storyboard, animated: true)
+                
+                //            self.dismiss(animated: true, completion: {
+                //                self.onDismiss?()
+                let quantity = Int(self.qtyTextField.text ?? "") ?? 0
+                self.viewModel2.addToCart(productId: product.id, quantity: quantity)
+                self.dismiss(animated: true)
+                self.delegate?.onDismiss(productQty: quantity)
+              
+            }
         }
-        else if id == 2{
-            
-            guard let product = product else {return}
-//            let storyboard = UIStoryboard(name: "OrderScreen", bundle: nil).instantiateViewController(withIdentifier: "CartViewController") as!  CartViewController
-//            self.navigationController?.pushViewController(storyboard, animated: true)
-            
-//            self.dismiss(animated: true, completion: {
-//                self.onDismiss?()
-            
-            dismiss(animated: true)
-            delegate?.onDismiss(productQty: Int(qtyTextField.text ?? "") ?? 0)
-           
-        }
-        
     }
     @objc func  dismissPopUp(_ sender : UITapGestureRecognizer){
         dismiss(animated: true)

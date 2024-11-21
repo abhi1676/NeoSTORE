@@ -19,6 +19,7 @@ class SlideViewController: UIViewController {
     
     @IBOutlet var email: UILabel!
     
+    @IBOutlet var profilePic: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,11 @@ class SlideViewController: UIViewController {
         fullname.text = UserDefaults.standard.string(forKey: Constants.fullname)
         email.text = UserDefaults.standard.string(forKey: Constants.email)
         
-        
+        if let imageData = UserDefaults.standard.data(forKey: "profileImage") {
+            profilePic.image = UIImage(data: imageData)
+        } else {
+            print("No image found in UserDefaults")
+        }
     }
     
     func navigateToProductList(categoryId:Int) {
@@ -52,6 +57,11 @@ class SlideViewController: UIViewController {
          }
        
      }
+    func navigateToAccount(){
+        let sb = UIStoryboard(name: "AccountScreen", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "MyAccountViewController") as! MyAccountViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 
 
 }
@@ -95,6 +105,23 @@ extension SlideViewController:UITableViewDataSource,UITableViewDelegate{
             navigateToProductList(categoryId: 2)
         case 4 :
             navigateToProductList(categoryId: 4)
+        case 5 :
+            let storyboard = UIStoryboard(name: "AccountScreen", bundle: nil)
+            if let vc = storyboard.instantiateViewController(withIdentifier: "MyAccountViewController") as? MyAccountViewController {
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+            //navigate(storyboardName: "AccountScreen", viewControllerID: "MyAccountViewController")
+        case 6 :
+            navigate(storyboardName: "AccountScreen", viewControllerID: "StoreLocatorViewController")
+        case 7 :
+            print("My Orders")
+        case 8 :
+            UserDefaults.standard.removeObject(forKey: Constants.fullname)
+            UserDefaults.standard.removeObject(forKey:Constants.email)
+            UserDefaults.standard.removeObject( forKey: Constants.accessToken)
+            
+            print(UserDefaults.standard.string(forKey: Constants.fullname)," ",UserDefaults.standard.string(forKey: Constants.accessToken))
+            self.navigationController?.popToRootViewController(animated: true)
         default :
             break
         }

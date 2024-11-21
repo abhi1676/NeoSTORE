@@ -22,6 +22,9 @@ class CartViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.topItem?.title = ""
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.title = "My Cart"
+    }
     
     func setUpNib(){
         let nib = UINib(nibName: "CartTableViewCell", bundle: nil)
@@ -29,7 +32,7 @@ class CartViewController: UIViewController {
     }
   
     @IBAction func orderButtonTapped(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+       navigate(storyboardName: "OrderScreen", viewControllerID: "AddressListViewController")
     }
     
 }

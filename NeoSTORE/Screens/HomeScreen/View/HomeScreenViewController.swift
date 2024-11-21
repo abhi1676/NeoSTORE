@@ -44,6 +44,7 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
         UserDefaults.standard.set(true, forKey: "displayHomeNavBar")
         super.viewDidLoad()
         self.navigationItem.backBarButtonItem?.isHidden = true
+    
         hideNavigationBackButtton()
         setupNavigationBarButton(imageName: Constants.menuIcon, isLeft: true, action: #selector(menuButtonTapped))
         setupNavigationBarButton(imageName: Constants.searchIcon, isLeft: false, action: #selector(serachButtonTapped))
@@ -54,15 +55,18 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
         backViewForSlideMenu.isHidden = true
         backViewForSlideMenu.layer.cornerRadius = 10
         rightSideView.isUserInteractionEnabled = false
+        
 
     }
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+        backView.alpha = 0
         self.navigationItem.title = "NeoSTORE"
-        if UserDefaults.standard.bool(forKey: "displayHomeNavBar") == false {
-            self.navigationController?.navigationBar.isHidden = true
-        } else {
-            self.navigationController?.navigationBar.isHidden = false
-        }
+//        if UserDefaults.standard.bool(forKey: "displayHomeNavBar") == false {
+//            self.navigationController?.navigationBar.isHidden = true
+//        } else {
+//            self.navigationController?.navigationBar.isHidden = false
+//        }
     }
     
     func setUpNib(){
@@ -72,6 +76,7 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
     @objc func menuButtonTapped(){
         rightSideView.isUserInteractionEnabled = true
         backView.isUserInteractionEnabled = true
+        backView.alpha = 1
         self.navigationController?.navigationBar.isHidden = true
         backViewForSlideMenu.isHidden = false
         UIView.animate(withDuration: 0.5) {
@@ -90,9 +95,11 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
             self.view.layoutIfNeeded()
            
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+  
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4){
             self.navigationController?.navigationBar.isHidden = false
         }
+        
         
         
     }

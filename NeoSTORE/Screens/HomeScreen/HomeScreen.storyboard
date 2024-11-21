@@ -402,6 +402,7 @@
                     <connections>
                         <outlet property="email" destination="PsK-fX-jiK" id="Vvl-gj-bTg"/>
                         <outlet property="fullname" destination="xMn-BJ-5DQ" id="wer-vq-zDn"/>
+                        <outlet property="profilePic" destination="Lhd-cq-m4g" id="o7G-v0-Jbu"/>
                         <outlet property="slideMenuTableView" destination="23f-Uj-oQo" id="AmO-Pz-ged"/>
                         <outlet property="slideMenuView" destination="ruh-1b-hI2" id="U5g-Eu-4qF"/>
                     </connections>

@@ -110,6 +110,7 @@ final class APIManager {
         
        
         let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+            
             if let error = error {
                 completion(.failure(.network(error.localizedDescription)))
                 return
@@ -128,6 +129,10 @@ final class APIManager {
             guard let data = data else {
                 completion(.failure(.invalidData))
                 return
+            }
+            
+            if let JSONString = String(data: data, encoding: String.Encoding.utf8) {
+               print(JSONString)
             }
 
             do {

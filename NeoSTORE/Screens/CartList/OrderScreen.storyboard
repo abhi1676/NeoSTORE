@@ -33,12 +33,12 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lg9-iW-H0D">
-                                <rect key="frame" x="30" y="718" width="333" height="41.333333333333371"/>
+                                <rect key="frame" x="30" y="718" width="333" height="39.333333333333371"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="ORDER NOW" titleAlignment="center">
                                     <backgroundConfiguration key="background" cornerRadius="10"/>
-                                    <fontDescription key="titleFontDescription" name="AlNile" family="Al Nile" pointSize="20"/>
+                                    <fontDescription key="titleFontDescription" name="Gotham-Medium" family="Gotham" pointSize="21"/>
                                     <color key="baseBackgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>

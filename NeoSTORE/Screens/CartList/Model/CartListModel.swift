@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 struct CartListModel : Codable {
     let status : Int
     let data : [CartListData]
@@ -28,3 +29,4 @@ struct CartListProduct : Codable {
     let product_images : String
     let sub_total : Int
 }
+

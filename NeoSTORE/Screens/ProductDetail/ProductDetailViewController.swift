@@ -123,8 +123,8 @@ class ProductDetailViewController: UIViewController{
         productImage4.layer.borderWidth = 1
         
         productImage2.layer.borderColor = UIColor.red.cgColor
-        productImage2.layer.borderColor = UIColor.black.cgColor
-        productImage2.layer.borderColor = UIColor.green.cgColor
+        productImage3.layer.borderColor = UIColor.black.cgColor
+        productImage4.layer.borderColor = UIColor.green.cgColor
     }
     @IBAction func shareButtonTapped(_ sender: Any) {
         navigate(storyboardName: "AccountScreen", viewControllerID: "MyAccountViewController")

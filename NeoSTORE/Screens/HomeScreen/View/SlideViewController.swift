@@ -98,7 +98,10 @@ extension SlideViewController:UITableViewDataSource,UITableViewDelegate{
         UserDefaults.standard.set(false, forKey: "displayHomeNavBar")
         switch indexPath.row {
         case 0 :
-            print("Cart tapped")
+            let storyboard = UIStoryboard(name: "OrderScreen", bundle: nil)
+            if let vc = storyboard.instantiateViewController(withIdentifier: "CartViewController") as? CartViewController {
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
         case 1 :
             navigateToProductList(categoryId: 1)
         case 2 :

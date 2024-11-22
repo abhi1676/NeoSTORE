@@ -21,7 +21,9 @@ class CartTableViewCell: UITableViewCell {
     
     var product : ProductDetailData?
     var quantityDidChange: ((Int) -> Void)?
-    
+    var viewModel = CartViewModel()
+    var qty = 1
+    var didQuantityChange:((Int) -> Void)?
     override func awakeFromNib() {
         super.awakeFromNib()
         showQuantityDropdown()
@@ -35,15 +37,15 @@ class CartTableViewCell: UITableViewCell {
     //        cartProductqty.setTitle("\(quantity)", for: .normal)
     //
     //    }
-    func configureCell(with product: ProductDetailData?, qty: Int) {
-        cartProductqty.setTitle("\(String(describing: qty))", for: .normal)
+    func configureCell(with product: CartListData?) {
+        cartProductqty.setTitle("\(product?.quantity ?? 1)", for: .normal)
         
-        self.product = product
-        cartProductName.text = product?.name
-        cartProductCategory.text = product?.producer
-        cartProductPrice.text = "₹\(Int(product?.cost ?? 1))"
+        //self.product = product
+        cartProductName.text = product?.product.name
+        cartProductCategory.text = product?.product.product_category
+        cartProductPrice.text = "₹\(Int(product?.product.cost ?? 1))"
         
-        if let imageurl = URL(string: product?.product_images[0].image ?? "")
+        if let imageurl = URL(string: product?.product.product_images ?? "")
         {
             cartProductImg.loadImage(from: imageurl,placeholder: UIImage(named: "cricket"))
         }
@@ -54,8 +56,10 @@ class CartTableViewCell: UITableViewCell {
         let menuItems: [UIAction] = (1...5).map { i in
             UIAction(title: "\(i)", handler: { [weak self] _ in
                 self?.updateQuantity(i)
+                self?.didQuantityChange?(i)
             })
         }
+        
         let menu = UIMenu(title: "Select Quantity", children: menuItems)
         cartProductqty.menu = menu
         cartProductqty.showsMenuAsPrimaryAction = true
@@ -64,6 +68,12 @@ class CartTableViewCell: UITableViewCell {
     private func updateQuantity(_ quantity: Int) {
         cartProductqty.setTitle("\(quantity)", for: .normal)
         quantityDidChange?(quantity)
+        qty = quantity
+       
+    }
+    
+    func editCart(productID: Int){
+        viewModel.editCart(productId: productID, quantity: self.qty)
     }
     
     //extension CartTableViewCell: UIEditMenuInteractionDelegate {

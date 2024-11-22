@@ -22,14 +22,17 @@ class AddressViewController: UIViewController {
     @IBOutlet var countryTextfield: UITextField!
     
     var addressArray = [String]()
+    var temp:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        zipcodeTextfield.keyboardType = .numberPad
         self.navigationController?.navigationBar.topItem?.title = ""
         print(UserDefaults.standard.stringArray(forKey: "Address") ?? "")
+        self.title = "Add Address"
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.title = "Add Address"
+        self.title = "Add Address"
+        addressArray = UserDefaults.standard.stringArray(forKey: "Address") ?? []
     }
 
     @IBAction func saveAddressTapped(_ sender: Any) {
@@ -41,15 +44,17 @@ class AddressViewController: UIViewController {
             let state = stateTextfield.text ?? ""
             let zipcode = zipcodeTextfield.text ?? ""
             
-         
-            address.append(" \(landmark) \(city) \(state) \(zipcode)")
+         let str = "\(address) \(landmark) \(city) \(state) \(zipcode)"
+            temp+=str
             
          
-            addressArray.append(address)
+            addressArray.append(temp)
             UserDefaults.standard.set(addressArray, forKey: "Address")
             print(addressArray.description)
         }
-        showAlert(title: "DONE", message: "Added Address Successfully")
+        showAlert(title: "DONE", message: "Added Address Successfully"){
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
 

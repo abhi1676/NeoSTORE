@@ -42,7 +42,7 @@ class CartViewModel {
         
         APIManager.shared.manager(
             modelType: CartModel.self,
-            type: EndPointList.cart,
+            type: EndPointList.editCart,
             requestModel: request,
             method: .post
         ) { [weak self] result in
@@ -65,7 +65,7 @@ class CartViewModel {
         
         APIManager.shared.manager(
             modelType: CartModel.self,
-            type: EndPointList.cart,
+            type: EndPointList.deleteCart,
             requestModel: request,
             method: .post
         ) { [weak self] result in

@@ -97,15 +97,15 @@ var viewModel2 = CartViewModel()
                     print("Stopped Loading.")
                 case .dataLoaded:
                     self?.handleRatingSuccess()
-                case .error(let error):
-                    print(error?.localizedDescription)
+                case .error(let _):
+                    break
                 }
             }
         }
     }
     private func handleRatingSuccess() {
         if let userMessage = viewModel.ratingResponse?.user_msg {
-            print(userMessage)
+           print("Thank you for rating")
         }
     }
     

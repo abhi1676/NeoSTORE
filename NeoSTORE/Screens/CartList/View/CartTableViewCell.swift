@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+
 class CartTableViewCell: UITableViewCell {
     
     @IBOutlet var cartProductImg: UIImageView!
@@ -18,9 +20,9 @@ class CartTableViewCell: UITableViewCell {
     @IBOutlet var cartProductqty: UIButton!
     
     @IBOutlet var cartProductPrice: UILabel!
-    
-    var product : ProductDetailData?
-    var quantityDidChange: ((Int) -> Void)?
+    var delegate:CartDelegate?
+    var product : CartListData?
+
     var viewModel = CartViewModel()
     var qty = 1
     var didQuantityChange:((Int) -> Void)?
@@ -40,7 +42,7 @@ class CartTableViewCell: UITableViewCell {
     func configureCell(with product: CartListData?) {
         cartProductqty.setTitle("\(product?.quantity ?? 1)", for: .normal)
         
-        //self.product = product
+        self.product = product
         cartProductName.text = product?.product.name
         cartProductCategory.text = product?.product.product_category
         cartProductPrice.text = "₹\(Int(product?.product.cost ?? 1))"
@@ -56,7 +58,8 @@ class CartTableViewCell: UITableViewCell {
         let menuItems: [UIAction] = (1...5).map { i in
             UIAction(title: "\(i)", handler: { [weak self] _ in
                 self?.updateQuantity(i)
-                self?.didQuantityChange?(i)
+                self?.delegate?.cartEdited(req: EditCartRequest(product_id: self?.product?.product_id ?? 1, quantity: i))
+                self?.cartProductPrice.text = "₹\(Int((self?.product?.product.cost ?? 1) * i))"
             })
         }
         
@@ -67,8 +70,7 @@ class CartTableViewCell: UITableViewCell {
     
     private func updateQuantity(_ quantity: Int) {
         cartProductqty.setTitle("\(quantity)", for: .normal)
-        quantityDidChange?(quantity)
-        qty = quantity
+       
        
     }
     

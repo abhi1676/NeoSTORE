@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol CartDelegate{
+    func cartEdited(req:EditCartRequest)
+}
+
 class CartViewController: UIViewController {
 
     @IBOutlet var cartTableView: UITableView!
@@ -22,7 +26,7 @@ class CartViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.topItem?.title = ""
         self.navigationController?.title = "My Cart"
-        
+    
         bindViewModel()
         fetchCartItems()
     }
@@ -69,7 +73,11 @@ class CartViewController: UIViewController {
     
 }
 
-extension CartViewController: UITableViewDelegate,UITableViewDataSource {
+extension CartViewController: UITableViewDelegate,UITableViewDataSource,CartDelegate {
+    func cartEdited(req: EditCartRequest) {
+        self.cartViewModel.editCart(productId: req.product_id, quantity: req.quantity)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.cartItems.count
     }
@@ -77,9 +85,7 @@ extension CartViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CartTableViewCell", for: indexPath) as! CartTableViewCell
         cell.configureCell(with: viewModel.cartItems[indexPath.row])
-        cell.didQuantityChange = { [weak self] qty in
-           
-        }
+        cell.delegate = self
        // cell.editCart(productID: viewModel.cartItems[indexPath.row].product_id)
 
         return cell
@@ -108,4 +114,5 @@ extension CartViewController: UITableViewDelegate,UITableViewDataSource {
 
     
 }
+
 

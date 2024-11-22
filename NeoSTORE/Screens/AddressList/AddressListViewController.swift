@@ -9,7 +9,7 @@ import UIKit
 
 class AddressListViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
-    
+    var viewModel = OrderViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,12 +31,16 @@ class AddressListViewController: UIViewController {
     @IBAction func placeOrderButtonTapped(_ sender: Any) {
 //        print(UserDefaults.standard.stringArray(forKey: "Address")?.description)
 //        print(UserDefaults.standard.string(forKey: Constants.fullname))
-        
+        let arr = UserDefaults.standard.array(forKey: "Address")
+        let address = arr?[0] as? String ?? ""
+        viewModel.placeOrder(with: address)
     }
     
     @objc func addAddress(){
         navigate(storyboardName: "OrderScreen", viewControllerID: "AddressViewController")
     }
+    
+    
 
 }
 

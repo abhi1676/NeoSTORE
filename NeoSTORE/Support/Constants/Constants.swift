@@ -43,6 +43,8 @@ struct Constants{
     static let addToCart = "addToCart"
     static let editCart = "editCart"
     static let deleteCart = "deleteCart"
+    static let order = "order"
+    static let orderList = "orderList"
     
     static let getuserData = "users/getUserData"
     static let updateData = "users/update"

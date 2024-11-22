@@ -354,6 +354,46 @@
             </objects>
             <point key="canvasLocation" x="2845" y="4"/>
         </scene>
+        <!--Order List View Controller-->
+        <scene sceneID="nMN-cx-u57">
+            <objects>
+                <viewController storyboardIdentifier="OrderListViewController" id="fxm-H4-j70" customClass="OrderListViewController" customModule="NeoSTORE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dzZ-1x-urB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BHQ-xd-2bB">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="3Pb-ld-abx"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0K4-D3-rRL">
+                                <rect key="frame" x="0.0" y="60" width="393" height="758"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aEo-uC-XFV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BHQ-xd-2bB" firstAttribute="top" secondItem="dzZ-1x-urB" secondAttribute="top" id="1IS-ck-wG6"/>
+                            <constraint firstItem="BHQ-xd-2bB" firstAttribute="leading" secondItem="aEo-uC-XFV" secondAttribute="leading" id="6Yo-xu-8ao"/>
+                            <constraint firstItem="aEo-uC-XFV" firstAttribute="trailing" secondItem="BHQ-xd-2bB" secondAttribute="trailing" id="K76-OH-KgZ"/>
+                            <constraint firstItem="0K4-D3-rRL" firstAttribute="top" secondItem="BHQ-xd-2bB" secondAttribute="bottom" id="QzP-bD-fiZ"/>
+                            <constraint firstItem="aEo-uC-XFV" firstAttribute="trailing" secondItem="0K4-D3-rRL" secondAttribute="trailing" id="WqG-f7-J30"/>
+                            <constraint firstItem="0K4-D3-rRL" firstAttribute="leading" secondItem="aEo-uC-XFV" secondAttribute="leading" id="p57-9Z-gJv"/>
+                            <constraint firstItem="aEo-uC-XFV" firstAttribute="bottom" secondItem="0K4-D3-rRL" secondAttribute="bottom" id="rvK-1F-4uh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="orderListTableview" destination="0K4-D3-rRL" id="qHd-4d-cE3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JWy-aL-vOg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3705" y="4"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">

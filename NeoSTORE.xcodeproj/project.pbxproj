@@ -26,6 +26,11 @@
 		183A0D1B2CE20C3A002D9850 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A0D1A2CE20C3A002D9850 /* ProductListViewController.swift */; };
 		185C1B282CEC5FBF007DFEDB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C1B272CEC5FBF007DFEDB /* BaseViewController.swift */; };
 		185C1B2E2CECB2BE007DFEDB /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C1B2D2CECB2BE007DFEDB /* ResetPasswordViewController.swift */; };
+		1862877A2CF0A7FE005B338C /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186287792CF0A7FE005B338C /* OrderModel.swift */; };
+		1862877C2CF0A8C6005B338C /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862877B2CF0A8C6005B338C /* OrderViewModel.swift */; };
+		1862877E2CF0AEA1005B338C /* OrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862877D2CF0AEA1005B338C /* OrderListViewController.swift */; };
+		186287812CF0AED9005B338C /* OrderListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862877F2CF0AED9005B338C /* OrderListTableViewCell.swift */; };
+		186287822CF0AED9005B338C /* OrderListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186287802CF0AED9005B338C /* OrderListTableViewCell.xib */; };
 		1862920C2CD0DA8D0052DF4A /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862920B2CD0DA8D0052DF4A /* UILabelExtension.swift */; };
 		1862920E2CD206100052DF4A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862920D2CD206100052DF4A /* StringExtension.swift */; };
 		186292102CD20D2F0052DF4A /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862920F2CD20D2F0052DF4A /* RegisterViewModel.swift */; };
@@ -102,6 +107,11 @@
 		183A0D1A2CE20C3A002D9850 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		185C1B272CEC5FBF007DFEDB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		185C1B2D2CECB2BE007DFEDB /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		186287792CF0A7FE005B338C /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
+		1862877B2CF0A8C6005B338C /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
+		1862877D2CF0AEA1005B338C /* OrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListViewController.swift; sourceTree = "<group>"; };
+		1862877F2CF0AED9005B338C /* OrderListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListTableViewCell.swift; sourceTree = "<group>"; };
+		186287802CF0AED9005B338C /* OrderListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderListTableViewCell.xib; sourceTree = "<group>"; };
 		1862920B2CD0DA8D0052DF4A /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		1862920D2CD206100052DF4A /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		1862920F2CD20D2F0052DF4A /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
@@ -284,6 +294,18 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		186287782CF0A7EB005B338C /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				186287792CF0A7FE005B338C /* OrderModel.swift */,
+				1862877B2CF0A8C6005B338C /* OrderViewModel.swift */,
+				1862877D2CF0AEA1005B338C /* OrderListViewController.swift */,
+				1862877F2CF0AED9005B338C /* OrderListTableViewCell.swift */,
+				186287802CF0AED9005B338C /* OrderListTableViewCell.xib */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
 		1873ADDB2CEB3183009B731E /* MyAccount */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +434,7 @@
 		18B092A52CCB7DE2007F19F4 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				186287782CF0A7EB005B338C /* Order */,
 				1829DC5A2CEF66B00062E5C8 /* StoreLocator */,
 				189977D02CEDE2C6004E9943 /* ProductRating */,
 				185C1B292CECB27C007DFEDB /* ResetPassword */,
@@ -678,6 +701,7 @@
 				1818D5EE2CCB7C5B006FDFE1 /* LaunchScreen.storyboard in Resources */,
 				18DBF77B2CDCA22500EEA8C5 /* HomeScreenCollectionViewCell.xib in Resources */,
 				1818D5EB2CCB7C5B006FDFE1 /* Assets.xcassets in Resources */,
+				186287822CF0AED9005B338C /* OrderListTableViewCell.xib in Resources */,
 				18E4990C2CDA579300B57CA2 /* HomeScreen.storyboard in Resources */,
 				183507FC2CDF39DF008CC561 /* SlideMenuTableViewCell.xib in Resources */,
 				18AABFA32CCF63D200E35122 /* Gotham-Book.otf in Resources */,
@@ -718,6 +742,7 @@
 				18AC6EB92CCF732000235314 /* UITextFieldExtension.swift in Sources */,
 				1818D5E22CCB7C59006FDFE1 /* AppDelegate.swift in Sources */,
 				183A0D172CE20ABC002D9850 /* Product Model.swift in Sources */,
+				1862877E2CF0AEA1005B338C /* OrderListViewController.swift in Sources */,
 				1829DC572CEF542C0062E5C8 /* CartViewModel.swift in Sources */,
 				18B7F2442CE5FCF2003264BF /* CartModel.swift in Sources */,
 				186292162CD26AC70052DF4A /* TextFieldType.swift in Sources */,
@@ -738,6 +763,7 @@
 				18280E662CE3632900FD8411 /* CustomStarView.swift in Sources */,
 				185C1B2E2CECB2BE007DFEDB /* ResetPasswordViewController.swift in Sources */,
 				183A0D1B2CE20C3A002D9850 /* ProductListViewController.swift in Sources */,
+				186287812CF0AED9005B338C /* OrderListTableViewCell.swift in Sources */,
 				189977D72CEE0EEE004E9943 /* CartTableViewCell.swift in Sources */,
 				188BF7F72CE38E0300475E7A /* ProductDetailModel.swift in Sources */,
 				18E499092CDA136800B57CA2 /* Register.swift in Sources */,
@@ -752,7 +778,9 @@
 				18A9084A2CE750A00056C499 /* RatePopUpViewController.swift in Sources */,
 				187A61672CD8CD990028E3C3 /* LoginViewModel.swift in Sources */,
 				18F568252CCF9CE600B3EE8D /* Constants.swift in Sources */,
+				1862877A2CF0A7FE005B338C /* OrderModel.swift in Sources */,
 				18FA7B5F2CDB688700BCFB32 /* HomeScreenViewController.swift in Sources */,
+				1862877C2CF0A8C6005B338C /* OrderViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

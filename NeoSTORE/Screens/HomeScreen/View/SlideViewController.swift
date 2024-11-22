@@ -119,7 +119,7 @@ extension SlideViewController:UITableViewDataSource,UITableViewDelegate{
         case 6 :
             navigate(storyboardName: "AccountScreen", viewControllerID: "StoreLocatorViewController")
         case 7 :
-            print("My Orders")
+            navigate(storyboardName: "OrderScreen", viewControllerID: "OrderListViewController")
         case 8 :
             UserDefaults.standard.removeObject(forKey: Constants.fullname)
             UserDefaults.standard.removeObject(forKey:Constants.email)

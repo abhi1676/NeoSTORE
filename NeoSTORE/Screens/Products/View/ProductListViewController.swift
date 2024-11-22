@@ -21,6 +21,7 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
         shimmerView.isUserInteractionEnabled = false
         self.shimmerView.isShimmering = true
         self.navigationController?.navigationBar.backgroundColor = UIColor(red: 1.0, green: 0.149, blue: 0.0, alpha: 1.0)
+//self.navigationController?.navigationBar.tintColor = UIColor(red: 1.0, green: 0.149, blue: 0.0, alpha: 1.0)
 
         
     }

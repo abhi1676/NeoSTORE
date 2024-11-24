@@ -79,7 +79,7 @@ extension EndPointList:EndPointType{
   
     var headers: HTTPHeaders {
         switch self {
-        case .getUserData, .updateUserData,.addToCart,.editCart,.deleteCart,.cart,.order:
+        case .getUserData, .updateUserData,.addToCart,.editCart,.deleteCart,.cart,.order,.orderList:
             var header = [String:String]()
             if let token = UserDefaults.standard.string(forKey: Constants.accessToken) {
                 header["access_token"] = "\(token)"

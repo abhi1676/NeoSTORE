@@ -46,7 +46,7 @@ class OrderViewModel {
             APIManager.shared.manager(
                 modelType: OrderListResponse.self,
                 type: EndPointList.orderList,
-                requestModel: nil as EmptyModel?,
+                requestModel: EmptyRequest(),
                 method: .get
             ) { [weak self] result in
                 DispatchQueue.main.async {

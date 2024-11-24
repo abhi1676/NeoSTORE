@@ -10,16 +10,21 @@ import UIKit
 class OrderListViewController: UIViewController {
 
     @IBOutlet var orderListTableview: UITableView!
-    var viewModel = OrderViewModel()
+    private let viewModel = OrderViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableview()
-        self.title = "My Orders"
-        self.navigationController?.navigationBar.backgroundColor = UIColor(red: 1.0, green: 0.149, blue: 0.0, alpha: 1.0)
-        setupNavigationBarButton(imageName: Constants.searchIcon, isLeft: true, action: #selector(searchTapped))
-        
+        self.navigationController?.navigationBar.isHidden = false
+        observerEvent()
+        viewModel.fetchOrderList()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.topItem?.title = ""
+        self.title = "My Orders"
+        self.navigationController?.navigationBar.backgroundColor = UIColor(red: 1.0, green: 0.149, blue: 0.0, alpha: 1.0)
+        setupNavigationBarButton(imageName: Constants.searchIcon, isLeft: false, action: #selector(searchTapped))
+    }
 
    func  setUpTableview(){
        orderListTableview.delegate = self
@@ -30,7 +35,18 @@ class OrderListViewController: UIViewController {
     }
     
     func observerEvent(){
-       
+        viewModel.eventHandler = { [weak self] event in
+                    switch event {
+                    case .loading:
+                        print("Loading")
+                    case .stopLoading:
+                        print("Loading Stopped")
+                    case .dataLoaded:
+                        self?.orderListTableview.reloadData()
+                    case .error(let message):
+                        self?.showAlert(title: "Error", message: message!.localizedDescription)
+                    }
+                }
     }
 
     @objc func searchTapped(){
@@ -40,20 +56,25 @@ class OrderListViewController: UIViewController {
 
 extension OrderListViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        viewModel.orders.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "OrderListTableViewCell", for: indexPath) as? OrderListTableViewCell else {return UITableViewCell()}
-        cell.orderCost.text = "Rs. \(45.0)"
-        cell.orderDate.text = "01-06-2002"
-        cell.orderID.text = "123456"
+        
+        let order = viewModel.orders[indexPath.row]
+        cell.orderCost.text = "Rs. \(order.cost)"
+        cell.orderDate.text = "\(order.created)"
+        cell.orderID.text = " \(order.id)"
         return cell
         
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
        100
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     

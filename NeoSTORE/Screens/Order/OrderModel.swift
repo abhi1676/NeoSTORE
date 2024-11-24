@@ -29,7 +29,6 @@ struct Order: Codable {
 struct OrderListResponse: Codable {
     let status: Int
     let data: [Order]
-    let message: String
     let user_msg: String
 }
 

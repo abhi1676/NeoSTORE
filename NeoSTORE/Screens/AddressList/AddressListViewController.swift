@@ -10,6 +10,7 @@ import UIKit
 class AddressListViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     var viewModel = OrderViewModel()
+    var selectedAddress: String?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,9 +32,16 @@ class AddressListViewController: UIViewController {
     @IBAction func placeOrderButtonTapped(_ sender: Any) {
 //        print(UserDefaults.standard.stringArray(forKey: "Address")?.description)
 //        print(UserDefaults.standard.string(forKey: Constants.fullname))
-        let arr = UserDefaults.standard.array(forKey: "Address")
-        let address = arr?[0] as? String ?? ""
-        viewModel.placeOrder(with: address)
+//        let arr = UserDefaults.standard.array(forKey: "Address")
+//        let address = arr?[0] as? String ?? ""
+//        viewModel.placeOrder(with: address)
+        guard let address = selectedAddress else {
+                showAlert(title: "Error", message: "Please select an address to place your order.")
+                return
+            }
+            viewModel.placeOrder(with: address)
+        showAlert(title: "ORDER PLACED", message: "THANK YOU FOR ORDERING")
+        
     }
     
     @objc func addAddress(){
@@ -53,15 +61,22 @@ extension AddressListViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let arr = UserDefaults.standard.array(forKey: "Address")
-        
+        let arr = UserDefaults.standard.array(forKey: "Address") as? [String] ?? []
+
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "AddressListTableViewCell") as? AddressListTableViewCell else {
             return UITableViewCell()
         }
         
-        let address = arr?[indexPath.row] ?? "No Address"
-        cell.userAddress.text = address as? String
+        let address = arr[indexPath.row]
+        cell.userAddress.text = address
         cell.userNameLbl.text = UserDefaults.standard.string(forKey: Constants.fullname)
+        
+        if address == selectedAddress {
+               cell.contentView.backgroundColor = UIColor.systemBlue.withAlphaComponent(0.2)
+           } else {
+               cell.contentView.backgroundColor = .clear
+           }
+        
         return cell
     }
 
@@ -85,5 +100,12 @@ extension AddressListViewController: UITableViewDelegate, UITableViewDataSource 
              tableView.deleteRows(at: [indexPath], with: .automatic)
          }
      }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let arr = UserDefaults.standard.array(forKey: "Address") as? [String] ?? []
+          selectedAddress = arr[indexPath.row]
+        
+          tableView.reloadData()
+    }
  }
 

@@ -13,16 +13,25 @@ class OrderDetailViewController: UIViewController {
     @IBOutlet var orderDeatilTableView: UITableView!
     
     @IBOutlet var orderDetailTotalCost: UILabel!
+    
+    @IBOutlet var shimmerView: UIView!
+    
     var orderId : Int?
     private let viewModel = OrderDetailViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        shimmerView.isHidden = true
+        shimmerView.isUserInteractionEnabled = false
+        self.shimmerView.isShimmering = true
         setUpNib()
         bindViewModel()
         viewModel.fetchOrderDetails(orderId: orderId ?? 1)
-    }
+        self.navigationController?.navigationBar.topItem?.title = ""
     
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.title = "Order Details"
+    }
     private func setUpNib(){
         let nib = UINib(nibName: "OrderDetailTableViewCell", bundle: nil)
         orderDeatilTableView.register(nib, forCellReuseIdentifier: "OrderDetailTableViewCell")
@@ -35,7 +44,8 @@ class OrderDetailViewController: UIViewController {
 
             switch event {
             case .loading:
-                
+                self.shimmerView.isHidden = false
+                self.shimmerView.startShimmering()
                 print("Loading...")
             case .stopLoading:
                 
@@ -43,6 +53,10 @@ class OrderDetailViewController: UIViewController {
             case .dataLoaded:
                 DispatchQueue.main.async {
                     self.orderDeatilTableView.reloadData()
+                }
+                self.shimmerView.stopShimmering()
+                DispatchQueue.main.async {
+                    self.shimmerView.isHidden = true
                 }
 //                self.updateOrderTotalCost()
             case .error(let message):

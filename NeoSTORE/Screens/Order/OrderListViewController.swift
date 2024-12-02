@@ -17,11 +17,12 @@ class OrderListViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = false
         observerEvent()
         viewModel.fetchOrderList()
+        self.navigationController?.title = "My Orders"
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.topItem?.title = ""
-        self.title = "My Orders"
+        self.navigationController?.title = "My Orders"
         self.navigationController?.navigationBar.backgroundColor = UIColor(red: 1.0, green: 0.149, blue: 0.0, alpha: 1.0)
         setupNavigationBarButton(imageName: Constants.searchIcon, isLeft: false, action: #selector(searchTapped))
     }

@@ -477,6 +477,11 @@
                                     <constraint firstItem="8MS-0u-kwg" firstAttribute="top" secondItem="3d6-VZ-YjA" secondAttribute="top" id="rmi-rm-XfN"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" id="q0J-8W-Niu">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YwT-7m-9O3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -496,16 +501,20 @@
                     <connections>
                         <outlet property="orderDeatilTableView" destination="8GL-Cx-ThT" id="DAF-u8-Peh"/>
                         <outlet property="orderDetailTotalCost" destination="RWN-IU-W4Q" id="EpA-QV-ooc"/>
+                        <outlet property="shimmerView" destination="q0J-8W-Niu" id="nX5-e8-BTx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GXi-q7-Cfg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4372" y="4"/>
+            <point key="canvasLocation" x="4371.7557251908393" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

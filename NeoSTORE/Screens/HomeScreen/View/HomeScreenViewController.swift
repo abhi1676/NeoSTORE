@@ -7,7 +7,9 @@
 
 import UIKit
 
-class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,PageControlDelegate {
+   
+    
 
     @IBOutlet var homeScreenCollectionView:
     UICollectionView!
@@ -34,8 +36,8 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
     @IBOutlet var tapGesture: UITapGestureRecognizer!
     
     var selectedCategoryId:Int?
-    
-    
+    var scrollTimer : Timer?
+    var currentPage = 0
     
     
     let images = [UIImage(named: "slider_img1"),UIImage(named: "slider_img2"),UIImage(named: "slider_img3"),UIImage(named: "slider_img4")]
@@ -67,12 +69,16 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
 //        } else {
 //            self.navigationController?.navigationBar.isHidden = false
 //        }
+   
     }
+   
     
     func setUpNib(){
         let nib = UINib(nibName: "HomeScreenCollectionViewCell", bundle: nil)
         homeScreenCollectionView.register(nib, forCellWithReuseIdentifier: "HomeScreenCollectionViewCell")
     }
+  
+
     @objc func menuButtonTapped(){
         rightSideView.isUserInteractionEnabled = true
         backView.isUserInteractionEnabled = true
@@ -104,7 +110,14 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
         
     }
     
-    
+  
+    func didPageControltapped(page: Int) {
+        homeScreenCollectionView.isPagingEnabled = false
+        let indexPath = IndexPath(item: page, section: 0)
+        homeScreenCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        homeScreenCollectionView.isPagingEnabled = true
+
+    }
     
     @objc func serachButtonTapped(){
         print("search button tapped")
@@ -116,6 +129,7 @@ class HomeScreenViewController: UIViewController,UICollectionViewDelegate,UIColl
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeScreenCollectionViewCell", for: indexPath) as! HomeScreenCollectionViewCell
+        cell.delegate = self
         cell.configure(image: images[indexPath.row] ?? UIImage(), currentPage: indexPath.row, totalPages: images.count)
         
         return cell

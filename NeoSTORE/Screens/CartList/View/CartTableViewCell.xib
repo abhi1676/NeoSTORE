@@ -64,6 +64,7 @@
                     <constraint firstItem="BHe-pK-0Zc" firstAttribute="bottom" secondItem="wKN-le-7Bv" secondAttribute="bottom" id="QDH-tk-bUr"/>
                     <constraint firstItem="uJt-el-Dgp" firstAttribute="top" secondItem="wKN-le-7Bv" secondAttribute="top" id="jI2-Nm-fEf"/>
                     <constraint firstItem="wKN-le-7Bv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="rrN-DH-TY5"/>
+                    <constraint firstAttribute="bottom" secondItem="uJt-el-Dgp" secondAttribute="bottom" constant="21" id="sCG-VO-6PW"/>
                     <constraint firstItem="wKN-le-7Bv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="tdf-fD-BJX"/>
                 </constraints>
             </tableViewCellContentView>

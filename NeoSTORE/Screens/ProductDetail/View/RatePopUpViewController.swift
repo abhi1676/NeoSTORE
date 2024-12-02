@@ -43,7 +43,7 @@ var cartViewModel = CartViewModel()
         popUpView.layer.cornerRadius = 15
         setData()
         hideKeyboardWhenTappedAround()
-        
+        qtyTextField.delegate = self
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissPopUp))
         dismissView1.addGestureRecognizer(tap)
         let tap1 = UITapGestureRecognizer(target: self, action: #selector(dismissPopUp))
@@ -147,5 +147,16 @@ var cartViewModel = CartViewModel()
     }
     @objc func  dismissPopUp(_ sender : UITapGestureRecognizer){
         dismiss(animated: true)
+    }
+}
+extension RatePopUpViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+       
+        if textField == qtyTextField {
+            let allowedCharacterSet = CharacterSet.decimalDigits
+            let replacementCharacterSet = CharacterSet(charactersIn: string)
+            return allowedCharacterSet.isSuperset(of: replacementCharacterSet)
+        }
+        return true
     }
 }

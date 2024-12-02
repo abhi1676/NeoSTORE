@@ -15,6 +15,10 @@ extension String {
         let numberCharacterSet = CharacterSet.decimalDigits
         return self.rangeOfCharacter(from: numberCharacterSet.inverted) == nil && self.count == 10
     }
+    func containsNumbers() -> Bool {
+        let numberCharacterSet = CharacterSet.decimalDigits
+        return self.rangeOfCharacter(from: numberCharacterSet.inverted) == nil 
+    }
     
     func isValidEmail() -> Bool {
         let emailPattern = "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"

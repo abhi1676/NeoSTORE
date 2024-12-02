@@ -62,9 +62,7 @@ class CartViewController: UIViewController {
             case .loading :
                 print("Loading")
             case .dataLoaded :
-                DispatchQueue.main.async {
-                    self.cartTableView.reloadData()
-                }
+                self.fetchCartItems()
             case .stopLoading :
                 print("Laoding Stopped")
             case .error(let error):
@@ -116,7 +114,7 @@ extension CartViewController: UITableViewDelegate,UITableViewDataSource,CartDele
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        120
+        UITableView.automaticDimension
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     

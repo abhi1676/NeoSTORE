@@ -19,9 +19,15 @@ class LoginViewController: UIViewController{
     
     private var viewModel = LoginViewModel()
     
+    @IBOutlet var LoadingView: UIView!
+    
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        LoadingView.alpha = 0
+        LoadingView.backgroundColor = .systemRed
+       
         setUpUI()
         passwordTextField.delegate = self
         userNameTextField.delegate = self
@@ -40,7 +46,8 @@ class LoginViewController: UIViewController{
         viewModel.onLoginSuccess = {
             [weak self] in
             DispatchQueue.main.async {
-                
+                self?.LoadingView.alpha = 0
+                self?.activityIndicator.stopAnimating()
                     self?.navigate(storyboardName: EnumConstants.HomeScreen.rawValue, viewControllerID: EnumConstants.HomeScreenViewController.rawValue)
                 }
             }
@@ -78,7 +85,8 @@ class LoginViewController: UIViewController{
     
     
     @IBAction func loginButtonTapped(_ sender: UIButton) {
-        
+        LoadingView.alpha = 0.5
+        activityIndicator.startAnimating()
         viewModel.login(email: userNameTextField.text ?? "", password: passwordTextField.text ?? "")
     }
     

@@ -35,6 +35,12 @@ class OrderDetailTableViewCell: UITableViewCell {
         orderDeatilCategory.text = data.prod_cat_name ?? "N/A"
         orderDeatilQty.text = "Quantity: \(data.quantity ?? 0)"
         orderDetailCost.text = "Cost: \(data.total ?? 0)"
+        
+        if let imgurl = URL(string: data.prod_image ?? ""){
+            orderDeatilImg.loadImage(from: imgurl)
+        } else{
+            orderDeatilImg.image = UIImage(named: "cricket")
+        }
     }
     
 

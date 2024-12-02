@@ -25,37 +25,40 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HFk-mC-kwW">
-                        <rect key="frame" x="25" y="10" width="164" height="52"/>
+                        <rect key="frame" x="25" y="10.000000000000004" width="169" height="51.333333333333343"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fOg-Ka-qoE">
-                                <rect key="frame" x="0.0" y="0.0" width="164" height="21.666666666666668"/>
+                                <rect key="frame" x="0.0" y="0.0" width="169" height="20.666666666666668"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Order ID : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jR-iM-cKT">
-                                        <rect key="frame" x="0.0" y="0.0" width="112.66666666666667" height="21.666666666666668"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="111.66666666666667" height="20.666666666666668"/>
                                         <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ji7-U7-EuV">
-                                        <rect key="frame" x="122.66666666666664" y="0.0" width="41.333333333333329" height="21.666666666666668"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="121.66666666666664" y="0.0" width="47.333333333333329" height="20.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="1jR-iM-cKT" firstAttribute="baseline" secondItem="Ji7-U7-EuV" secondAttribute="firstBaseline" id="zfv-Ik-0YS"/>
+                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LoQ-ZW-LhU">
-                                <rect key="frame" x="0.0" y="31.666666666666664" width="164" height="20.333333333333336"/>
+                                <rect key="frame" x="0.0" y="30.666666666666664" width="169" height="20.666666666666664"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ordered Date :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4AP-GN-1cr">
-                                        <rect key="frame" x="0.0" y="0.0" width="102.66666666666667" height="20.333333333333332"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="102.66666666666667" height="20.666666666666668"/>
                                         <fontDescription key="fontDescription" name="Gotham-Book" family="Gotham" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YsX-hm-Mx6">
-                                        <rect key="frame" x="122.66666666666664" y="0.0" width="41.333333333333329" height="20.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="122.66666666666664" y="0.0" width="46.333333333333329" height="20.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="Gotham-Book" family="Gotham" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -64,16 +67,18 @@
                         </subviews>
                     </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kpz-Fs-1bg">
-                        <rect key="frame" x="239.00000000000003" y="25" width="41.333333333333343" height="20.333333333333329"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <rect key="frame" x="234.00000000000003" y="25" width="44.333333333333343" height="20.333333333333329"/>
+                        <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="16"/>
+                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Kpz-Fs-1bg" firstAttribute="leading" secondItem="HFk-mC-kwW" secondAttribute="trailing" constant="50" id="DA7-BK-RhW"/>
+                    <constraint firstItem="Kpz-Fs-1bg" firstAttribute="leading" secondItem="HFk-mC-kwW" secondAttribute="trailing" constant="40" id="DA7-BK-RhW"/>
+                    <constraint firstAttribute="bottom" secondItem="HFk-mC-kwW" secondAttribute="bottom" constant="11.67" id="PMm-I5-dRk"/>
                     <constraint firstItem="HFk-mC-kwW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="SHs-pC-3XX"/>
                     <constraint firstItem="Kpz-Fs-1bg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="gzX-8e-cic"/>
+                    <constraint firstAttribute="bottom" secondItem="Kpz-Fs-1bg" secondAttribute="bottom" constant="27.670000000000002" id="kV3-VT-lFf"/>
                     <constraint firstItem="HFk-mC-kwW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="s6F-nL-XxD"/>
                 </constraints>
             </tableViewCellContentView>

@@ -101,6 +101,20 @@
                                     <action selector="forgotPassWordTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AV2-ju-kHl"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SpU-xp-xPj">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="EVb-GQ-ycN">
+                                        <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                                        <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="EVb-GQ-ycN" firstAttribute="centerX" secondItem="SpU-xp-xPj" secondAttribute="centerX" id="1vU-zF-Xqo"/>
+                                    <constraint firstItem="EVb-GQ-ycN" firstAttribute="centerY" secondItem="SpU-xp-xPj" secondAttribute="centerY" id="fju-3Z-Nsw"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -113,6 +127,8 @@
                             <constraint firstItem="XYA-a0-9mJ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="FYX-V7-KOk"/>
                             <constraint firstItem="KHf-Te-Rvt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="FYn-th-dBS"/>
                             <constraint firstItem="KHf-Te-Rvt" firstAttribute="top" secondItem="XYA-a0-9mJ" secondAttribute="bottom" constant="50" id="GSb-ZQ-Rud"/>
+                            <constraint firstItem="SpU-xp-xPj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RP4-TX-6aQ"/>
+                            <constraint firstItem="SpU-xp-xPj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RkR-RQ-OfD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zqV-mB-36g" secondAttribute="trailing" constant="34" id="V5f-Bj-Uz6"/>
                             <constraint firstItem="uVP-hR-8A1" firstAttribute="top" secondItem="zqV-mB-36g" secondAttribute="bottom" constant="34" id="a9j-gT-PFO"/>
                             <constraint firstItem="zqV-mB-36g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="d4Z-iy-CMG"/>
@@ -124,12 +140,16 @@
                             <constraint firstItem="kQ5-di-3wC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="tFh-hY-9dI"/>
                             <constraint firstItem="X49-lT-ElA" firstAttribute="leading" secondItem="jpQ-IO-XJt" secondAttribute="trailing" id="tNz-dy-PKW"/>
                             <constraint firstItem="X49-lT-ElA" firstAttribute="centerY" secondItem="jpQ-IO-XJt" secondAttribute="centerY" id="tfx-Cp-rH5"/>
+                            <constraint firstAttribute="bottom" secondItem="SpU-xp-xPj" secondAttribute="bottom" id="uNf-YP-ji5"/>
                             <constraint firstItem="kQ5-di-3wC" firstAttribute="top" secondItem="uVP-hR-8A1" secondAttribute="bottom" constant="22" id="vBi-oM-rNA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X49-lT-ElA" secondAttribute="trailing" constant="13" id="y0i-CN-uvc"/>
+                            <constraint firstItem="SpU-xp-xPj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="z6C-Ml-Qme"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="m6J-uM-MAj"/>
                     <connections>
+                        <outlet property="LoadingView" destination="SpU-xp-xPj" id="Py5-6i-jni"/>
+                        <outlet property="activityIndicator" destination="EVb-GQ-ycN" id="mbu-Fx-AQ4"/>
                         <outlet property="addAccountButton" destination="X49-lT-ElA" id="OaU-CN-Lvf"/>
                         <outlet property="passwordTextField" destination="zqV-mB-36g" id="tkV-Zc-OoR"/>
                         <outlet property="userNameTextField" destination="KHf-Te-Rvt" id="fzx-4E-Wbc"/>
@@ -137,7 +157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="941" y="-2"/>
+            <point key="canvasLocation" x="939.69465648854953" y="-2.1126760563380285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9H2-KB-B3b">
@@ -437,6 +457,9 @@
     <resources>
         <image name="check_icon" width="25" height="25"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

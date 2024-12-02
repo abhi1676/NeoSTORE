@@ -14,6 +14,12 @@ enum HTTPMethod {
 }
 }
 
+struct CommonErrorResponse:Codable{
+        let status: Int
+        let message: String
+        let user_msg: String
+}
+
 
 enum DataError: Error {
     case invalidResponse
@@ -21,6 +27,15 @@ enum DataError: Error {
     case invalidURL
     case invalidData
     case network(String)
+    
+    var localizedError:String{
+        switch self {
+        case .network(let error):
+            return error
+        default:
+            return ""
+        }
+    }
 }
 
 typealias Handler<T> = (Result<T, DataError>) -> Void
@@ -122,8 +137,21 @@ final class APIManager {
             }
 
             guard (200...299).contains(httpResponse.statusCode) else {
-                completion(.failure(.invalidResponse))
-                return
+                if let data = data {
+                                    do {
+                                        let decoder = JSONDecoder()
+                                        let errorResponse = try decoder.decode(CommonErrorResponse.self, from: data)
+                                        print("Error message from server: \(errorResponse.message)")
+                                        completion(.failure(.network(errorResponse.message)))
+                                    } catch {
+                                        
+                                        completion(.failure(.invalidResponse))
+                                    }
+                                } else {
+                                    completion(.failure(.invalidResponse))
+                                }
+                                return
+                  
             }
 
             guard let data = data else {

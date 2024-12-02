@@ -34,7 +34,7 @@ class RatePopUpViewController: UIViewController {
     var viewModel = RatingViewModel()
     var delegate : ProductQuantityDelegate?
    // var onDismiss: (() -> Void)?
-var viewModel2 = CartViewModel()
+var cartViewModel = CartViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -138,7 +138,7 @@ var viewModel2 = CartViewModel()
                 //            self.dismiss(animated: true, completion: {
                 //                self.onDismiss?()
                 let quantity = Int(self.qtyTextField.text ?? "") ?? 0
-                self.viewModel2.addToCart(productId: product.id, quantity: quantity)
+                self.cartViewModel.addToCart(productId: product.id, quantity: quantity)
                 self.dismiss(animated: true)
                 self.delegate?.onDismiss(productQty: quantity)
               

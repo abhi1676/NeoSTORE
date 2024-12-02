@@ -37,7 +37,7 @@ class LoginViewModel {
                 self.onLoginSuccess?()
                 
             case .failure(let error):
-                self.onLoginFailure?(error.localizedDescription)
+                self.onLoginFailure?(error.localizedError)
             }
         }
     }

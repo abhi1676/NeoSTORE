@@ -14,7 +14,7 @@ class ProductDetailViewController: UIViewController{
     var viewmodel : ProductDetailViewModel?
     var productId : Int?
     var ratePopUp = RatePopUpViewController()
-    
+    var data : ProductDetailData?
     @IBOutlet var shimmerView: UIView!
     
     @IBOutlet var productNameLbl: UILabel!
@@ -80,7 +80,7 @@ class ProductDetailViewController: UIViewController{
     func fetchProductDetail(){
         viewmodel = ProductDetailViewModel()
         viewmodel?.fetchProductDetails(productId: productId ?? 1) {
-            
+            self.data = self.viewmodel?.productDetail?.data
             DispatchQueue.main.async {
                 self.setUpUI(data: self.viewmodel?.productDetail )
             }
@@ -127,8 +127,29 @@ class ProductDetailViewController: UIViewController{
         productImage4.layer.borderColor = UIColor.green.cgColor
     }
     @IBAction func shareButtonTapped(_ sender: Any) {
-        navigate(storyboardName: "AccountScreen", viewControllerID: "MyAccountViewController")
+        
+        
+        
+        let name = "\(self.data?.name ?? "")"
+        let producer = "\(self.data?.producer ?? "")"
+        let image = UIImage(named: self.data?.product_images[0].image ?? "")
+        
+        let items: [Any] = [name, producer, image]
+        
+        let activityViewController = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        
+        activityViewController.excludedActivityTypes = [.addToReadingList, .postToFacebook]
+        
+        self.present(activityViewController, animated: true, completion: nil)
+        
     }
+    
+    
+    
+    
+    
+    
+    
     
     @IBAction func productBuyButtonTapped(_ sender: Any) {
         //navigate(storyboardName: "OrderScreen", viewControllerID: "AddressViewController")
@@ -169,6 +190,7 @@ extension ProductDetailViewController: ProductQuantityDelegate {
         if let cartVC = storyboard.instantiateViewController(withIdentifier: "CartViewController") as? CartViewController {
             cartVC.product = viewmodel?.productDetail?.data
             cartVC.productQty = productQty
+            
             self.navigationController?.pushViewController(cartVC, animated: true)
         }
     }

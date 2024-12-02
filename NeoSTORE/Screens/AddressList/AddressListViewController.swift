@@ -27,6 +27,11 @@ class AddressListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.title = "Address List"
         self.tableView.reloadData()
+        if let viewControllers = navigationController?.viewControllers {
+            for viewController in viewControllers {
+                print("ViewController: \(viewController)")
+            }
+        }
     }
     
     @IBAction func placeOrderButtonTapped(_ sender: Any) {
@@ -40,7 +45,16 @@ class AddressListViewController: UIViewController {
                 return
             }
             viewModel.placeOrder(with: address)
-        showAlert(title: "ORDER PLACED", message: "THANK YOU FOR ORDERING")
+        showAlert(title: "ORDER PLACED", message: "THANK YOU FOR ORDERING"){
+            if let viewControllers = self.navigationController?.viewControllers {
+                for viewController in viewControllers {
+                    if let homeScreenVC = viewController as? HomeScreenViewController {
+                        self.navigationController?.popToViewController(homeScreenVC, animated: true)
+                        break
+                    }
+                }
+            }
+        }
         
     }
     

@@ -74,7 +74,11 @@ extension OrderListViewController:UITableViewDelegate,UITableViewDataSource{
        100
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.navigationController?.popViewController(animated: true)
+        let sb = UIStoryboard(name: "OrderScreen", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "OrderDetailViewController") as? OrderDetailViewController
+        let order = viewModel.orders[indexPath.row]
+        vc?.orderId = order.id
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
     
     

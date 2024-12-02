@@ -45,7 +45,8 @@ class CartTableViewCell: UITableViewCell {
         self.product = product
         cartProductName.text = product?.product.name
         cartProductCategory.text = product?.product.product_category
-        cartProductPrice.text = "₹\(Int(product?.product.cost ?? 1))"
+        cartProductPrice.text = "₹\(Int(product?.product.cost ?? 1) * (product?.quantity ?? 1))"
+
         
         if let imageurl = URL(string: product?.product.product_images ?? "")
         {

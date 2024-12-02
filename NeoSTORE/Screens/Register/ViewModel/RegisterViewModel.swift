@@ -28,7 +28,7 @@ class RegisterViewModel{
                    self.onRegisterSuccess?()
                 
             case .failure(let error):
-                self.onRegisterFailure?(error.localizedDescription)
+                self.onRegisterFailure?(error.localizedError)
             }
         }
     }

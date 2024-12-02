@@ -14,10 +14,13 @@ protocol CartDelegate{
 class CartViewController: UIViewController {
 
     @IBOutlet var cartTableView: UITableView!
+    
+    @IBOutlet var totalCost: UILabel!
     var product : ProductDetailData?
     var productQty: Int = 0
     var viewModel = ListCartViewModel()
     var cartViewModel = CartViewModel()
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,6 +39,7 @@ class CartViewController: UIViewController {
         self.navigationController?.title = "My Cart"
         self.navigationController?.navigationBar.backgroundColor = UIColor(red: 1.0, green: 0.149, blue: 0.0, alpha: 1.0)
         self.cartTableView.reloadData()
+        updateTotalCost()
     }
     private func setupTableView() {
         let nib = UINib(nibName: "CartTableViewCell", bundle: nil)
@@ -47,9 +51,27 @@ class CartViewController: UIViewController {
             viewModel.reloadCartData = { [weak self] in
                 DispatchQueue.main.async {
                     self?.cartTableView.reloadData()
+                    self?.updateTotalCost()
                 }
             }
+
+        cartViewModel.eventHandler = {
+            [weak self]  event in
+            guard let self = self else {return}
+            switch event {
+            case .loading :
+                print("Loading")
+            case .dataLoaded :
+                DispatchQueue.main.async {
+                    self.cartTableView.reloadData()
+                }
+            case .stopLoading :
+                print("Laoding Stopped")
+            case .error(let error):
+                print(error?.localizedDescription)
+            }
             
+        }
             viewModel.showError = { errorMessage in
                 DispatchQueue.main.async {
                     self.showAlert(title: "Error", message: "Error fetching cart items")
@@ -61,10 +83,10 @@ class CartViewController: UIViewController {
             viewModel.fetchCartItems()
         }
     
-//    private func updateTotalCost() {
-//        let totalCost = cartItems.reduce(0) { $0 + Int($1.product.cost) * $1.quantity }
-//        totalCostLabel.text = Texts.Total  + "\(totalCost)"
-//    }
+    private func updateTotalCost() {
+        let totalCost = viewModel.cartItems.reduce(0) { $0 + Int($1.product.cost) * $1.quantity }
+        self.totalCost.text = "₹\(totalCost)"
+    }
     
   
     @IBAction func orderButtonTapped(_ sender: Any) {
@@ -76,6 +98,9 @@ class CartViewController: UIViewController {
 extension CartViewController: UITableViewDelegate,UITableViewDataSource,CartDelegate {
     func cartEdited(req: EditCartRequest) {
         self.cartViewModel.editCart(productId: req.product_id, quantity: req.quantity)
+        self.updateTotalCost()
+        
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -106,6 +131,10 @@ extension CartViewController: UITableViewDelegate,UITableViewDataSource,CartDele
         if editingStyle == .delete {
             self.cartViewModel.deleteFromCart(productId: viewModel.cartItems[indexPath.row].product_id)
            
+            self.updateTotalCost()
+           
+            
+
            
             
         }

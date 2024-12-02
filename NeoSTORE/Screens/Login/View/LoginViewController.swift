@@ -51,7 +51,7 @@ class LoginViewController: UIViewController{
             [weak self] errorMsg in
             DispatchQueue.main.async {
                 
-                self?.showAlert(title: Constants.loginFailed, message:Constants.invalidCredentials )
+                self?.showAlert(title: Constants.loginFailed, message:errorMsg )
             }
         }
         

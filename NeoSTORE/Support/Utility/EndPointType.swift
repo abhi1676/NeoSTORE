@@ -33,6 +33,7 @@ enum EndPointList{
     case deleteCart
     case order
     case orderList
+    case orderDetail
 }
 
 extension EndPointList:EndPointType{
@@ -74,12 +75,14 @@ extension EndPointList:EndPointType{
             return Constants.order
         case .orderList:
             return Constants.orderList
+        case .orderDetail:
+            return Constants.orderDetail
         }
     }
   
     var headers: HTTPHeaders {
         switch self {
-        case .getUserData, .updateUserData,.addToCart,.editCart,.deleteCart,.cart,.order,.orderList:
+        case .getUserData, .updateUserData,.addToCart,.editCart,.deleteCart,.cart,.order,.orderList,.orderDetail:
             var header = [String:String]()
             if let token = UserDefaults.standard.string(forKey: Constants.accessToken) {
                 header["access_token"] = "\(token)"

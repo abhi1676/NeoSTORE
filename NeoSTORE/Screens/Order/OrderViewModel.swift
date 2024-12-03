@@ -54,7 +54,7 @@ class OrderViewModel {
                     switch result {
                     case .success(let response):
                         if response.status == 200 {
-                            self?.orders = response.data
+                            self?.orders = response.data 
                             self?.eventHandler?(.dataLoaded)
                         } else {
                             self?.eventHandler?(.error("" as? Error))

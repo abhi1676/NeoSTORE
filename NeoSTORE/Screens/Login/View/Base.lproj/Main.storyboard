@@ -101,7 +101,7 @@
                                     <action selector="forgotPassWordTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AV2-ju-kHl"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SpU-xp-xPj">
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SpU-xp-xPj">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="EVb-GQ-ycN">
@@ -186,10 +186,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2iQ-D7-lSe">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="664"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aT5-mQ-jWi">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="664"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NeoSTORE" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uz6-Gx-SbB">
                                                 <rect key="frame" x="71.666666666666686" y="30" width="250" height="45"/>
@@ -202,10 +202,10 @@
                                                 <color key="shadowColor" systemColor="tertiarySystemBackgroundColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="RBz-30-HAp">
-                                                <rect key="frame" x="34" y="150" width="325" height="464"/>
+                                                <rect key="frame" x="34" y="150" width="325" height="652"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kGh-oh-tS3" customClass="CustomTextField" customModule="NeoSTORE" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="325" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="325" height="61"/>
                                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="2yQ-4g-sgk"/>
@@ -215,7 +215,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3n2-gl-bNG" customClass="CustomTextField" customModule="NeoSTORE" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="53" width="325" height="40"/>
+                                                        <rect key="frame" x="0.0" y="74" width="325" height="60.666666666666657"/>
                                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="D6L-k8-CwZ"/>
@@ -225,7 +225,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7O2-XU-jMa" customClass="CustomTextField" customModule="NeoSTORE" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="106" width="325" height="40"/>
+                                                        <rect key="frame" x="0.0" y="147.66666666666669" width="325" height="61"/>
                                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="mCM-1R-yRF"/>
@@ -235,7 +235,7 @@
                                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="64F-QQ-VKT" customClass="CustomTextField" customModule="NeoSTORE" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="159" width="325" height="40"/>
+                                                        <rect key="frame" x="0.0" y="221.66666666666669" width="325" height="61"/>
                                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="EdN-cp-4Zn"/>
@@ -245,7 +245,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ngd-6q-l6K" customClass="CustomTextField" customModule="NeoSTORE" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="212" width="325" height="40"/>
+                                                        <rect key="frame" x="0.0" y="295.66666666666669" width="325" height="60.666666666666686"/>
                                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="Fzm-Rn-u8A"/>
@@ -255,16 +255,16 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xyh-x8-9PC">
-                                                        <rect key="frame" x="0.0" y="265" width="325" height="40"/>
+                                                        <rect key="frame" x="0.0" y="369.33333333333337" width="325" height="61"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9m-fD-HBy">
-                                                                <rect key="frame" x="0.0" y="0.0" width="66.666666666666671" height="40"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="66.666666666666671" height="61"/>
                                                                 <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="18"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mf1-ws-SL8">
-                                                                <rect key="frame" x="76.666666666666671" y="0.0" width="81.000000000000014" height="40"/>
+                                                                <rect key="frame" x="76.666666666666671" y="0.0" width="81.000000000000014" height="61"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
@@ -277,7 +277,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="blU-NF-hw9">
-                                                                <rect key="frame" x="167.66666666666663" y="0.0" width="157.33333333333337" height="40"/>
+                                                                <rect key="frame" x="167.66666666666663" y="0.0" width="157.33333333333337" height="61"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
@@ -292,7 +292,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1lN-X6-2JJ" customClass="CustomTextField" customModule="NeoSTORE" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="318" width="325" height="40"/>
+                                                        <rect key="frame" x="0.0" y="443.33333333333337" width="325" height="61"/>
                                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="XvF-uq-MLp"/>
@@ -302,10 +302,10 @@
                                                         <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done"/>
                                                     </textField>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xSZ-UB-P7H">
-                                                        <rect key="frame" x="0.0" y="371" width="325" height="40"/>
+                                                        <rect key="frame" x="0.0" y="517.33333333333337" width="325" height="60.666666666666629"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrU-b7-j0N">
-                                                                <rect key="frame" x="0.0" y="0.66666666666662877" width="68" height="39"/>
+                                                                <rect key="frame" x="0.0" y="11" width="68" height="39"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="check_icon"/>
@@ -314,7 +314,7 @@
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I agree Terms &amp; Conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4w-wd-7JP">
-                                                                <rect key="frame" x="78" y="12.333333333333371" width="247" height="15.666666666666664"/>
+                                                                <rect key="frame" x="78" y="22.666666666666629" width="247" height="15.666666666666664"/>
                                                                 <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="13"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -322,7 +322,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7g-dK-vKX">
-                                                        <rect key="frame" x="0.0" y="424" width="325" height="40"/>
+                                                        <rect key="frame" x="0.0" y="591" width="325" height="61"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="REGISTER">
                                                             <fontDescription key="titleFontDescription" name="Gotham-Medium" family="Gotham" pointSize="26"/>

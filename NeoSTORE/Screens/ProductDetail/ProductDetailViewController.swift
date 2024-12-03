@@ -55,8 +55,8 @@ class ProductDetailViewController: UIViewController{
     func setUpUI(data:ProductDetail?){
         guard let product = data?.data else {return}
         productNameLbl.text = product.name
-        productPrice.text = "Rs\(product.cost)"
-        switch viewmodel?.productDetail?.data.product_category_id {
+        productPrice.text = "Rs.\(product.cost ?? 1)"
+        switch viewmodel?.productDetail?.data?.product_category_id {
         case 1:
             productCategoryLbl.text = "Category - Table"
         case 2:
@@ -69,8 +69,8 @@ class ProductDetailViewController: UIViewController{
             break
         }
         productInfoLbl.text = product.producer
-        productStarView.rating = product.rating
-        if let imgurl = URL(string: product.product_images[0].image){
+        productStarView.rating = product.rating ?? 1
+        if let imgurl = URL(string: product.product_images[0].image ?? ""){
             productImage1.loadImage(from: imgurl)
             productImage2.loadImage(from: imgurl)
             productImage3.loadImage(from: imgurl)

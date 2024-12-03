@@ -10,6 +10,7 @@ import Foundation
 struct LoginData:Codable{
     var email:String?
     var password:String?
+    
 }
 
 
@@ -18,6 +19,7 @@ struct LoginResponse : Codable {
     let data : User?
     let message : String?
     let user_msg : String?
+    let test : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -25,6 +27,7 @@ struct LoginResponse : Codable {
         case data = "data"
         case message = "message"
         case user_msg = "user_msg"
+        case test = "test"
     }
 
     init(from decoder: Decoder) throws {
@@ -33,6 +36,7 @@ struct LoginResponse : Codable {
         data = try values.decodeIfPresent(User.self, forKey: .data)
         message = try values.decodeIfPresent(String.self, forKey: .message)
         user_msg = try values.decodeIfPresent(String.self, forKey: .user_msg)
+        test = try values.decodeIfPresent(String.self, forKey: .test)
     }
 
 }

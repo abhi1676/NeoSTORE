@@ -5,6 +5,12 @@ class LoginViewModel {
     var onLoginSuccess: (() -> Void)?
     var onLoginFailure: ((String) -> Void)?
   
+    private let apiManager: APIManagerProtocol
+    
+    init(apiManager: APIManagerProtocol = APIManager.shared) {
+        self.apiManager = apiManager
+    }
+    
     func login(email: String, password: String) {
         let loginData = LoginData(email: email, password: password)
 

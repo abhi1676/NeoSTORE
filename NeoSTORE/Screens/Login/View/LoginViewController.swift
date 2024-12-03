@@ -17,7 +17,7 @@ class LoginViewController: UIViewController{
     
     @IBOutlet var forgotPassLabel: UILabel!
     
-    private var viewModel = LoginViewModel()
+    private var viewModel = LoginViewModel(apiManager: APIManager.shared)
     
     @IBOutlet var LoadingView: UIView!
     

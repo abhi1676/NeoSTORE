@@ -1,5 +1,5 @@
 import Foundation
-
+//MARK: - Enum
 enum HTTPMethod {
     case get
     case post
@@ -37,6 +37,18 @@ enum DataError: Error {
         }
     }
 }
+
+//MARK: - ApiMangerProtocol
+protocol APIManagerProtocol {
+    func manager<T: Codable, U: Codable>(
+        modelType: T.Type,
+        type: EndPointType,
+        requestModel: U?,
+        method: HTTPMethod,
+        completion: @escaping Handler<T>
+    )
+}
+extension APIManager: APIManagerProtocol { }
 
 typealias Handler<T> = (Result<T, DataError>) -> Void
 

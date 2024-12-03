@@ -9,7 +9,7 @@ import Foundation
 
 
 struct RatingRequest: Codable {
-    let product_id : String
+    let product_id : String?
     let rating: Int?
 }
 

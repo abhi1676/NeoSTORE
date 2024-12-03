@@ -7,10 +7,10 @@
 
 import Foundation
 struct RegisterResponse: Codable {
-    let status: Int
+    let status: Int?
     let data: RegistrationData?
-    let message: String
-    let userMessage: String
+    let message: String?
+    let userMessage: String?
 
     enum CodingKeys: String, CodingKey {
         case status

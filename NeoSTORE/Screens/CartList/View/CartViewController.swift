@@ -28,7 +28,7 @@ class CartViewController: UIViewController {
     
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.topItem?.title = ""
-        self.navigationController?.title = "My Cart"
+      
     
         bindViewModel()
         fetchCartItems()
@@ -36,7 +36,7 @@ class CartViewController: UIViewController {
     
    
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.title = "My Cart"
+        self.title = "My Cart"
         self.navigationController?.navigationBar.backgroundColor = UIColor(red: 1.0, green: 0.149, blue: 0.0, alpha: 1.0)
         self.cartTableView.reloadData()
         updateTotalCost()
@@ -95,7 +95,7 @@ class CartViewController: UIViewController {
 
 extension CartViewController: UITableViewDelegate,UITableViewDataSource,CartDelegate {
     func cartEdited(req: EditCartRequest) {
-        self.cartViewModel.editCart(productId: req.product_id, quantity: req.quantity)
+        self.cartViewModel.editCart(productId: req.product_id ?? 1, quantity: req.quantity ?? 0)
         self.updateTotalCost()
         
 

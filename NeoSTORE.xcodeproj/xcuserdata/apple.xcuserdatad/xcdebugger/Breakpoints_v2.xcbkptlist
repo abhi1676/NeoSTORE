@@ -20,7 +20,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "2577785B-7AE2-4F64-A43F-899609E3835B - 2c43e32ae753e95e"
+                  uuid = "2577785B-7AE2-4F64-A43F-899609E3835B - 2c43e32ae753e93f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -30,12 +30,12 @@
                   urlString = "file:///Users/apple/Documents/NeoSTORE/NeoSTORE/Screens/Order/OrderListViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
                   offsetFromSymbolStart = "26">
                </Location>
                <Location
-                  uuid = "2577785B-7AE2-4F64-A43F-899609E3835B - d8422352c5f5bf59"
+                  uuid = "2577785B-7AE2-4F64-A43F-899609E3835B - d8422352c5f5bf38"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -45,8 +45,8 @@
                   urlString = "file:///Users/apple/Documents/NeoSTORE/NeoSTORE/Screens/Order/OrderListViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
                   offsetFromSymbolStart = "48">
                </Location>
             </Locations>
@@ -94,8 +94,8 @@
             filePath = "NeoSTORE/Support/Helper/APIManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "manager(modelType:type:requestModel:method:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -110,8 +110,8 @@
             filePath = "NeoSTORE/Support/Helper/APIManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
             landmarkName = "manager(modelType:type:requestModel:method:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -126,13 +126,13 @@
             filePath = "NeoSTORE/Support/Helper/APIManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
             landmarkName = "manager(modelType:type:requestModel:method:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "AD427BF3-82BB-433D-913E-1D4B474A11EE - de655a09aaa483d4"
+                  uuid = "AD427BF3-82BB-433D-913E-1D4B474A11EE - de655a09aaa48258"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -142,12 +142,12 @@
                   urlString = "file:///Users/apple/Documents/NeoSTORE/NeoSTORE/Support/Helper/APIManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "162"
-                  endingLineNumber = "162"
+                  startingLineNumber = "174"
+                  endingLineNumber = "174"
                   offsetFromSymbolStart = "1984">
                </Location>
                <Location
-                  uuid = "AD427BF3-82BB-433D-913E-1D4B474A11EE - de655a09aaa483d4"
+                  uuid = "AD427BF3-82BB-433D-913E-1D4B474A11EE - de655a09aaa48258"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -157,8 +157,8 @@
                   urlString = "file:///Users/apple/Documents/NeoSTORE/NeoSTORE/Support/Helper/APIManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "162"
-                  endingLineNumber = "162"
+                  startingLineNumber = "174"
+                  endingLineNumber = "174"
                   offsetFromSymbolStart = "2065">
                </Location>
             </Locations>
@@ -174,8 +174,8 @@
             filePath = "NeoSTORE/Support/Helper/APIManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
             landmarkName = "manager(modelType:type:requestModel:method:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -190,8 +190,8 @@
             filePath = "NeoSTORE/Support/Helper/APIManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "manager(modelType:type:requestModel:method:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -206,8 +206,8 @@
             filePath = "NeoSTORE/Support/Helper/APIManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
             landmarkName = "manager(modelType:type:requestModel:method:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -222,8 +222,8 @@
             filePath = "NeoSTORE/Screens/Login/LoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "login(email:password:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -238,8 +238,8 @@
             filePath = "NeoSTORE/Screens/Login/LoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "login(email:password:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -257,6 +257,22 @@
             startingLineNumber = "23"
             endingLineNumber = "23"
             landmarkName = "showAlert(title:message:actionTitle:style:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0D573EDA-9331-4683-9B5B-7EE332094E33"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeoSTORE/Screens/CartList/View/CartViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

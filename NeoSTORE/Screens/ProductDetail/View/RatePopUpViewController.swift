@@ -71,7 +71,7 @@ var cartViewModel = CartViewModel()
         guard let product else {return}
         
         lblProductName.text = product.name
-        if let imgurl = URL(string: product.product_images[0].image){
+        if let imgurl = URL(string: product.product_images[0].image ?? ""){
             productImage.loadImage(from: imgurl)
         }
         
@@ -118,7 +118,7 @@ var cartViewModel = CartViewModel()
             if self.id == 1 {
                 print(self.startRating.rating ,"Star Rating Given")
                 guard let product = self.product else { return }
-                self.viewModel.setRating(productId: "\(product.id)",
+                self.viewModel.setRating(productId: "\(product.id ?? 1)",
                                          rating: self.startRating.rating)
                 let alertController = UIAlertController(title: "RATING SUCCESSFULL", message: "THANK YOU FOR RATING !", preferredStyle: .alert)
                 
@@ -138,7 +138,7 @@ var cartViewModel = CartViewModel()
                 //            self.dismiss(animated: true, completion: {
                 //                self.onDismiss?()
                 let quantity = Int(self.qtyTextField.text ?? "") ?? 0
-                self.cartViewModel.addToCart(productId: product.id, quantity: quantity)
+                self.cartViewModel.addToCart(productId: product.id ?? 1, quantity: quantity)
                 self.dismiss(animated: true)
                 self.delegate?.onDismiss(productQty: quantity)
               

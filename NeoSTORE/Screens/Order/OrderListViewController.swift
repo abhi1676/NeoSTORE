@@ -17,7 +17,7 @@ class OrderListViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = false
         observerEvent()
         viewModel.fetchOrderList()
-        self.navigationController?.title = "My Orders"
+//        self.navigationController?.title = "My Orders"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,9 +64,9 @@ extension OrderListViewController:UITableViewDelegate,UITableViewDataSource{
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "OrderListTableViewCell", for: indexPath) as? OrderListTableViewCell else {return UITableViewCell()}
         
         let order = viewModel.orders[indexPath.row]
-        cell.orderCost.text = "Rs. \(order.cost)"
-        cell.orderDate.text = "\(order.created)"
-        cell.orderID.text = " \(order.id)"
+        cell.orderCost.text = "Rs. \(order.cost ?? 1)"
+        cell.orderDate.text = "\(order.created ?? "1")"
+        cell.orderID.text = " \(order.id ?? 1)"
         return cell
         
     }

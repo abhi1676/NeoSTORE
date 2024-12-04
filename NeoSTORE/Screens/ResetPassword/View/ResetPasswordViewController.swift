@@ -28,9 +28,9 @@ class ResetPasswordViewController: UIViewController {
         newPassword.setIcon(UIImage(named: Constants.passwordIcon) ?? UIImage())
         confirmNewPassword.setIcon(UIImage(named: Constants.passwordIcon) ?? UIImage())
         
-        oldPassword.setPlaceholderText("Current Password", .white)
-        newPassword.setPlaceholderText("New Password", .white)
-        confirmNewPassword.setPlaceholderText("Confirm Password", .white)
+        oldPassword.setPlaceholderText(Constants.currentPassword, .white)
+        newPassword.setPlaceholderText(Constants.newPassword, .white)
+        confirmNewPassword.setPlaceholderText(Constants.confirmpassword, .white)
         
     }
     

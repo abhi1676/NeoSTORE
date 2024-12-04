@@ -186,8 +186,8 @@ class ProductDetailViewController: UIViewController{
 
 extension ProductDetailViewController: ProductQuantityDelegate {
     func onDismiss(productQty: Int) {
-        let storyboard = UIStoryboard(name: "OrderScreen", bundle: nil)
-        if let cartVC = storyboard.instantiateViewController(withIdentifier: "CartViewController") as? CartViewController {
+        let storyboard = UIStoryboard(name: Constants.OrderScreen, bundle: nil)
+        if let cartVC = storyboard.instantiateViewController(withIdentifier: Constants.CartViewController) as? CartViewController {
             cartVC.product = viewmodel?.productDetail?.data
             cartVC.productQty = productQty
             

@@ -13,14 +13,7 @@ class StoreLocatorViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     
-    let cities = [
-        ("Mumbai", 19.0760, 72.8777, "9th floor, Business arcade, Sayani Rd, Parel Bus Depot, Dighe Nagar, Prabhadevi, Mumbai, Maharashtra 400025"),
-        ("Pune", 18.5204, 73.8567, "NTPL SEZ (Blueridge), IT-08/09, 10th Floor, Hinjewadi Phase 1 Rd, Hinjawadi Rajiv Gandhi Infotech Park, Hinjawadi, Pune, Maharashtra 411057"),
-        ("Sangli", 16.8600, 74.5670, "Address: DEF Street, Sangli"),
-        ("Delhi", 28.6139, 77.2090, "IIIrd Floor, 76A, J&K Block, Block J & K, Laxmi Nagar, Delhi, 110092"),
-        ("Navi Mumbai", 19.0330, 73.0297, "Unit No 501, Sigma IT Park, Plot No R-203,204, Midc TTC Industrial Area. Rabale, Navi Mumbai, Maharashtra 400701"),
-        ("Ahmedabad", 23.0225, 72.5714, "5th floor, E, The Address House, Westgate, Sarkhej - Gandhinagar Hwy, near YMCA Club, Truevalue, Makarba, Ahmedabad, Gujarat 380015")
-    ]
+    let cities = Constants.cityArray
     
     
     override func viewDidLoad() {

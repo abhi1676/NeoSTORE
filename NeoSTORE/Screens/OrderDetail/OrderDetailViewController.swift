@@ -17,7 +17,7 @@ class OrderDetailViewController: UIViewController {
     @IBOutlet var shimmerView: UIView!
     
     var orderId : Int?
-    private let viewModel = OrderDetailViewModel()
+    private lazy var viewModel = OrderDetailViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         shimmerView.isHidden = true
@@ -33,8 +33,8 @@ class OrderDetailViewController: UIViewController {
         self.title = "Order Details"
     }
     private func setUpNib(){
-        let nib = UINib(nibName: "OrderDetailTableViewCell", bundle: nil)
-        orderDeatilTableView.register(nib, forCellReuseIdentifier: "OrderDetailTableViewCell")
+        let nib = UINib(nibName: Constants.OrderDetailTableViewCell, bundle: nil)
+        orderDeatilTableView.register(nib, forCellReuseIdentifier: Constants.OrderDetailTableViewCell)
         orderDeatilTableView.delegate = self
         orderDeatilTableView.dataSource = self
     }
@@ -79,7 +79,7 @@ extension OrderDetailViewController:UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "OrderDetailTableViewCell", for: indexPath) as? OrderDetailTableViewCell else {return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.OrderDetailTableViewCell, for: indexPath) as? OrderDetailTableViewCell else {return UITableViewCell()}
         if let orderDetail = viewModel.orderDetailsData?.order_details?[indexPath.row]{
             cell.configureCell(data: orderDetail)
         }

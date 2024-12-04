@@ -9,6 +9,7 @@ import UIKit
 
 protocol CartDelegate{
     func cartEdited(req:EditCartRequest)
+    //func cartEdited(req:EditCartRequest, at indexPath: IndexPath?)
 }
 
 class CartViewController: UIViewController {
@@ -28,8 +29,7 @@ class CartViewController: UIViewController {
     
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.topItem?.title = ""
-      
-    
+
         bindViewModel()
         fetchCartItems()
     }
@@ -42,8 +42,8 @@ class CartViewController: UIViewController {
         updateTotalCost()
     }
     private func setupTableView() {
-        let nib = UINib(nibName: "CartTableViewCell", bundle: nil)
-        cartTableView.register(nib, forCellReuseIdentifier: "CartTableViewCell")
+        let nib = UINib(nibName: Constants.cartTableViewCell, bundle: nil)
+        cartTableView.register(nib, forCellReuseIdentifier: Constants.cartTableViewCell)
         cartTableView.delegate = self
         cartTableView.dataSource = self
     }
@@ -52,6 +52,8 @@ class CartViewController: UIViewController {
                 DispatchQueue.main.async {
                     self?.cartTableView.reloadData()
                     self?.updateTotalCost()
+                    
+                    
                 }
             }
 
@@ -88,29 +90,39 @@ class CartViewController: UIViewController {
     
   
     @IBAction func orderButtonTapped(_ sender: Any) {
-       navigate(storyboardName: "OrderScreen", viewControllerID: "AddressListViewController")
+        navigate(storyboardName: Constants.OrderScreen, viewControllerID: Constants.addressListViewController)
     }
     
 }
 
 extension CartViewController: UITableViewDelegate,UITableViewDataSource,CartDelegate {
-    func cartEdited(req: EditCartRequest) {
-        self.cartViewModel.editCart(productId: req.product_id ?? 1, quantity: req.quantity ?? 0)
-        self.updateTotalCost()
-        
+    
+   // func cartEdited(req: EditCartRequest, at indexPath: IndexPath?) {
+        func cartEdited(req: EditCartRequest) {
+          // guard let indexPath = indexPath else { return }
 
+          // guard indexPath.row < viewModel.cartItems.count else { return }
+        
+        self.cartViewModel.editCart(productId: req.product_id ?? 1, quantity: req.quantity ?? 0)
+      //  cartTableView.reloadRows(at: [indexPath], with: .automatic)
+
+        self.updateTotalCost()
+    
     }
+  
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.cartItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CartTableViewCell", for: indexPath) as! CartTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cartTableViewCell, for: indexPath) as! CartTableViewCell
         cell.configureCell(with: viewModel.cartItems[indexPath.row])
+        //cell.configureCell(with: viewModel.cartItems[indexPath.row], at: indexPath)
         cell.delegate = self
+ 
        // cell.editCart(productID: viewModel.cartItems[indexPath.row].product_id)
-
+        
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -128,7 +140,7 @@ extension CartViewController: UITableViewDelegate,UITableViewDataSource,CartDele
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             self.cartViewModel.deleteFromCart(productId: viewModel.cartItems[indexPath.row].product_id)
-           
+            
             self.updateTotalCost()
            
             

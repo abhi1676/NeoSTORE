@@ -25,6 +25,7 @@ class CartTableViewCell: UITableViewCell {
 
     var viewModel = CartViewModel()
     var qty = 1
+    //var indexPath : IndexPath?
     var didQuantityChange:((Int) -> Void)?
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -39,9 +40,11 @@ class CartTableViewCell: UITableViewCell {
     //        cartProductqty.setTitle("\(quantity)", for: .normal)
     //
     //    }
-    func configureCell(with product: CartListData?) {
+    
+   // func configureCell(with product: CartListData?, at indexPath: IndexPath) {
+        func configureCell(with product: CartListData?) {
         cartProductqty.setTitle("\(product?.quantity ?? 1)", for: .normal)
-        
+       // self.indexPath = indexPath
         self.product = product
         cartProductName.text = product?.product.name
         cartProductCategory.text = product?.product.product_category
@@ -59,6 +62,7 @@ class CartTableViewCell: UITableViewCell {
         let menuItems: [UIAction] = (1...5).map { i in
             UIAction(title: "\(i)", handler: { [weak self] _ in
                 self?.updateQuantity(i)
+//                self?.delegate?.cartEdited(req: EditCartRequest(product_id: self?.product?.product_id ?? 1, quantity: i), at: self?.indexPath)
                 self?.delegate?.cartEdited(req: EditCartRequest(product_id: self?.product?.product_id ?? 1, quantity: i))
                 self?.cartProductPrice.text = "₹\(Int((self?.product?.product.cost ?? 1) * i))"
             })

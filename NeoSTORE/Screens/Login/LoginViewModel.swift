@@ -7,14 +7,14 @@ class LoginViewModel {
   
     private let apiManager: APIManagerProtocol
     
-    init(apiManager: APIManagerProtocol = APIManager.shared) {
+    init(apiManager: APIManagerProtocol) {
         self.apiManager = apiManager
     }
     
     func login(email: String, password: String) {
         let loginData = LoginData(email: email, password: password)
 
-        APIManager.shared.manager(
+        apiManager.manager(
             modelType: LoginResponse.self,
             type: EndPointList.login,
             requestModel: loginData,

@@ -14,8 +14,8 @@ class AddressListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let nib = UINib(nibName: "AddressListTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "AddressListTableViewCell")
+        let nib = UINib(nibName: Constants.addressListTableViewCell, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: Constants.addressListTableViewCell)
         tableView.delegate = self
         tableView.dataSource = self
         self.navigationController?.navigationBar.topItem?.title = ""
@@ -59,7 +59,7 @@ class AddressListViewController: UIViewController {
     }
     
     @objc func addAddress(){
-        navigate(storyboardName: "OrderScreen", viewControllerID: "AddressViewController")
+        navigate(storyboardName: Constants.OrderScreen, viewControllerID: Constants.addressViewController)
     }
     
     
@@ -77,7 +77,7 @@ extension AddressListViewController: UITableViewDelegate, UITableViewDataSource 
         
         let arr = UserDefaults.standard.array(forKey: "Address") as? [String] ?? []
 
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AddressListTableViewCell") as? AddressListTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.addressListTableViewCell) as? AddressListTableViewCell else {
             return UITableViewCell()
         }
         

@@ -7,7 +7,7 @@ class OrderViewModel {
     func placeOrder(with address: String) {
         
         guard !address.isEmpty else {
-            eventHandler?(.error("Address cannot be empty" as? Error))
+            eventHandler?(.error(Constants.addressError as? Error))
             return
         }
         

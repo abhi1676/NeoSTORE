@@ -23,7 +23,7 @@ class MyAccountViewController: UIViewController {
     
     
     @IBOutlet var DOB: CustomTextField!
-    var viewModel = MyAccountViewModel()
+   private lazy var viewModel = MyAccountViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -112,11 +112,11 @@ class MyAccountViewController: UIViewController {
         }
         
     @IBAction func editButtonTapped(_ sender: Any) {
-        navigate(storyboardName: "AccountScreen", viewControllerID: "EditProfileViewController")
+        navigate(storyboardName: Constants.AccountScreen, viewControllerID: Constants.editProfileViewController)
     }
     
     @IBAction func resetButtonTapped(_ sender: Any) {
-        navigate(storyboardName: "AccountScreen", viewControllerID: "ResetPasswordViewController")
+        navigate(storyboardName: Constants.AccountScreen, viewControllerID: Constants.resetPasswordViewController)
     }
     
     

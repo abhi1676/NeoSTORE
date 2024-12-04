@@ -18,6 +18,9 @@ struct Constants{
     static let phonenumber = "Phone Number"
     static let confirmpassword = "Confirm Password"
     static let termsAndConditions = "Terms & Conditions"
+    static let currentPassword = "Current Password"
+    static let newPassword = "New Password"
+    
     
     //MARK: - Icon
     static let usernameIcon = "username_icon"
@@ -66,6 +69,7 @@ struct Constants{
     static let invalidEmail = "Invalid email address"
     static let error = "Error"
     static let noUserData = "No user data returned"
+    static let addressError = "Address cannot be empty"
     
     
     //MARK: - HELPERS
@@ -80,7 +84,34 @@ struct Constants{
     static let male = "M"
     static let female = "F"
     static let fullname = "fullname"
+    static let cityArray = [
+        ("Mumbai", 19.0760, 72.8777, "9th floor, Business arcade, Sayani Rd, Parel Bus Depot, Dighe Nagar, Prabhadevi, Mumbai, Maharashtra 400025"),
+        ("Pune", 18.5204, 73.8567, "NTPL SEZ (Blueridge), IT-08/09, 10th Floor, Hinjewadi Phase 1 Rd, Hinjawadi Rajiv Gandhi Infotech Park, Hinjawadi, Pune, Maharashtra 411057"),
+        ("Sangli", 16.8600, 74.5670, "Address: DEF Street, Sangli"),
+        ("Delhi", 28.6139, 77.2090, "IIIrd Floor, 76A, J&K Block, Block J & K, Laxmi Nagar, Delhi, 110092"),
+        ("Navi Mumbai", 19.0330, 73.0297, "Unit No 501, Sigma IT Park, Plot No R-203,204, Midc TTC Industrial Area. Rabale, Navi Mumbai, Maharashtra 400701"),
+        ("Ahmedabad", 23.0225, 72.5714, "5th floor, E, The Address House, Westgate, Sarkhej - Gandhinagar Hwy, near YMCA Club, Truevalue, Makarba, Ahmedabad, Gujarat 380015")
+    ]
     
+    
+    //MARK: - Storyboard Constants
+    static let OrderDetailViewController = "OrderDetailViewController"
+    static let editProfileViewController = "EditProfileViewController"
+    static let resetPasswordViewController = "ResetPasswordViewController"
+    static let addressViewController = "AddressViewController"
+    static let addressListViewController = "AddressListViewController"
+    static let CartViewController = "CartViewController"
+    static let productDetailViewController = "ProductDetailViewController"
+    static let OrderScreen = "OrderScreen"
+    static let AccountScreen = "AccountScreen"
+    static let HomeScreen = "HomeScreen"
+    
+    //MARK: - TableViewCell Constants
+    static let OrderDetailTableViewCell = "OrderDetailTableViewCell"
+    static let OrderListTableViewCell = "OrderListTableViewCell"
+    static let addressListTableViewCell = "AddressListTableViewCell"
+    static let cartTableViewCell = "CartTableViewCell"
+    static let productsTableViewCell = "ProductsTableViewCell"
 }
 
 

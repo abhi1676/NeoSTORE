@@ -112,7 +112,7 @@ hideKeyboardWhenTappedAround()
             
             viewModel.updateProfile(requestModel: requestModel)
         showAlert(title: "UPDATED", message: "PROFILE DATA UPDATED SUCCESSFULLY",completion: {
-            self.navigate(storyboardName: "HomeScreen", viewControllerID: "HomeScreenViewController")
+            self.navigate(storyboardName: Constants.HomeScreen, viewControllerID: EnumConstants.HomeScreenViewController.rawValue)
         })
         
     }

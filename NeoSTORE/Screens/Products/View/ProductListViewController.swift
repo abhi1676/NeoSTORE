@@ -15,8 +15,8 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
         tableView.delegate = self
         tableView.dataSource = self
         self.navigationController?.navigationBar.topItem?.title = ""
-        let nib = UINib(nibName: "ProductsTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "ProductsTableViewCell")
+        let nib = UINib(nibName: Constants.productsTableViewCell, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: Constants.productsTableViewCell)
         self.observeEvent()
         shimmerView.isUserInteractionEnabled = false
         self.shimmerView.isShimmering = true
@@ -91,7 +91,7 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let product = viewModel.products?.data?[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProductsTableViewCell", for: indexPath) as! ProductsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.productsTableViewCell, for: indexPath) as! ProductsTableViewCell
         cell.productName.text = product?.name
      
         cell.productMaker.text = product?.producer
@@ -117,8 +117,8 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     private func navigateToProductDetails(index:Int,name:String){
-        let sb = UIStoryboard(name: "HomeScreen", bundle: nil)
-        let productDetailVC = sb.instantiateViewController(withIdentifier: "ProductDetailViewController") as! ProductDetailViewController
+        let sb = UIStoryboard(name: Constants.HomeScreen, bundle: nil)
+        let productDetailVC = sb.instantiateViewController(withIdentifier: Constants.productDetailViewController) as! ProductDetailViewController
         productDetailVC.productId = index
         productDetailVC.productName = name
         navigationController?.pushViewController(productDetailVC, animated: true)

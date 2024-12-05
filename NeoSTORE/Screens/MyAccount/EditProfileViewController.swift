@@ -177,7 +177,8 @@ hideKeyboardWhenTappedAround()
         picker.dismiss(animated: true, completion: nil)
     }
     
-    func saveImageToUserDefaults(image: UIImage, forKey key: String) {
+    func saveImageToUserDefaults(image: UIImage?, forKey key: String?) {
+        guard let image,let key else {return}
         if let imageData = image.jpegData(compressionQuality: 1.0) {
             UserDefaults.standard.set(imageData, forKey: key)
         } else {

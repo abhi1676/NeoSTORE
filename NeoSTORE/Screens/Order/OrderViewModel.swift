@@ -4,8 +4,8 @@ class OrderViewModel {
     var eventHandler: ((_ event: Event) -> Void)?
     
     //MARK: - Placing Order
-    func placeOrder(with address: String) {
-        
+    func placeOrder(with address: String?) {
+        guard let address else {return}
         guard !address.isEmpty else {
             eventHandler?(.error(Constants.addressError as? Error))
             return

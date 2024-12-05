@@ -30,7 +30,8 @@ class OrderDetailTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCell(data : OrderData_details){
+    func configureCell(data : OrderData_details?){
+        guard let data else {return}
         orderDetailName.text = data.prod_name ?? "N/A"
         orderDeatilCategory.text = data.prod_cat_name ?? "N/A"
         orderDeatilQty.text = "Quantity: \(data.quantity ?? 0)"

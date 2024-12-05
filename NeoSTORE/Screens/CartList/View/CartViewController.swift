@@ -64,7 +64,7 @@ class CartViewController: UIViewController {
             case .loading :
                 print("Loading")
             case .dataLoaded :
-                self.fetchCartItems()
+                self.viewModel.fetchCartItems()
             case .stopLoading :
                 print("Laoding Stopped")
             case .error(let error):

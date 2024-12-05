@@ -17,7 +17,7 @@ final class OrderDetailViewModel {
 
     var eventHandler: ((Event) -> Void)?
     
-    func fetchOrderDetails(orderId: Int) {
+    func fetchOrderDetails(orderId: Int?) {
         eventHandler?(.loading)
 
         APIManager.shared.manager(

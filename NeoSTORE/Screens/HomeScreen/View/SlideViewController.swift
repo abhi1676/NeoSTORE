@@ -11,8 +11,8 @@ class SlideViewController: UIViewController {
 
     @IBOutlet var slideMenuTableView: UITableView!
     
-    let slideImages = ["shopping_cart","table","sofa","chair","cupboard","username_icon","storelocator_icon","myorders_icon","logout_icon"]
-    let slideItems = ["My Cart","Tables","Sofas","Chairs","Cupboards","My Account","Store Locator","My Orders","Logout"]
+    let slideImages = Constants.slideImages
+    let slideItems = Constants.slideItems
     @IBOutlet var slideMenuView: UIView!
     
     @IBOutlet var fullname: UILabel!
@@ -24,8 +24,8 @@ class SlideViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nib = UINib(nibName: "SlideMenuTableViewCell", bundle: nil)
-        slideMenuTableView.register(nib, forCellReuseIdentifier: "SlideMenuTableViewCell")
+        let nib = UINib(nibName: Constants.slideMenuTableViewCell, bundle: nil)
+        slideMenuTableView.register(nib, forCellReuseIdentifier:Constants.slideMenuTableViewCell)
         slideMenuTableView.delegate = self
         slideMenuTableView.dataSource = self
         slideMenuView.layer.cornerRadius = 10
@@ -45,7 +45,7 @@ class SlideViewController: UIViewController {
     func navigateToProductList(categoryId:Int) {
         let sb = UIStoryboard(name: "HomeScreen", bundle: nil)
       
-         if let nextVc = sb.instantiateViewController(withIdentifier: "ProductListViewController") as? ProductListViewController
+        if let nextVc = sb.instantiateViewController(withIdentifier: Constants.productListViewController) as? ProductListViewController
                 
         {
              nextVc.categoryId = categoryId
@@ -60,8 +60,8 @@ class SlideViewController: UIViewController {
        
      }
     func navigateToAccount(){
-        let sb = UIStoryboard(name: "AccountScreen", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "MyAccountViewController") as! MyAccountViewController
+        let sb = UIStoryboard(name: Constants.AccountScreen, bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: Constants.myAccountViewController) as! MyAccountViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
@@ -74,7 +74,7 @@ extension SlideViewController:UITableViewDataSource,UITableViewDelegate{
     }
    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SlideMenuTableViewCell", for: indexPath) as! SlideMenuTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.slideMenuTableViewCell, for: indexPath) as! SlideMenuTableViewCell
         cell.layer.borderColor = UIColor.black.cgColor
         
         if indexPath.row == 0
@@ -98,8 +98,8 @@ extension SlideViewController:UITableViewDataSource,UITableViewDelegate{
         UserDefaults.standard.set(false, forKey: "displayHomeNavBar")
         switch indexPath.row {
         case 0 :
-            let storyboard = UIStoryboard(name: "OrderScreen", bundle: nil)
-            if let vc = storyboard.instantiateViewController(withIdentifier: "CartViewController") as? CartViewController {
+            let storyboard = UIStoryboard(name: Constants.OrderScreen, bundle: nil)
+            if let vc = storyboard.instantiateViewController(withIdentifier: Constants.CartViewController) as? CartViewController {
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         case 1 :
@@ -111,15 +111,15 @@ extension SlideViewController:UITableViewDataSource,UITableViewDelegate{
         case 4 :
             navigateToProductList(categoryId: 4)
         case 5 :
-            let storyboard = UIStoryboard(name: "AccountScreen", bundle: nil)
-            if let vc = storyboard.instantiateViewController(withIdentifier: "MyAccountViewController") as? MyAccountViewController {
+            let storyboard = UIStoryboard(name: Constants.AccountScreen, bundle: nil)
+            if let vc = storyboard.instantiateViewController(withIdentifier: Constants.myAccountViewController) as? MyAccountViewController {
                 self.navigationController?.pushViewController(vc, animated: true)
             }
             //navigate(storyboardName: "AccountScreen", viewControllerID: "MyAccountViewController")
         case 6 :
-            navigate(storyboardName: "AccountScreen", viewControllerID: "StoreLocatorViewController")
+            navigate(storyboardName:Constants.AccountScreen, viewControllerID: Constants.StoreLocatorViewController)
         case 7 :
-            navigate(storyboardName: "OrderScreen", viewControllerID: "OrderListViewController")
+            navigate(storyboardName: Constants.OrderScreen, viewControllerID: Constants.OrderListViewController)
         case 8 :
             UserDefaults.standard.removeObject(forKey: Constants.fullname)
             UserDefaults.standard.removeObject(forKey:Constants.email)

@@ -24,6 +24,8 @@
 		183A0D172CE20ABC002D9850 /* Product Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A0D162CE20ABC002D9850 /* Product Model.swift */; };
 		183A0D192CE20B0D002D9850 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A0D182CE20B0D002D9850 /* ProductViewModel.swift */; };
 		183A0D1B2CE20C3A002D9850 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A0D1A2CE20C3A002D9850 /* ProductListViewController.swift */; };
+		1840AD7B2D017AE500241F61 /* ProductImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840AD792D017AE500241F61 /* ProductImagesCollectionViewCell.swift */; };
+		1840AD7C2D017AE500241F61 /* ProductImagesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1840AD7A2D017AE500241F61 /* ProductImagesCollectionViewCell.xib */; };
 		18556F0C2CFD784E00941FFE /* OrderDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18556F0B2CFD784E00941FFE /* OrderDetailViewModel.swift */; };
 		18556F0F2CFD786A00941FFE /* OrderDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18556F0D2CFD786A00941FFE /* OrderDetailTableViewCell.swift */; };
 		18556F102CFD786A00941FFE /* OrderDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18556F0E2CFD786A00941FFE /* OrderDetailTableViewCell.xib */; };
@@ -111,6 +113,8 @@
 		183A0D162CE20ABC002D9850 /* Product Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product Model.swift"; sourceTree = "<group>"; };
 		183A0D182CE20B0D002D9850 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		183A0D1A2CE20C3A002D9850 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		1840AD792D017AE500241F61 /* ProductImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImagesCollectionViewCell.swift; sourceTree = "<group>"; };
+		1840AD7A2D017AE500241F61 /* ProductImagesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductImagesCollectionViewCell.xib; sourceTree = "<group>"; };
 		18556F0B2CFD784E00941FFE /* OrderDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewModel.swift; sourceTree = "<group>"; };
 		18556F0D2CFD786A00941FFE /* OrderDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailTableViewCell.swift; sourceTree = "<group>"; };
 		18556F0E2CFD786A00941FFE /* OrderDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderDetailTableViewCell.xib; sourceTree = "<group>"; };
@@ -430,6 +434,8 @@
 			children = (
 				18A908482CE750A00056C499 /* RatePopUpViewController.swift */,
 				18A908492CE750A00056C499 /* RatePopUpViewController.xib */,
+				1840AD792D017AE500241F61 /* ProductImagesCollectionViewCell.swift */,
+				1840AD7A2D017AE500241F61 /* ProductImagesCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -743,6 +749,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1840AD7C2D017AE500241F61 /* ProductImagesCollectionViewCell.xib in Resources */,
 				189977D82CEE0EEE004E9943 /* CartTableViewCell.xib in Resources */,
 				18280E632CE34FF200FD8411 /* ProductsTableViewCell.xib in Resources */,
 				18AABFA52CCF63DD00E35122 /* Gotham-Bold.otf in Resources */,
@@ -834,6 +841,7 @@
 				18B7F2492CE5FDA9003264BF /* ListCartViewModel.swift in Sources */,
 				18A3E4B52CD36E7200FA7CC2 /* APIManager.swift in Sources */,
 				183507FB2CDF39DF008CC561 /* SlideMenuTableViewCell.swift in Sources */,
+				1840AD7B2D017AE500241F61 /* ProductImagesCollectionViewCell.swift in Sources */,
 				183A0D192CE20B0D002D9850 /* ProductViewModel.swift in Sources */,
 				18280E622CE34FF200FD8411 /* ProductsTableViewCell.swift in Sources */,
 				18280E662CE3632900FD8411 /* CustomStarView.swift in Sources */,

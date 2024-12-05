@@ -9,12 +9,6 @@ import UIKit
 
 class ProductDetailViewController: UIViewController{
     
-    
-    var productName = ""
-    var viewmodel : ProductDetailViewModel?
-    var productId : Int?
-    var ratePopUp = RatePopUpViewController()
-    var data : ProductDetailData?
     @IBOutlet var shimmerView: UIView!
     
     @IBOutlet var productNameLbl: UILabel!
@@ -26,13 +20,26 @@ class ProductDetailViewController: UIViewController{
     @IBOutlet var shareButton: UIButton!
     
     @IBOutlet var productImage1: UIImageView!
-    @IBOutlet var productImage2: UIImageView!
-    @IBOutlet var productImage3: UIImageView!
-    @IBOutlet var productImage4: UIImageView!
+
     
     @IBOutlet var productDescription: UITextView!
+   
     
+    var productName = ""
+    var viewmodel : ProductDetailViewModel?
+    var productId : Int?
+    var ratePopUp = RatePopUpViewController()
+    var data : ProductDetailData?
+  
     
+    @IBOutlet var productImageCollectionView: UICollectionView?{
+        didSet{
+            productImageCollectionView?.delegate = self
+            productImageCollectionView?.dataSource = self
+            let nib = UINib(nibName: "ProductImagesCollectionViewCell", bundle: nil)
+            productImageCollectionView?.register(nib, forCellWithReuseIdentifier: "ProductImagesCollectionViewCell")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +49,7 @@ class ProductDetailViewController: UIViewController{
         self.shimmerView.isUserInteractionEnabled = false
         self.shimmerView.isShimmering = true
         self.navigationController?.navigationBar.backgroundColor = UIColor(red: 1.0, green: 0.149, blue: 0.0, alpha: 1.0)
-        setUpImages()
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,9 +79,7 @@ class ProductDetailViewController: UIViewController{
         productStarView.rating = product.rating ?? 1
         if let imgurl = URL(string: product.product_images[0].image ?? ""){
             productImage1.loadImage(from: imgurl)
-            productImage2.loadImage(from: imgurl)
-            productImage3.loadImage(from: imgurl)
-            productImage4.loadImage(from: imgurl)
+           
         }
     }
     func fetchProductDetail(){
@@ -106,6 +111,9 @@ class ProductDetailViewController: UIViewController{
                 print("Loading Stopped")
             case .dataLoaded :
                 print("data loaded")
+                DispatchQueue.main.async {
+                    self.productImageCollectionView?.reloadData()
+                }
                 self.shimmerView.stopShimmering()
                 DispatchQueue.main.async {
                     self.shimmerView.isHidden = true
@@ -117,15 +125,7 @@ class ProductDetailViewController: UIViewController{
         }
     }
     
-    func setUpImages(){
-        productImage2.layer.borderWidth = 1
-        productImage3.layer.borderWidth = 1
-        productImage4.layer.borderWidth = 1
-        
-        productImage2.layer.borderColor = UIColor.red.cgColor
-        productImage3.layer.borderColor = UIColor.black.cgColor
-        productImage4.layer.borderColor = UIColor.green.cgColor
-    }
+  
     @IBAction func shareButtonTapped(_ sender: Any) {
         
         
@@ -193,5 +193,42 @@ extension ProductDetailViewController: ProductQuantityDelegate {
             
             self.navigationController?.pushViewController(cartVC, animated: true)
         }
+    }
+}
+
+extension ProductDetailViewController:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewmodel?.productDetail?.data?.product_images.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductImagesCollectionViewCell", for: indexPath) as? ProductImagesCollectionViewCell else {return UICollectionViewCell()}
+        if let imgurl = URL(string: viewmodel?.productDetail?.data?.product_images[indexPath.row].image ?? "cricket"){
+            cell.productImage.loadImage(from: imgurl)
+        }
+      
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       
+        collectionView.cellForItem(at: indexPath)?.layer.borderColor = UIColor.black.cgColor
+        collectionView.cellForItem(at: indexPath)?.layer.borderWidth = 2
+        if let imgurl = URL(string: viewmodel?.productDetail?.data?.product_images[indexPath.row].image ?? ""){
+            productImage1.loadImage(from: imgurl)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        collectionView.cellForItem(at: indexPath)?.layer.borderColor = UIColor.clear.cgColor
+        collectionView.cellForItem(at: indexPath)?.layer.borderWidth = 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width / 3, height: 80)
     }
 }

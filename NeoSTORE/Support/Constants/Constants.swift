@@ -92,7 +92,8 @@ struct Constants{
         ("Navi Mumbai", 19.0330, 73.0297, "Unit No 501, Sigma IT Park, Plot No R-203,204, Midc TTC Industrial Area. Rabale, Navi Mumbai, Maharashtra 400701"),
         ("Ahmedabad", 23.0225, 72.5714, "5th floor, E, The Address House, Westgate, Sarkhej - Gandhinagar Hwy, near YMCA Club, Truevalue, Makarba, Ahmedabad, Gujarat 380015")
     ]
-    
+    static let slideImages = ["shopping_cart","table","sofa","chair","cupboard","username_icon","storelocator_icon","myorders_icon","logout_icon"]
+    static let slideItems = ["My Cart","Tables","Sofas","Chairs","Cupboards","My Account","Store Locator","My Orders","Logout"]
     
     //MARK: - Storyboard Constants
     static let OrderDetailViewController = "OrderDetailViewController"
@@ -102,6 +103,10 @@ struct Constants{
     static let addressListViewController = "AddressListViewController"
     static let CartViewController = "CartViewController"
     static let productDetailViewController = "ProductDetailViewController"
+    static let productListViewController = "ProductListViewController"
+    static let myAccountViewController = "MyAccountViewController"
+    static let StoreLocatorViewController = "StoreLocatorViewController"
+    static let OrderListViewController = "OrderListViewController"
     static let OrderScreen = "OrderScreen"
     static let AccountScreen = "AccountScreen"
     static let HomeScreen = "HomeScreen"
@@ -112,6 +117,7 @@ struct Constants{
     static let addressListTableViewCell = "AddressListTableViewCell"
     static let cartTableViewCell = "CartTableViewCell"
     static let productsTableViewCell = "ProductsTableViewCell"
+    static let slideMenuTableViewCell = "SlideMenuTableViewCell"
 }
 
 
